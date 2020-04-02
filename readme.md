@@ -1,1 +1,0 @@
-Documentation files for the **VarBox** platform.
