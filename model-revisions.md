@@ -392,7 +392,7 @@ Route::group([
     Route::get('revision/{revision}', [
         'as' => 'admin.posts.revision', 
         'uses' => 'PostsController@showRevision', 
-        'permissions' => 'pages-edit' // optional to restrict access
+        'permissions' => 'posts-edit' // optional to restrict access
     ]);
 });
 ```
