@@ -17,6 +17,8 @@
 
 After you've successfully installed <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> you can install the `VarBox` platform with ease by running only two commands.
 
+> Having a database setup in your `.env` file is mandatory!
+
 #### Require the package
 
 ```
