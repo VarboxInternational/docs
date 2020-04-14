@@ -208,7 +208,7 @@ You can find a good example of this kind of implementation inside:
 - `Admin -> Manage Content -> Blocks (edit)`
 - `Admin -> Manage Content -> Emails (edit)`
 
-> To learn how to create a CRUD step by step (**with drafts included**), please follow the [Admin Crud Example](/docs/{{version}}/admin-crud#full-example) guide.
+> To learn how to create a CRUD step by step (**with drafts included**), please follow the [Admin Crud Example](/docs/{{version}}/full-example) guide.
 
 To apply the draft functionality in your own CRUDs there's a few steps you'll need to follow.   
 For this example we'll assume you have a `App\Http\Controllers\Admin\PostsController` on which you want to apply drafts.
