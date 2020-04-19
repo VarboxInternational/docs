@@ -1,6 +1,5 @@
 # Model Urls
 
-- [Prerequisites](#prerequisites)
 - [Usage](#usage)
     - [Generate Url](#generate-url)
     - [Fetch The Url](#fetch-the-url)
@@ -17,43 +16,6 @@
 
 This functionality allows you to generate custom urls for your model records.   
 The generated url will be stored inside the `urls` database table.   
-
-<a name="prerequisites"></a>
-## Prerequisites
-
-If you've followed the [Installation Guide](/docs/{{version}}/installation), you should already have the `urls` table present in your database.
-If not, create a new migration containing the following:
-
-```php
-/**
- * Run the migrations.
- *
- * @return void
- */
-public function up()
-{
-    if (!Schema::hasTable('urls')) {
-        Schema::create('urls', function (Blueprint $table) {
-            $table->increments('id');
-    
-            $table->string('url')->unique();
-            $table->morphs('urlable');
-    
-            $table->timestamps();
-        });
-    }
-}
-
-/**
- * Reverse the migrations.
- *
- * @return void
- */
-public function down()
-{
-    Schema::dropIfExists('urls');
-}
-```
 
 <a name="usage"></a>
 ## Usage
