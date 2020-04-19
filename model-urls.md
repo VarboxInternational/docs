@@ -12,6 +12,7 @@
     - [Disable Cascade Update](#disable-cascade-update)
 - [The Model](#the-model)
     - [Get Original Model](#get-original-model)
+    - [Get Accessed Url Model](#get-accessed-url-model)
 - [Overwrite Bindings](#overwrite-bindings)
 
 This functionality allows you to generate custom urls for your model records.   
@@ -297,6 +298,39 @@ use Varbox\Models\Url;
 
 $url = Url::find($id);
 $model = $url->urlable;
+```
+
+<a name="get-accessed-url-model"></a>
+#### Get Accessed Url Model
+
+To get your actual model instance when accessing its url in the browser, you might be tempted to use the `urbale()` method from the `Varbox\Models\Url` model.
+
+However, that won't be necessary because the route dispatcher already takes care of attaching the model instance. 
+
+To fetch your model instance when accessing its url use `$request->route()->action['model']`
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class YourController extends Controller
+{
+    /**
+     * @param Request $request
+     * @return \Illuminate\View\View
+     */
+    public function show(Request $request)
+    {
+        $model = $request->route()->action['model'] ?? null;
+    
+        return view('your.view')->with([
+            'model' => $model
+        ]);
+    }
+}
 ```
 
 <a name="overwrite-bindings"></a>
