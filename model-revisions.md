@@ -496,12 +496,21 @@ In your projects, you may stumble upon the need to modify the behavior of these 
 
 The `revision` classes available for binding overwrites are:
 
-#### Varbox\Models\Revision
+<style>
+    span.overwrite-class {
+        display: block;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-weight: 600;
+        font-size: 14px;
+    }
+</style>
+
+<span class="overwrite-class">Varbox\Models\Revision</span>
 
 Found in `config/varbox/bindings.php` at `models.revision_model` key.   
 This class represents the revision model.
 
-#### Varbox\Controllers\RevisionsController
+<span class="overwrite-class">Varbox\Controllers\RevisionsController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.revision_controller` key.   
 This class is used for interactions with revisions inside a crud implementation.

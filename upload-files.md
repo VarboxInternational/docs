@@ -1313,42 +1313,51 @@ In your projects, you may stumble upon the need to modify the behavior of these 
 
 The `upload` classes available for binding overwrites are:
 
-#### Varbox\Services\UploadService
+<style>
+    span.overwrite-class {
+        display: block;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-weight: 600;
+        font-size: 14px;
+    }
+</style>
+
+<span class="overwrite-class">Varbox\Services\UploadService</span>
 
 Found in `config/varbox/bindings.php` at `services.upload_service` key.   
 This class is used for the entire file upload functionality.
 
-#### Varbox\Models\Upload
+<span class="overwrite-class">Varbox\Models\Upload</span>
 
 Found in `config/varbox/bindings.php` at `models.upload_model` key.   
 This class represents the upload model.
 
-#### Varbox\Controllers\UploadController
+<span class="overwrite-class">Varbox\Controllers\UploadController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.upload_controller` key.   
 This class is used for interactions with the `UploaderHelper` class.
 
-#### Varbox\Controllers\UploadsController
+<span class="overwrite-class">Varbox\Controllers\UploadsController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.uploads_controller` key.   
 This class is used for interactions with the `Admin -> Media Library -> Uploads` section.
 
-#### Varbox\Requests\UploadRequest
+<span class="overwrite-class">Varbox\Requests\UploadRequest</span>
 
 Found in `config/varbox/bindings.php` at `form_requests.upload_form_request` key.   
 This class is used for validating any upload when inserting into the database.
 
-#### Varbox\Helpers\UploadedHelper
+<span class="overwrite-class">Varbox\Helpers\UploadedHelper</span>
 
 Found in `config/varbox/bindings.php` at `helpers.uploaded_helper` key.   
 This class is used for displaying any uploaded file.
 
-#### Varbox\Helpers\UploaderHelper
+<span class="overwrite-class">Varbox\Helpers\UploaderHelper</span>
 
 Found in `config/varbox/bindings.php` at `helpers.uploader_helper` key.   
 This class is used for creating the entire upload manager for the admin.
 
-#### Varbox\Helpers\Varbox\Helpers\UploaderLangHelper
+<span class="overwrite-class">Varbox\Helpers\Varbox\Helpers\UploaderLangHelper</span>
 
 Found in `config/varbox/bindings.php` at `helpers.uploader_lang_helper` key.   
 This class is used for creating the entire multi-language upload manager for the admin.

@@ -16,6 +16,8 @@
 
 The `pages` component is a very powerful content management functionality that allows you to quickly convert a static Laravel page into a dynamic page that can be modified from the admin panel.
 
+> The pages component uses [kalnoy/nestedset](https://github.com/lazychaser/laravel-nestedset) as an underlying dependency for working with the tree structure, so you should also inspect their documentation in order to see how you can leverage different methods or query scopes they expose.
+
 In order to provide you with a complex crud functionality inside the admin, the pages crud implements the following out of the box:
 
 <style>
@@ -134,8 +136,8 @@ The blade file you should modify is located at: `resources/views/vendor/varbox/a
 You can then reference those fields in your `resources/views/pages/show.blade.php` like this:
 
 ```php
-<span>{{ $page->data['author']}</span>
-<p>{{ $page->data['intro']}}</p>
+<span>{{ $page->data['author'] }}</span>
+<p>{{ $page->data['intro'] }}</p>
 ```
 
 The above method for adding extra fields was the easy one without no hassle on your part, but if for some reason you actually need additional table columns for pages, you can create a `migration` to add those fields and then [extend](#overwrite-bindings) the `Varbox\Models\Page` model with your own model to make those fields `fillable`
@@ -224,24 +226,33 @@ In your projects, you may stumble upon the need to modify the behavior of these 
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
-The `pages` classes available for binding overwrites are:
+The `page` classes available for binding overwrites are:
 
-#### Varbox\Models\Page
+<style>
+    span.overwrite-class {
+        display: block;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-weight: 600;
+        font-size: 14px;
+    }
+</style>
+
+<span class="overwrite-class">Varbox\Models\Page</span>
 
 Found in `config/varbox/bindings.php` at `models.page_model` key.   
 This class represents the page model.
 
-#### Varbox\Controllers\PagesController
+<span class="overwrite-class">Varbox\Controllers\PagesController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_controller` key.   
 This class is used for interactions with the `Admin -> Manage Content -> Pages` section.
 
-#### Varbox\Controllers\PagesTreeController
+<span class="overwrite-class">Varbox\Controllers\PagesTreeController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_tree_controller` key.   
 Used for interactions with the `pages tree` from the `Admin -> Manage Content -> Pages` section.
 
-#### Varbox\Requests\PageRequest
+<span class="overwrite-class">Varbox\Requests\PageRequest</span>
 
 Found in `config/varbox/bindings.php` at `form_requests.page_form_request` key.   
 This class is used for validating any page when creating or updating.

@@ -330,42 +330,51 @@ In your projects, you may stumble upon the need to modify the behavior of these 
 
 The `role & permission` classes available for binding overwrites are:
 
-#### Varbox\Models\Role
+<style>
+    span.overwrite-class {
+        display: block;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-weight: 600;
+        font-size: 14px;
+    }
+</style>
+
+<span class="overwrite-class">Varbox\Models\Role</span>
 
 Found in `config/varbox/bindings.php` at `models.role_model` key.   
 This class represents the role model.
 
-#### Varbox\Models\Permission
+<span class="overwrite-class">Varbox\Models\Permission</span>
 
 Found in `config/varbox/bindings.php` at `models.permission_model` key.   
 This class represents the permission model.
 
-#### Varbox\Controllers\RolesController
+<span class="overwrite-class">Varbox\Controllers\RolesController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.roles_controller` key.   
 This class is used for interactions with the `Admin -> Access Control -> Roles` section.
 
-#### Varbox\Controllers\PermissionsController
+<span class="overwrite-class">Varbox\Controllers\PermissionsController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.permissions_controller` key.   
 This class is used for interactions with the `Admin -> Access Control -> Permissions` section.
 
-#### Varbox\Requests\RoleRequest
+<span class="overwrite-class">Varbox\Requests\RoleRequest</span>
 
 Found in `config/varbox/bindings.php` at `form_requests.role_form_request` key.   
 This class is used for validating any role when inserting into the database.
 
-#### Varbox\Requests\PermissionRequest
+<span class="overwrite-class">Varbox\Requests\PermissionRequest</span>
 
 Found in `config/varbox/bindings.php` at `form_requests.permission_form_request` key.   
 This class is used for validating any permission when inserting into the database.
 
-#### Varbox\Middleware\CheckRoles
+<span class="overwrite-class">Varbox\Middleware\CheckRoles</span>
 
 Found in `config/varbox/bindings.php` at `middleware.check_roles_middleware` key.   
 This class is used for restricting access to users based on the given roles.
 
-#### Varbox\Middleware\CheckPermissions
+<span class="overwrite-class">Varbox\Middleware\CheckPermissions</span>
 
 Found in `config/varbox/bindings.php` at `middleware.check_permissions_middleware` key.   
 This class is used for restricting access to users based on the given permissions.
