@@ -579,27 +579,6 @@ To enable or disable saving to the database, change the `database -> save` value
 ]
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <a name="retrieve-videos"></a>
 ## Retrieve Videos
 
