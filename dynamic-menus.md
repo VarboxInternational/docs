@@ -47,7 +47,7 @@ Before you learn about using your menus inside a [VarBox](/) application, you sh
 You can find the menus section inside [Admin -> Manage Content -> Menus](/docs/{{version}}/menus-interface).   
 Feel free to explore all available options this section offers.
 
-![Menus List](/docs/menus-list.png)
+![Menus List](/docs/{{version}}/menus-list.png)
 
 <a name="how-it-works"></a>
 ## How It Works

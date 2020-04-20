@@ -49,7 +49,7 @@ Before going deeper, you should know that there's already a section in the admin
 You can find the roles section inside [Admin -> Access Control -> Roles](/docs/{{version}}/roles-interface).   
 Feel free to explore all available options this section offers.
 
-![Roles List](/docs/roles-list.png)
+![Roles List](/docs/{{version}}/roles-list.png)
 
 <a name="permissions-interface"></a>
 #### Permissions Interface
@@ -57,7 +57,7 @@ Feel free to explore all available options this section offers.
 You can find the permissions section inside [Admin -> Access Control -> Permissions](/docs/{{version}}/permissions-interface).   
 Feel free to explore all available options this section offers.
 
-![Roles List](/docs/permissions-list.png)
+![Roles List](/docs/{{version}}/permissions-list.png)
 
 <a name="manage-access"></a>
 ## Manage Access

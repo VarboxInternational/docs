@@ -104,7 +104,7 @@ Before you learn about managing your files inside a `VarBox` application, you sh
 You can find the uploads section inside [Admin -> Media Library -> Uploads](/docs/{{version}}/uploads-interface).   
 Feel free to explore all available options this section offers.
 
-![Uploads List](/docs/uploads-list.png)
+![Uploads List](/docs/{{version}}/uploads-list.png)
 
 <a name="upload-images"></a>
 ## Upload Images

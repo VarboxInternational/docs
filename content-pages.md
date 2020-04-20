@@ -54,7 +54,7 @@ Before you learn about using your pages inside a [VarBox](/) application, you sh
 You can find the pages section inside [Admin -> Manage Content -> Pages](/docs/{{version}}/pages-interface).   
 Feel free to explore all available options this section offers.
 
-![Pages List](/docs/pages-list.png)
+![Pages List](/docs/{{version}}/pages-list.png)
 
 <a name="how-it-works"></a>
 ## How It Works
