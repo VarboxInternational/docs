@@ -1,5 +1,5 @@
 # Version Compatibility
 
-| VarBox Version    | Laravel Version |
+| Varbox Version    | Laravel Version |
 | ----------------- | --------------- |
 | `1.x`             | `7.x`           |
