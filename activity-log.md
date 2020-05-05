@@ -18,7 +18,7 @@ Log activity and correlate it to users for any Eloquent model record.
 <a name="admin-interface"></a>
 ## Admin Interface
 
-Before you learn about logging activity inside a `VarBox` application, you should know that there's already a section in the admin from where you can manage all your activity logs.
+Before you learn about logging activity inside a [VarBox](/) application, you should know that there's already a section in the admin from where you can manage all your activity logs.
 
 You can find the activity log section inside [Admin -> Access Control -> Activity](/docs/{{version}}/activity-interface).   
 Feel free to explore all available options this section offers.
@@ -225,7 +225,7 @@ For more information on how you can customize the activity log functionality, pl
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-`VarBox` makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
@@ -248,4 +248,4 @@ This class represents the activity log model.
 <span class="overwrite-class">Varbox\Controllers\ActivityController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.activity_controller` key.   
-This class is used for interactions with the `Admin -> Access Control -> Activity` section.
+This class is used for interactions with the Admin -> Access Control -> Activity section.

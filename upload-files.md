@@ -99,7 +99,7 @@ php artisan varbox:uploads-link
 <a name="admin-interface"></a>
 ## Admin Interface
 
-Before you learn about managing your files inside a `VarBox` application, you should know that there's already a section in the admin from where you can manage all your files.
+Before you learn about managing your files inside a [VarBox](/) application, you should know that there's already a section in the admin from where you can manage all your files.
 
 You can find the uploads section inside [Admin -> Media Library -> Uploads](/docs/{{version}}/uploads-interface).   
 Feel free to explore all available options this section offers.
@@ -1286,7 +1286,7 @@ For more information on how you can customize the upload functionality, please r
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-`VarBox` makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
@@ -1314,12 +1314,12 @@ This class represents the upload model.
 <span class="overwrite-class">Varbox\Controllers\UploadController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.upload_controller` key.   
-This class is used for interactions with the `UploaderHelper` class.
+This class is used for interactions with the uploading functionality.
 
 <span class="overwrite-class">Varbox\Controllers\UploadsController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.uploads_controller` key.   
-This class is used for interactions with the `Admin -> Media Library -> Uploads` section.
+This class is used for interactions with the Admin -> Media Library -> Uploads section.
 
 <span class="overwrite-class">Varbox\Requests\UploadRequest</span>
 

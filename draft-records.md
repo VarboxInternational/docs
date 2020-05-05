@@ -338,7 +338,7 @@ Additionally you'll also want to add the actual button that makes saving records
 #### Create Permissions
 
 You have the possibility to restrict the drafting actions by setting specific permissions.   
-The `VarBox` platform is using a `role based permission` system out of the box.
+The [VarBox](/) platform is using a `role based permission` system out of the box.
 
 > This step is optional and you should follow it only if you've added permissions on your draft routes, or in your blade file.
 

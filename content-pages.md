@@ -171,7 +171,7 @@ You can then reference those fields in your `resources/views/pages/show.blade.ph
 </video>
 ```
 
-You can also cusomize the upload configuration from inside the `config/varbox.pages` config file, specifically from the `upload` section.
+You can also cusomize the upload configuration from inside the `config/varbox/pages` config file, specifically from the `upload` section.
 
 <a name="render-location-blocks"></a>
 #### Render Location Blocks
@@ -245,12 +245,12 @@ This class represents the page model.
 <span class="overwrite-class">Varbox\Controllers\PagesController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_controller` key.   
-This class is used for interactions with the `Admin -> Manage Content -> Pages` section.
+This class is used for interactions with the Admin -> Manage Content -> Pages section.
 
 <span class="overwrite-class">Varbox\Controllers\PagesTreeController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_tree_controller` key.   
-Used for interactions with the `pages tree` from the `Admin -> Manage Content -> Pages` section.
+Used for interactions with the pages tree from the Admin -> Manage Content -> Pages section.
 
 <span class="overwrite-class">Varbox\Requests\PageRequest</span>
 

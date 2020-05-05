@@ -217,12 +217,12 @@ This class represents the menu model.
 <span class="overwrite-class">Varbox\Controllers\MenusController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.menus_controller` key.   
-This class is used for interactions with the `Admin -> Manage Content -> Menus` section.
+This class is used for interactions with the Admin -> Manage Content -> Menus section.
 
 <span class="overwrite-class">Varbox\Controllers\MenusTreeController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.menus_tree_controller` key.   
-Used for interactions with the `menus tree` from the `Admin -> Manage Content -> Menus` section.
+Used for interactions with the menus tree from the Admin -> Manage Content -> Menus section.
 
 <span class="overwrite-class">Varbox\Requests\MenuRequest</span>
 

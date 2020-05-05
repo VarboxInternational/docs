@@ -346,7 +346,7 @@ In your `edit` blade view file add the code for displaying the `duplicate` butto
 #### Create Permissions
 
 You have the possibility to restrict the duplicate action by setting a specific permission.   
-The `VarBox` platform is using a `role based permission` system out of the box.
+The [VarBox](/) platform is using a `role based permission` system out of the box.
 
 > This step is optional and you should follow it only if you've added permissions on your duplicate route, or in your blade file.
 

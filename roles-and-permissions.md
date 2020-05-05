@@ -324,7 +324,7 @@ $user->hasAllPermissions(['view-users', 'edit-users']);
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-`VarBox` makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
@@ -352,12 +352,12 @@ This class represents the permission model.
 <span class="overwrite-class">Varbox\Controllers\RolesController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.roles_controller` key.   
-This class is used for interactions with the `Admin -> Access Control -> Roles` section.
+This class is used for interactions with the Admin -> Access Control -> Roles section.
 
 <span class="overwrite-class">Varbox\Controllers\PermissionsController</span>
 
 Found in `config/varbox/bindings.php` at `controllers.permissions_controller` key.   
-This class is used for interactions with the `Admin -> Access Control -> Permissions` section.
+This class is used for interactions with the Admin -> Access Control -> Permissions section.
 
 <span class="overwrite-class">Varbox\Requests\RoleRequest</span>
 

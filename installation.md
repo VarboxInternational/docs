@@ -15,7 +15,7 @@
 <a name="automatic-installation"></a>
 ## Automatic Installation
 
-After you've successfully installed <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> you can install the `VarBox` platform with ease by running only two commands.
+After you've successfully installed <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> you can install the [VarBox](/) platform with ease by running only two commands.
 
 > Having a database setup in your `.env` file is mandatory!
 
@@ -39,7 +39,7 @@ Use `admin@mail.com / admin` to authenticate.
 <a name="manual-installation"></a>
 ## Manual Installation
 
-If for some reason you don't want to automatically install the `VarBox` platform, you can do so manually, by following the below steps.
+If for some reason you don't want to automatically install the [VarBox](/) platform, you can do so manually, by following the below steps.
 
 The following steps also provides useful insight on what the `varbox:install` artisan command actually does. 
 
@@ -170,7 +170,7 @@ class Handler extends VarboxExceptionHandler {
 <a name="migrate-database"></a>
 #### Migrate Database
 
-Create the necessary database tables for the `VarBox` platform to work properly.
+Create the necessary database tables for the [VarBox](/) platform to work properly.
 
 ```
 php artisan migrate
@@ -179,7 +179,7 @@ php artisan migrate
 <a name="seed-database"></a>
 #### Seed Database
 
-Populate the database with necessary data for the `VarBox` platform to work properly.
+Populate the database with necessary data for the [VarBox](/) platform to work properly.
 
 ```
 php artisan db:seed --class="Varbox\Seed\PermissionsSeeder"

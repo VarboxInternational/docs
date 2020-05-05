@@ -27,7 +27,7 @@ class YourModel extends Model
 }
 ```
 
-Next, if you've installed the `VarBox` correctly, you should already see the following in your `.env` file.   
+Next, if you've installed the [VarBox](/) correctly, you should already see the following in your `.env` file.   
 If not, please add them.
 
 ```

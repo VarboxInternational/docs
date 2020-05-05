@@ -490,7 +490,7 @@ If you still have difficulties in implementing revisions on your own, you can lo
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-`VarBox` makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 

@@ -126,7 +126,7 @@ In your `edit` blade view file add the preview button.
 #### Create Permission
 
 You have the possibility to restrict the preview action by setting a specific permission.   
-The `VarBox` platform is using a `role based permission` system out of the box.
+The [VarBox](/) platform is using a `role based permission` system out of the box.
 
 > This step is optional and you should follow it only if you've added permissions on your preview route, or in your blade file.
 
