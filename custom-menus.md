@@ -1,4 +1,4 @@
-# Dynamic Menus
+# Custom Menus
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)
