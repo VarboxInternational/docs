@@ -20,11 +20,9 @@
 - [Upload Videos](#upload-videos)
     - [Video Max Size](#video-max-size)
     - [Allowed Video Extensions](#allowed-video-extensions)
-    - [Generate Video Thumbnails](#generate-video-thumbnails)
     - [Save Video To Database](#save-video-to-database)
 - [Retrieve Videos](#retrieve-videos)
     - [Display Original Video](#display-original-video)
-    - [Display Video Thumbnails](#display-video-thumbnails)
     - [Download Original Video](#download-original-video)
     - [Retrieve Video Path](#retrieve-video-path)
     - [Check If Video Exists](#check-if-video-exists)
@@ -510,48 +508,6 @@ To modify the list of allowed extensions for videos, change the `videos -> allow
 ]
 ```
 
-<a name="generate-video-thumbnails"></a>
-#### Generate Video Thumbnails
-
-When uploading a video, the `UploadService` will automatically generate 3 thumbnails for it.   
-The thumbnails are snapshot images taken from the video throughout its entire duration.
-
-To enable or disable the thumbnails generation, change the `videos -> generate_thumbnails` value inside the `config/varbox/upload.php` config file.
-
-```php
-'videos' => [
-
-    /*
-    |
-    | Flag that on video upload to generate thumbnails as well (true | false).
-    |
-    | Thumbnail will be generated from the first second of the uploaded video.
-    | All thumbnails will be stored as images having the name {video_file}_thumbnail_{number}.jpg.
-    |
-    */
-    'generate_thumbnails' => true,
-
-]
-```
-
-You can also specify the number of thumbnails to be generated, by changing the `videos -> thumbnails_number` value inside the `config/varbox/upload.php` config file.
-
-```php
-'videos' => [
-
-    /*
-    |
-    | How many thumbnails should be generated for a video.
-    |
-    | Keep in mind that if this option is invalid (ex: 0, null, ''), thumbnails won't be generated.
-    | This is happening regardless the "generate_thumbnails" options.
-    |
-    */
-    'thumbnails_number' => 3,
-
-]
-```
-
 <a name="save-video-to-database"></a>
 #### Save Video To Database
 
@@ -609,36 +565,6 @@ $video = Upload::find($id);
 <video controls>
     <source src="{{ $video->helper->url() }}" type="video/mp4">
 </video>
-```
-
-<a name="display-video-thumbnails"></a>
-#### Display Video Thumbnails
-
-As said [above](#generate-video-thumbnails), when uploading video, a number of thumbnails for that video will be automatically created.
-
-To display one of the video's thumbnail, you can use the `thumbnail()` method present on the `UploadedHelper` class and pass to it the `number` of th thumbnail you wish to display as its only paramter.
-
-```php
-// display the first thumbnail
-<img src="{{ uploaded($fullPathToVideo)->thumbnail(1) }}" />
-
-// display the third thumbnail
-<img src="{{ uploaded($fullPathToVideo)->thumbnail(3) }}" />
-```
-
-If you're working with a `Varbox\Models\Upload` model you can use the `helper` accessor instead of the `uploaded()` helper function.
-
-```php
-use Varbox\Models\Upload;
-
-// fetch the upload record from database
-$video = Upload::find($id);
-
-// display the first thumbnail in your blade files
-<img src="{{ $video->helper->thumbnail(1) }}" />
-
-// display the third thumbnail in your blade files
-<img src="{{ $video->helper->thumbnail(3) }}" />
 ```
 
 <a name="download-original-video"></a>
@@ -1168,9 +1094,6 @@ public function getUploadConfig()
             'allowed_extensions' => [
                 'mp4', 'flv'
             ],
-                
-            // disable the thumbnails generation
-            'generate_thumbnails' => false,
         ],
     
         // and the list of overwrites can continue
