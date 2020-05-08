@@ -91,7 +91,7 @@ From here you can specify what block types your application contains and a custo
 <a name="the-block-files"></a>
 #### The Block Files
 
-Running the artisan command for making blocks, will generate all necessary files for a block inside the `app/Blocks/{YourType}` directory. The generate files for each block type are:
+Running the artisan command for making blocks, will generate all necessary files for a block inside the `app/Blocks/{YourType}` directory. The generated files for each block type are:
 
 <style>
     span.file-class {
@@ -385,7 +385,7 @@ The `block` classes available for binding overwrites are:
 
 <span class="overwrite-class">Varbox\Models\Block</span>
 
-Found in `config/varbox/bindings.php` at `models.revision_model` key.   
+Found in `config/varbox/bindings.php` at `models.block_model` key.   
 This class represents the block model.
 
 <span class="overwrite-class">Varbox\Controllers\BlocksController</span>
