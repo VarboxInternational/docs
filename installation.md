@@ -11,6 +11,7 @@
     - [Seed Database](#seed-database)
     - [Symlink Directories](#symlink-directories)
     - [Create New Files](#create-new-files)
+    - [Overwrite Bindings](#overwrite-bindings)
 
 <a name="automatic-installation"></a>
 ## Automatic Installation
@@ -451,4 +452,59 @@ class AdminMenuComposer
         return false;
     }
 }
+```
+
+<a name="overwrite-bindings"></a>
+#### Overwrite Bindings
+
+Inside your `config/varbox/bindings.php` config file, change the `user_model` value to the `\App\User::class`
+
+```php
+/*
+| --------------------------------------------------------------------------------------------------------------
+| Model Class Bindings
+| --------------------------------------------------------------------------------------------------------------
+*/
+'models' => [
+    ...
+
+    /*
+    |
+    | Concrete implementation for the "user model".
+    | To extend or replace this functionality, change the value below with your full "user model" FQN.
+    |
+    | Your class will have to (first option is recommended):
+    | - extend the "Varbox\Models\User" class
+    | - or at least implement the "Varbox\Contracts\UserModelContract" interface.
+    |
+    | Regardless of the concrete implementation below, you can still use it like:
+    | - app('user.model') OR app('\Varbox\Contracts\UserModelContract')
+    | - or you could even use your own class as a direct implementation
+    |
+    */
+    'user_model' => \App\User::class,
+```
+
+Inside your `config/varbox/bindings.php` config file, change the `admin_menu_view_composer` value to the `\App\Http\Composers\AdminMenuComposer::class`
+
+```php
+/*
+| --------------------------------------------------------------------------------------------------------------
+| View Composers Class Bindings
+| --------------------------------------------------------------------------------------------------------------
+*/
+'view_composers' => [
+    ...
+
+    /*
+    |
+    | Concrete implementation for the "admin menu view composer".
+    | To extend or replace this functionality, change the value below with your full "admin menu view composer" FQN.
+    |
+    | Your class will have to (first option is recommended):
+    | - extend the "Varbox\Composers\AdminMenuComposer" class
+    | - or at least implement the following methods: compose()
+    |
+    */
+    'admin_menu_view_composer' => \App\Http\Composers\AdminMenuComposer::class,
 ```
