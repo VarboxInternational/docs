@@ -100,6 +100,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
 [Content Blocks](/docs/{{version}}/content-blocks)
+[Meta Tags](/docs/{{version}}/meta-tags)
 
 </div>
 
