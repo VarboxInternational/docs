@@ -349,4 +349,4 @@ For more information on how you can customize the crud functionality, please rea
 <a name="full-example"></a>
 ## Full Example
 
-For an example that combines almost every functionality into an `Admin Crud`, please follow this [Full Example](/docs/{{version}}/example-crud).
+For an example that combines almost every functionality into an `Admin Crud`, please follow this [Full Example](/docs/{{version}}/example-admin-crud).

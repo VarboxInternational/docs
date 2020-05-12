@@ -1060,3 +1060,8 @@ This class is used for interactions with the Admin -> Manage Content -> Emails s
 
 Found in `config/varbox/bindings.php` at `form_requests.email_form_request` key.   
 This class is used for validating any email when creating or updating.
+
+<a name="full-example"></a>
+## Full Example
+
+For an example on how to setup a frontent page supporting menus and blocks, please follow this [Full Example](/docs/{{version}}/example-page-blocks).
