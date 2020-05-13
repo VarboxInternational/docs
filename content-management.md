@@ -26,6 +26,7 @@
     - [Customize Email Design](#customize-email-design)
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
+- [Full Example](#full-example)
 
 The content management module is a powerful tool that offers you the following features out of the box:
 - create content pages on the fly to display your structured content
@@ -1064,4 +1065,4 @@ This class is used for validating any email when creating or updating.
 <a name="full-example"></a>
 ## Full Example
 
-For an example on how to setup a frontent page supporting menus and blocks, please follow this [Full Example](/docs/{{version}}/example-page-blocks).
+For an example on how to setup a page supporting menus and blocks, please follow this [Full Example](/docs/{{version}}/example-page-blocks)
