@@ -1,9 +1,24 @@
 # Vendor Files
 
+- [Platform Routes](#platform-routes)
 - [Config Files](#config-files)
 - [Blade Views](#blade-views)
 - [Public Assets](#public-assets)
 - [Migration & Seeds](#migration-seeds)
+
+<a name="platform-routes"></a>
+## Platform Routes
+
+All platform specific routes are stored inside the `routes` directory of the `varbox` package, so if you want to have a clear overview on what we expose, take a look in that directory.
+
+> The routes are automatically registered at service provider level, so you don't have to do anything regarding this. 
+
+One important thing to note here is to have the following at the very end of your `routes/web.php` file.   
+This is a route macro that dispatches your custom urls to their appropriate controller & method.
+
+```php
+Route::varbox();
+```
 
 <a name="config-files"></a>
 ## Config Files
