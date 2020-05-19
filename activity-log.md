@@ -129,10 +129,19 @@ There are two ways to delete old activity logs:
 Either of these options are fine, but they're still manual. It's recommended to schedule the `varbox:clean-activity` command to run daily, inside your `App\Console\Kernel` class.
 
 ```php
-$schedule->command('varbox:clean-activity')->daily();
+/**
+ * Define the application's command schedule.
+ *
+ * @param \Illuminate\Console\Scheduling\Schedule $schedule
+ * @return void
+ */
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('varbox:clean-activity')->daily();
+}
 ```
 
-The way to determine what activity logs are old, is by using the `old_threshold` key from inside the `config/varbox/activity.log` config file, so feel free to modify that value.
+The way to determine what activity logs are old, is by using the `old_threshold` key from inside the `config/varbox/activity.php` config file, so feel free to modify that value.
 
 ```php
 /*
@@ -141,7 +150,7 @@ The way to determine what activity logs are old, is by using the `old_threshold`
 |
 | This option is used to delete activity records older than the number of days supplied when:
 | - executing the cli command: "php artisan varbox:clean-activity"
-| - clicking the "Delete Old Activity" button from the admin panel, inside the activity list view
+| - clicking the "Delete Old Activity" button from the admin, inside the activity list view
 |
 | If set to "null" or "0", no past activities will be deleted whatsoever.
 |
