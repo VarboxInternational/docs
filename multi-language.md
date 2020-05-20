@@ -600,4 +600,4 @@ The view composer for the language switcher in the header.
 <a name="full-example"></a>
 ## Full Example
 
-For an example on how to add translatable fields to [Content Pages](/docs/{{version}}/content-management#content-pages), please follow this [Full Example](/docs/{{version}}/example-page-blocks).
+For an example on how to add translatable fields to your entities, please follow this [Full Example](/docs/{{version}}/translatable-model-example).
