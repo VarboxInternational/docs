@@ -91,7 +91,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 </style>
 <div id="available-filter-operators-list" markdown="1">
 
-[Upload Files](/docs/{{version}}/upload-files)
+[Upload Files](/docs/{{version}}/file-uploads)
 [Model Revisions](/docs/{{version}}/model-revisions)
 [Model Urls](/docs/{{version}}/model-urls)
 [Draft Records](/docs/{{version}}/draft-records)
@@ -222,7 +222,7 @@ The above method for adding extra fields was the easy one without no hassle on y
 
 Besides some basic extra fields, you might need file uploads for your pages component.
 
-> If the below code doesn't seem familiar, you might want to take a look at the [Upload Files](/docs/{{version}}/upload-files) documentation section.
+> If the below code doesn't seem familiar, you might want to take a look at the [Upload Files](/docs/{{version}}/file-uploads) documentation section.
 
 <a name="page-uploads-inside-the-admin"></a>
 #### Inside The Admin
@@ -447,7 +447,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 </style>
 <div id="available-filter-operators-list" markdown="1">
 
-[Upload Files](/docs/{{version}}/upload-files)
+[Upload Files](/docs/{{version}}/file-uploads)
 [Model Revisions](/docs/{{version}}/model-revisions)
 [Draft Records](/docs/{{version}}/draft-records)
 [Duplicate Records](/docs/{{version}}/duplicate-records)
@@ -568,7 +568,7 @@ Running the command, will generate all necessary files for a block inside the `a
 
 If some of your blocks require file uploads (eg. images), please know that you can overwrite their specific configuration from inside the `config/varbox/blocks` config file, specifically from the `upload` section.
 
-> To learn more about model specific upload configuration, please read this [documentation section](/docs/{{version}}/upload-files#specific-model-configurations).
+> To learn more about model specific upload configuration, please read this [documentation section](/docs/{{version}}/file-uploads#specific-model-configurations).
 
 <a name="enable-blocks-for-custom-entities"></a>
 ### Enable Blocks For Custom Entities
@@ -767,7 +767,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 </style>
 <div id="available-filter-operators-list" markdown="1">
 
-[Upload Files](/docs/{{version}}/upload-files)
+[Upload Files](/docs/{{version}}/file-uploads)
 [Model Revisions](/docs/{{version}}/model-revisions)
 [Draft Records](/docs/{{version}}/draft-records)
 [Duplicate Records](/docs/{{version}}/duplicate-records)

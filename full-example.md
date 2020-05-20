@@ -17,7 +17,7 @@ This example illustrates how to create a fully functional `crud` system for your
 - draft / publish your records *(see [Draft Records](/docs/{{version}}/draft-records))*
 - attach revisions to your records *(see [Model Revisions](/docs/{{version}}/model-revisions))*
 - support your records being duplicated *(see [Duplicate Records](/docs/{{version}}/duplicate-records))*
-- support uploading files for your record *(see [Upload Files](/docs/{{version}}/upload-files))*
+- support uploading files for your record *(see [Upload Files](/docs/{{version}}/file-uploads))*
 - attach custom urls to your records *(see [Model Urls](/docs/{{version}}/model-urls))*
 - preview your records *(see [Preview Records](/docs/{{version}}/preview-records))*
 - support adding blocks of content *(see [Content Blocks](/docs/{{version}}/content-blocks))*
