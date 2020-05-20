@@ -1,7 +1,5 @@
 # Custom Bindings
 
-- 
-
 In some of your applications that use the [VarBox](/) platform, you might find the need to overwrite, customize or extend functionalities that come with the platform, in order to match your needs.
 
 In its underlying implementation, the [VarBox](/) platform uses a lot of classes, each serving its own purpose in different parts of the system. 
