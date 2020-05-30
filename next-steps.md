@@ -9,7 +9,7 @@ Now that you've successfully installed the platform and are able to sign into th
 We suggest reading the following documentation pages in order to have an idea of how the platform operates behind the scenes.
 
 - [Vendor Files](/docs/{{version}}/vendor-files) - be aware of what files are published inside your application
-- [Custom Bindings](/docs/{{version}}/custom-bindings) - learn how to extend or replace platform functionalities
+- [Custom Bindings](/docs/{{version}}/custom-bindings) - learn how to extend or replace platform specific classes
 
 #### Follow The Tutorials
 
