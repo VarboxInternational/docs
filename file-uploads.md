@@ -1,4 +1,4 @@
-# Upload Files
+# File Uplaads
 
 - [Prerequisites](#prerequisites)
     - [Setup Storge Disk](#setup-storage-disk)
