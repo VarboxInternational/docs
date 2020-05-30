@@ -127,6 +127,11 @@ You can also do this from inside the admin panel, when editing a user.
 
 You can get a user's addresses by using the `addresses` has many relation present on the `Varbox\Traits\HasAddresses` trait.
 
+```php
+$user = \App\User::find($id);
+$addresses = $user->addresses;
+```
+
 <a name="get-address-user"></a>
 #### Get Address User
 

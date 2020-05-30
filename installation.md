@@ -1,5 +1,7 @@
 # Installation
 
+- [Download Platform](#download-platform)
+- [Setup Composer](#setup-composer)
 - [Automatic Installation](#automatic-installation)
 - [Manual Installation](#manual-installation)
     - [Publish Vendor Files](#publish-vendor-files)
@@ -7,32 +9,87 @@
     - [Register Routes](#register-routes)
     - [Update Configurations](#update-configurations)
     - [Update Existing Files](#update-existing-files)
+    - [Copy SQL Files](#copy-sql-files)
+    - [Copy Seeder Classes](#copy-seeder-classes)
     - [Migrate Database](#migrate-database)
     - [Seed Database](#seed-database)
     - [Symlink Directories](#symlink-directories)
     - [Create New Files](#create-new-files)
     - [Overwrite Bindings](#overwrite-bindings)
+    
+> In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> application and a database created and configured in your `.env` file.
+
+<a name="download-platform"></a>
+## Download Platform
+
+Once you have purchased a Varbox license, you may download a Varbox release from the [downloads](/downloads) section of the Varbox website.
+
+<a name="setup-composer"></a>
+## Setup Composer
+ 
+After downloading a Zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file.
+
+Unzip the contents of the Varbox release into a `varbox` directory within your application's root directory. 
+
+> **Hidden Files**
+> 
+> When unzipping Varbox into your application's `varbox` directory, make sure all of Varbox's "hidden" files (such as `.gitignore`) are included.
+
+Once you have unzipped and placed the Varbox source code within the appropriate directory, you are ready to update your `composer.json` file. 
+You should add the following configuration to the file:
+
+```
+"repositories": [
+    {
+        "type": "path",
+        "url": "./varbox"
+    }
+],
+```
+
+Next, add `varbox/varbox` to the `require` section of your `composer.json` file:
+
+```
+"require": {
+    "php": "^7.2.5",
+    "laravel/framework": "^7.0",
+    "varbox/varbox": "*"
+},
+```
+
+After your `composer.json` file has been updated, run the following command in your console terminal:
+
+```
+composer update
+```
+
+> **Package Stability**
+> 
+> If you are not able to install Varbox into your application because of your `minimum-stability` setting, consider setting your `minimum-stability` option to `dev` and your `prefer-stable` option to `true`. 
+> This will allow you to install Varbox while still preferring stable package releases for your application.
 
 <a name="automatic-installation"></a>
-## Automatic Installation
+## Automatic Installation 
 
-After you've successfully installed <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> you can install the [VarBox](/) platform with ease by running only two commands.
-
-> Having a database setup in your `.env` file is mandatory!
-
-#### Require the package
-
-```
-composer require varbox/varbox
-```
-
-#### Run the command
+Install the Varbox platform by running  one simple command:
 
 ```
 php artisan varbox:install
 ```
 
-That's it!
+Migrate your database with the newly created Varbox migration file:
+
+```
+php artisan migrate
+```
+
+Seed your database with Varbox specific data. For an overview of what data is seeded, take a look inside your `database/seeds/VarboxSeeder.php` file.
+
+```
+php artisan db:seed --class="VarboxSeeder"
+```
+
+#### That's it!
 
 Now you can sign into your admin panel by accessing `/admin`.   
 Use `admin@mail.com / admin` to authenticate.
@@ -162,6 +219,33 @@ class Handler extends VarboxExceptionHandler {
 }
 ```
 
+<a name="copy-sql-files"></a>
+#### Copy SQL Files
+
+Copy all sql files from inside the `varbox/database/sql;` directory into your own `database/sql` directory.
+
+```
+cp varbox/database/sql/countries.sql database/sql/countries.sql
+cp varbox/database/sql/states.sql database/sql/states.sql
+cp varbox/database/sql/cities.sql database/sql/cities.sql
+```
+
+<a name="copy-seeder-classes"></a>
+#### Copy Seeder Classes
+
+Copy all seeder classes from inside the `varbox/database/seeds` directory into your own `database/seeds` directory.
+Also, don't forget to change the files' extension from `stub` to `php`.
+
+```
+cp varbox/database/seeds/PermissionsSeeder.stub database/seeds/PermissionsSeeder.php
+cp varbox/database/seeds/RolesSeeder.stub database/seeds/RolesSeeder.php
+cp varbox/database/seeds/UsersSeeder.stub database/seeds/UsersSeeder.php
+cp varbox/database/seeds/LanguagesSeeder.stub database/seeds/LanguagesSeeder.php
+cp varbox/database/seeds/CountriesSeeder.stub database/seeds/CountriesSeeder.php
+cp varbox/database/seeds/StatesSeeder.stub database/seeds/StatesSeeder.php
+cp varbox/database/seeds/CitiesSeeder.stub database/seeds/CitiesSeeder.php
+```
+
 <a name="migrate-database"></a>
 #### Migrate Database
 
@@ -177,11 +261,13 @@ php artisan migrate
 Populate the database with necessary data for the [VarBox](/) platform to work properly.
 
 ```
-php artisan db:seed --class="Varbox\Seed\PermissionsSeeder"
-php artisan db:seed --class="Varbox\Seed\RolesSeeder"
-php artisan db:seed --class="Varbox\Seed\UsersSeeder"
-php artisan db:seed --class="Varbox\Seed\CountriesSeeder"
-php artisan db:seed --class="Varbox\Seed\LanguagesSeeder"
+composer dump-autoload
+
+php artisan db:seed --class="PermissionsSeeder"
+php artisan db:seed --class="RolesSeeder"
+php artisan db:seed --class="UsersSeeder"
+php artisan db:seed --class="CountriesSeeder"
+php artisan db:seed --class="LanguagesSeeder"
 ```
 
 <a name="symlink-directories"></a>
