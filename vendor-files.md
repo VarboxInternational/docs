@@ -145,34 +145,37 @@ php artisan vendor:publish --tag=varbox-migrations
 <a name="the-seeders"></a>
 #### The Seeders
 
-In addition to the migration file, a few database seeders are available for you out of the box.   
+In addition to the migration file, a few database seeders are are also published for you out of the box.   
 
-> No seeder will tamper with your already existing data, because a check is automatically performed to see if the record already exists, before creating it.
+> No seeder will tamper with your already existing data, because a check is automatically performed to see if the record already exists before creating it.
 
-The seeders were automatically executed when you ran:
+If you run the published seeders with one command:
 
 ```
-php artisan varbox:install
-``` 
+php artisan db:seed --class="VarboxSeeder"
+```
 
-If you didn't run the above command, you can execute the seeders, by running:
+Or individually, if you don't need all the data:
 
 ```
 // create all crud permissions
-php artisan db:seed --class="Varbox\Seed\PermissionsSeeder"
+php artisan db:seed --class="PermissionsSeeder"
 
 // create admin & super roles
-php artisan db:seed --class="Varbox\Seed\RolesSeeder"
+php artisan db:seed --class="RolesSeeder"
 
 // create the initial admin user
-php artisan db:seed --class="Varbox\Seed\UsersSeeder"
-
-// create all known countries
-php artisan db:seed --class="Varbox\Seed\CountriesSeeder"
+php artisan db:seed --class="UsersSeeder"
 
 // create all known languages
-php artisan db:seed --class="Varbox\Seed\LanguagesSeeder"
+php artisan db:seed --class="LanguagesSeeder"
 
-// create the analytics code record
-php artisan db:seed --class="Varbox\Seed\AnalyticsSeeder"
+// create all known countries
+php artisan db:seed --class="CountriesSeeder"
+
+// create most known states
+php artisan db:seed --class="StatesSeeder"
+
+// create most known cities
+php artisan db:seed --class="CitieesSeeder"
 ```
