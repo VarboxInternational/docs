@@ -1,0 +1,286 @@
+# Geo Location
+
+- [Admin Interface](#admin-interface)
+- [Countries](#countries)
+    - [Seeder Class](#seeder-class)
+    - [Fetch Country States](#fetch-country-states)
+    - [Fetch Country Cities](#fetch-country-cities)
+    - [Sort Countries Alphabetically](#sort-countries-alphabetically)
+- [States](#states)
+    - [Seeder Class](#seeder-class)
+    - [Get State Country](#get-state-country)
+    - [Fetch State Cities](#fetch-state-cities)
+    - [Sort States Alphabetically](#sort-states-alphabetically)
+- [Cities](#cities)
+    - [Seeder Class](#seeder-class)
+    - [Get City Country](#get-city-country)
+    - [Get City State](#get-city-state)
+    - [Sort Cities Alphabetically](#sort-cities-alphabetically)
+- [Overwrite Bindings](#overwrite-bindings)
+
+The geo location module is a powerful tool that offers you the following features out of the box:
+- manage all countries in the world
+- manage most states in the world
+- manage most cities in the world
+
+<a name="admin-interface"></a>
+## Admin Interface
+
+Before going deeper, you should know that there's already a section in the admin from where you can manage all your countries, states and cities.
+
+<a name="countries-interface"></a>
+#### Countries Interface
+
+You can find the countries section inside "Admin -> Geo Location -> Countries".   
+Feel free to explore all available options this section offers.
+
+![Countries List](/docs/{{version}}/countries-list.png)
+
+<a name="states-interface"></a>
+#### States Interface
+
+You can find the states section inside "Admin -> Geo Location -> States".   
+Feel free to explore all available options this section offers.
+
+![States List](/docs/{{version}}/states-list.png)
+
+<a name="cities-interface"></a>
+#### Cities Interface
+
+You can find the cities section inside "Admin -> Geo Location -> Cities".   
+Feel free to explore all available options this section offers.
+
+![Cities List](/docs/{{version}}/cities-list.png)
+
+<a name="countries"></a>
+## Countries
+
+<a name="seeder-class"></a>
+#### Seeder Class
+
+The countries component provides a seeder class for seeding all available countries into your `countries` database table. 
+The seeder only works with an empty `countries` database table.
+
+If you've successfully installed the Varbox platform, you should find the `CountriesSeeder.php` file inside your `database/seeds` directory and the `countries.sql` file inside your `database/sql` directory.
+
+You can seed your countries, if you haven't done so yet, by using the following artisan command:
+
+```
+php artisan db:seed --class="CountriesSeeder"
+```
+
+<a name="fetch-country-states"></a>
+#### Fetch Country States
+
+You can get a country's states by using the `states` has many relation present on the `Varbox\Models\Country` model.
+
+```php
+use Varbox\Models\Country;
+
+$country = Country::find($id);
+$states = $country->states;
+```
+
+<a name="fetch-country-cities"></a>
+#### Fetch Country Cities
+
+You can get a country's cities by using the `cities` has many relation present on the `Varbox\Models\Country` model.
+
+```php
+use Varbox\Models\Country;
+
+$country = Country::find($id);
+$cities = $country->cities;
+```
+
+<a name="sort-countries-alphabetically"></a>
+#### Sort Countries Alphabetically
+
+You can fetch countries in alphabetical order by using the `alphabetically` query scope present on the `Varbox\Models\Country` model.
+
+```php
+use Varbox\Models\Country;
+
+$countries = Country::alphabetically()->get();
+```
+
+<a name="states"></a>
+## States
+
+<a name="seeder-class"></a>
+#### Seeder Class
+
+The states component provides a seeder class for seeding most known states into your `states` database table. 
+The seeder only works with an empty `states` database table.
+
+If you've successfully installed the Varbox platform, you should find the `StatesSeeder.php` file inside your `database/seeds` directory and the `states.sql` file inside your `database/sql` directory.
+
+You can seed your states, if you haven't done so yet, by using the following artisan command:
+
+```
+php artisan db:seed --class="StatesSeeder"
+```
+
+<a name="get-state-country"></a>
+#### Get State Country
+
+You can get a state's country by using the `country` belongs to relation present on the `Varbox\Models\State` model.
+
+```php
+use Varbox\Models\State;
+
+$state = State::find($id);
+$country = $state->country;
+```
+
+<a name="fetch-state-cities"></a>
+#### Fetch State Cities
+
+You can get a state's cities by using the `cities` has many relation present on the `Varbox\Models\State` model.
+
+```php
+use Varbox\Models\State;
+
+$state = State::find($id);
+$cities = $state->cities;
+```
+
+<a name="sort-states-alphabetically"></a>
+#### Sort States Alphabetically
+
+You can fetch states in alphabetical order by using the `alphabetically` query scope present on the `Varbox\Models\State` model.
+
+```php
+use Varbox\Models\State;
+
+$states = State::alphabetically()->get();
+```
+
+<a name="cities"></a>
+## Cities
+
+<a name="seeder-class"></a>
+#### Seeder Class
+
+The cities component provides a seeder class for seeding most known cities into your `cities` database table. 
+The seeder only works with an empty `cities` database table.
+
+If you've successfully installed the Varbox platform, you should find the `CitiesSeeder.php` file inside your `database/seeds` directory and the `cities.sql` file inside your `database/sql` directory.
+
+You can seed your cities, if you haven't done so yet, by using the following artisan command:
+
+```
+php artisan db:seed --class="CitiesSeeder"
+```
+
+<a name="get-city-country"></a>
+#### Get City Country
+
+You can get a city's country by using the `country` belongs to relation present on the `Varbox\Models\City` model.
+
+```php
+use Varbox\Models\City;
+
+$city = City::find($id);
+$country = $city->country;
+```
+
+<a name="get-city-state"></a>
+#### Get City State
+
+You can get a city's state by using the `state` belongs to relation present on the `Varbox\Models\City` model.
+
+```php
+use Varbox\Models\City;
+
+$city = City::find($id);
+$state = $city->state;
+```
+
+<a name="sort-cities-alphabetically"></a>
+#### Sort Cities Alphabetically
+
+You can fetch cities in alphabetical order by using the `alphabetically` query scope present on the `Varbox\Models\City` model.
+
+```php
+use Varbox\Models\City;
+
+$cities = City::alphabetically()->get();
+```
+
+<a name="overwrite-bindings"></a>
+## Overwrite Bindings
+
+In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
+[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+
+> For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
+
+<style>
+    span.overwrite-class {
+        display: block;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-weight: 600;
+        font-size: 14px;
+    }
+</style>
+
+<a name="country-bindings"></a>
+### Country Bindings
+
+The `country` classes available for binding overwrites are:
+
+<span class="overwrite-class">Varbox\Models\Country</span>
+
+Found in `config/varbox/bindings.php` at `models.country_model` key.   
+This class represents the country model.
+
+<span class="overwrite-class">Varbox\Controllers\CountriesController</span>
+
+Found in `config/varbox/bindings.php` at `controllers.countries_controller` key.   
+This class is used for interactions with the Admin -> Geo Location -> Countries.
+
+<span class="overwrite-class">Varbox\Requests\CountryRequest</span>
+
+Found in `config/varbox/bindings.php` at `form_requests.country_form_request` key.   
+This class is used for validating any country when updating.
+
+<a name="state-bindings"></a>
+### State Bindings
+
+The `state` classes available for binding overwrites are:
+
+<span class="overwrite-class">Varbox\Models\State</span>
+
+Found in `config/varbox/bindings.php` at `models.state_model` key.   
+This class represents the state model.
+
+<span class="overwrite-class">Varbox\Controllers\StatesController</span>
+
+Found in `config/varbox/bindings.php` at `controllers.states_controller` key.   
+This class is used for interactions with the Admin -> Geo Location -> States.
+
+<span class="overwrite-class">Varbox\Requests\StateRequest</span>
+
+Found in `config/varbox/bindings.php` at `form_requests.state_form_request` key.   
+This class is used for validating any state when creating or updating.
+
+<a name="city-bindings"></a>
+### City Bindings
+
+The `city` classes available for binding overwrites are:
+
+<span class="overwrite-class">Varbox\Models\City</span>
+
+Found in `config/varbox/bindings.php` at `models.city_model` key.   
+This class represents the city model.
+
+<span class="overwrite-class">Varbox\Controllers\CitiesController</span>
+
+Found in `config/varbox/bindings.php` at `controllers.cities_controller` key.   
+This class is used for interactions with the Admin -> Geo Location -> Cities.
+
+<span class="overwrite-class">Varbox\Requests\CityRequest</span>
+
+Found in `config/varbox/bindings.php` at `form_requests.city_form_request` key.   
+This class is used for validating any city when creating or updating.
