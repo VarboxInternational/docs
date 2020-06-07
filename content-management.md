@@ -26,9 +26,8 @@
     - [Customize Email Design](#customize-email-design)
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
-- [Full Example](#full-example)
 
-The content management module is a powerful tool that offers you the following features out of the box:
+The content management module is a powerful tool that offers you the these features out of the box:
 - create content pages on the fly to display your structured content
 - assign and order individual pieces of content in a page
 - customize your menus present in your layouts
@@ -42,7 +41,7 @@ Before going deeper, you should know that there's already a section in the admin
 <a name="pages-interface"></a>
 #### Pages Interface
 
-You can find the pages section inside [Admin -> Manage Content -> Pages](/docs/{{version}}/pages-interface).   
+You can find the pages section inside **Admin -> Manage Content -> Pages**.   
 Feel free to explore all available options this section offers.
 
 ![Pages List](/docs/{{version}}/pages-list.png)
@@ -50,7 +49,7 @@ Feel free to explore all available options this section offers.
 <a name="menus-interface"></a>
 #### Menus Interface
 
-You can find the menus section inside [Admin -> Manage Content -> Menus](/docs/{{version}}/menus-interface).   
+You can find the menus section inside **Admin -> Manage Content -> Menus**.   
 Feel free to explore all available options this section offers.
 
 ![Menus List](/docs/{{version}}/menus-list.png)
@@ -58,7 +57,7 @@ Feel free to explore all available options this section offers.
 <a name="blocks-interface"></a>
 #### Blocks Interface
 
-You can find the blocks section inside [Admin -> Manage Content -> Blocks](/docs/{{version}}/blocks-interface).   
+You can find the blocks section inside **Admin -> Manage Content -> Blocks**.   
 Feel free to explore all available options this section offers.
 
 ![Blocks List](/docs/{{version}}/blocks-list.png)
@@ -66,7 +65,7 @@ Feel free to explore all available options this section offers.
 <a name="emails-interface"></a>
 #### Emails Interface
 
-You can find the emails section inside [Admin -> Manage Content -> Emails](/docs/{{version}}/emails-interface).   
+You can find the emails section inside **Admin -> Manage Content -> Emails**.   
 Feel free to explore all available options this section offers.
 
 ![Emails List](/docs/{{version}}/emails-list.png)
@@ -113,7 +112,7 @@ First of all, let's understand the architecture behind content pages and their w
 <a name="the-pages-workflow"></a>
 #### The Workflow
 
-- Create a page from `Admin -> Manage Content -> Pages` and access its url
+- Create a page from "Admin -> Manage Content -> Pages" and access its url
 - The route will be dispatched to `App\Http\Controllers\PagesController@show`
 - Initially you'll get an error saying `pages.show` view doesn't exist
 - From here it's all up to you to create the view and display your details
@@ -304,8 +303,8 @@ First of all, let's understand the architecture behind dynamic menus and their w
 <a name="the-workflow"></a>
 #### The Workflow
 
-- Select a menu location from `Admin -> Manage Content -> Menus` 
-- Create a menu item from `Admin -> Manage Content -> Menus (Location)`
+- Select a menu location from "Admin -> Manage Content -> Menus" 
+- Create a menu item from "Admin -> Manage Content -> Menus (Location)"
 - Fetch your location menu items (eg. in a view composer)
 - Render the proper html looping through your menu items (eg. in your view)
 
@@ -313,7 +312,7 @@ First of all, let's understand the architecture behind dynamic menus and their w
 #### Menu Locations
 
 Menu locations represent sections from your actual frontend layout where menu items can exist.   
-By default, the [VarBox](/) platform exposes two menu locations: `header` and `footer`
+By default, the Varbox platform exposes two menu locations: `header` and `footer`
 
 If you want to customize this, you can do so by modifying the `config/varbox/menus.php` config file, specifically the `locations` section.
 
@@ -915,7 +914,7 @@ Regards, [company] team
 <a name="send-a-custom-email"></a>
 ### Send A Custom Email
 
-Given that these custom emails the [VarBox](/) platform provides finally extend the Laravel's `Illuminate\Mail\Mailable` class, you can send these emails like you always did inside a Laravel application.
+Given that these custom emails the Varbox platform provides finally extend the Laravel's `Illuminate\Mail\Mailable` class, you can send these emails like you always did inside a Laravel application.
 
 ```php
 use App\Mail\YourMail;
@@ -957,40 +956,41 @@ The emails configuration file is located at `config/varbox/emails.php`.
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
 <a name="page-bindings"></a>
 ### Page Bindings
 
-The `page` classes available for binding overwrites are:
+The page classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Page</span>
+<p class="overwrite-class">Varbox\Models\Page</p>
 
 Found in `config/varbox/bindings.php` at `models.page_model` key.   
 This class represents the page model.
 
-<span class="overwrite-class">Varbox\Controllers\PagesController</span>
+<p class="overwrite-class">Varbox\Controllers\PagesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_controller` key.   
-This class is used for interactions with the Admin -> Manage Content -> Pages section.
+This class is used for interactions with the "Admin -> Manage Content -> Pages" section.
 
-<span class="overwrite-class">Varbox\Controllers\PagesTreeController</span>
+<p class="overwrite-class">Varbox\Controllers\PagesTreeController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.pages_tree_controller` key.   
-Used for interactions with the pages tree from the Admin -> Manage Content -> Pages section.
+Used for interactions with the pages tree from the "Admin -> Manage Content -> Pages" section.
 
-<span class="overwrite-class">Varbox\Requests\PageRequest</span>
+<p class="overwrite-class">Varbox\Requests\PageRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.page_form_request` key.   
 This class is used for validating any page when creating or updating.
@@ -998,24 +998,24 @@ This class is used for validating any page when creating or updating.
 <a name="menu-bindings"></a>
 ### Menu Bindings
 
-The `menu` classes available for binding overwrites are:
+The menu classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Menu</span>
+<p class="overwrite-class">Varbox\Models\Menu</p>
 
 Found in `config/varbox/bindings.php` at `models.menu_model` key.   
 This class represents the menu model.
 
-<span class="overwrite-class">Varbox\Controllers\MenusController</span>
+<p class="overwrite-class">Varbox\Controllers\MenusController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.menus_controller` key.   
-This class is used for interactions with the Admin -> Manage Content -> Menus section.
+This class is used for interactions with the "Admin -> Manage Content -> Menus" section.
 
-<span class="overwrite-class">Varbox\Controllers\MenusTreeController</span>
+<p class="overwrite-class">Varbox\Controllers\MenusTreeController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.menus_tree_controller` key.   
-Used for interactions with the menus tree from the Admin -> Manage Content -> Menus section.
+Used for interactions with the menus tree from the "Admin -> Manage Content -> Menus" section.
 
-<span class="overwrite-class">Varbox\Requests\MenuRequest</span>
+<p class="overwrite-class">Varbox\Requests\MenuRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.menu_form_request` key.   
 This class is used for validating any menu when creating or updating.
@@ -1024,19 +1024,19 @@ This class is used for validating any menu when creating or updating.
 <a name="block-bindings"></a>
 ### Block Bindings
 
-The `block` classes available for binding overwrites are:
+The block classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Block</span>
+<p class="overwrite-class">Varbox\Models\Block</p>
 
 Found in `config/varbox/bindings.php` at `models.block_model` key.   
 This class represents the block model.
 
-<span class="overwrite-class">Varbox\Controllers\BlocksController</span>
+<p class="overwrite-class">Varbox\Controllers\BlocksController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.blocks_controller` key.   
-This class is used for interactions with the Admin -> Manage Content -> Pages section.
+This class is used for interactions with the "Admin -> Manage Content -> Pages" section.
 
-<span class="overwrite-class">Varbox\Requests\BlockRequest</span>
+<p class="overwrite-class">Varbox\Requests\BlockRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.block_form_request` key.   
 This class is used for validating any block when creating or updating.
@@ -1045,24 +1045,19 @@ This class is used for validating any block when creating or updating.
 <a name="email-bindings"></a>
 ### Email Bindings
 
-The `email` classes available for binding overwrites are:
+The email classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Email</span>
+<p class="overwrite-class">Varbox\Models\Email</p>
 
 Found in `config/varbox/bindings.php` at `models.email_model` key.   
 This class represents the email model.
 
-<span class="overwrite-class">Varbox\Controllers\EmailsController</span>
+<p class="overwrite-class">Varbox\Controllers\EmailsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.emails_controller` key.   
-This class is used for interactions with the Admin -> Manage Content -> Emails section.
+This class is used for interactions with the "Admin -> Manage Content -> Emails" section.
 
-<span class="overwrite-class">Varbox\Requests\EmailRequest</span>
+<p class="overwrite-class">Varbox\Requests\EmailRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.email_form_request` key.   
 This class is used for validating any email when creating or updating.
-
-<a name="full-example"></a>
-## Full Example
-
-For an example on how to setup a page supporting menus and blocks, please follow this [Full Example](/docs/{{version}}/page-with-blocks-example)

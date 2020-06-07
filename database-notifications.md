@@ -16,7 +16,7 @@ Easily manage [Laravel Database Notifications](https://laravel.com/docs/7.x/noti
 
 Before going deeper, you should know that there's already a section in the admin from where you can manage all your users' notifications.
 
-You can find the notifications section inside "Admin -> Access Control -> Notifications"   
+You can find the notifications section inside **Admin -> Access Control -> Notifications**.   
 Feel free to explore all available options this section offers.
 
 ![Notifications List](/docs/{{version}}/notifications-list.png)
@@ -103,28 +103,26 @@ For more information on how you can customize the functionality, read the commen
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
-
-The `notification` classes available for binding overwrites are:
-
-<span class="overwrite-class">Varbox\Controllers\NotificationsController</span>
+<p class="overwrite-class">Varbox\Controllers\NotificationsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.notifications_controller` key.   
-This class is used for interactions with the Admin -> Access Control -> Notifications section.
+This class is used for interactions with the "Admin -> Access Control -> Notifications" section.
 
-<span class="overwrite-class">Varbox\Composers\NotificationsComposer</span>
+<p class="overwrite-class">Varbox\Composers\NotificationsComposer</p>
 
 Found in `config/varbox/bindings.php` at `view_composers.notifications_view_composer` key.   
 The view composer for the notification icon in the header.

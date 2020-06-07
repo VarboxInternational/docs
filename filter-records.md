@@ -7,6 +7,7 @@
     - [The `morph` Method](#the-morph-method)
     - [The `modifiers` Method](#the-modifiers-method)
 - [Available Filter Operators](#available-filter-operators)
+- [Implementation Example](#implementation-example)
 
 This functionality allows you to filter eloquent model records by defining filter rules, similar to how Laravel's form request rules work.   
 
@@ -128,13 +129,12 @@ public function filters()
 
 Up until this point you've learned how to implement the filtering functionality on your models, but you might still have some questions about how the filter class actually works and what it should contain.
 
-The filter class is used to define the filtering logic on which the `filtered` scope will function.
+The filter class is used to define the filtering logic on which the `filtered` query scope will function.
 
 <a name="the-filters-method"></a>
 #### The `filters` Method
 
-This method is used to define your actual filtering rules, that will later on be passed to the `filtered` query scope.
-
+This method is used to define your actual filtering rules, that will later on be passed to the `filtered` query scope. 
 This method should always return an array of this format:
 
 ```php
@@ -156,7 +156,7 @@ The `{query_field}` should be replaced with the name of your actual query field 
 For this url: `/search?keyword=test&status=1` you should replace `{query_field}` with either `keyword` or `status`. 
 
 The `operator` defines the way filtering should be done for the respective query field.   
-You can choose from a variety of filter operators listed [here](#available-operators).
+You can choose from a variety of filter operators listed [here](#available-filter-operators).
 
 The `condition` applies only if you specify multiple columns for a query field.   
 It defines how filtering between the columns should behave.   
@@ -218,9 +218,7 @@ public function modifiers()
 <a name="available-filter-operators"></a>
 ## Available Filter Operators
 
-The `Varbox\Filters\Filter` class exposes a few filter `operators` that you can use inside your `filters()` method in order to define the filter behavior for certain query string fields.
-
-Depending on what condition you use, the underlying generated `where` for that field, inside the `filtered` query scope will change.
+The `Varbox\Filters\Filter` class exposes a few filter operators that you can use inside your `filters()` method in order to define the filter behavior for certain query string fields.
 
 <style>
     #available-filter-operators-list > p {
@@ -261,5 +259,12 @@ Depending on what condition you use, the underlying generated `where` for that f
 <span class="list-item">Filter::<span style="color: #4AAEE3">OPERATOR_DATE_GREATER_OR_EQUAL</span></span>
 
 </div>
+
+<a name="implementation-example"></a>
+## Implementation Example
+
+For an implementation example of this functionality please refer to the [Full Example](/docs/{{version}}/full-example#filter-records) page.
+
+
 
 

@@ -1,12 +1,12 @@
 # Admin Crud
 
 - [Usage](#usage)
-    - [The `_index` Method](#the-_index-method)
-    - [The `_create` Method](#the-_create-method)
-    - [The `_store` Method](#the-_store-method)
-    - [The `_edit` Method](#the-_edit-method)
-    - [The `_update` Method](#the-_update-method)
-    - [The `_destroy` Method](#the-_destroy-method)
+    - [The Index Method](#the-index-method)
+    - [The Create Method](#the-create-method)
+    - [The Store Method](#the-store-method)
+    - [The Edit Method](#the-edit-method)
+    - [The Update Method](#the-update-method)
+    - [The Destroy Method](#the-destroy-method)
 - [Customizations](#customizations)
     - [Create Success Message](#create-success-message)
     - [Update Success Message](#update-success-message)
@@ -14,9 +14,9 @@
     - [Record Not Found Message](#record-not-found-message)
     - [Use Database Transactions](#use-database-transactions)
 - [Configuration](#configuration)
-- [Full Example](#full-example)
+- [Implementation Example](#implementation-example)
 
-This functionality allows you to easily setup `crud` systems for your entities.   
+This functionality allows you to easily setup a system for creating / reading / updating / deleting for your entities.   
 
 <a name="usage"></a>
 ## Usage
@@ -44,8 +44,8 @@ These methods are `callable`, meaning the code inside them will be executed by t
 
 > **Why should you use these methods?**   
 >   
-> Using these methods will take of your hands a lot of the boilerplate such as:
-> - verifying the appropriate HTTP verb for each route
+> Using these methods will take of your hands a lot of boilerplate such as:
+> - verifying the appropriate HTTP verb for each request
 > - encapsulating your logic in database transactions
 > - displaying the proper success or error message
 > - setting the page title and meta title
@@ -53,10 +53,10 @@ These methods are `callable`, meaning the code inside them will be executed by t
 >   
 > Without having to worry about all these stuff, your methods will only contain the bare minimum of code needed for achieving one of the crud operations.
 
-<a name="the-_index-method"></a>
-#### The `_index` Method
+<a name="the-index-method"></a>
+#### The Index Method
 
-This method is meant to be used inside your `index()` method on your controller.   
+The `_index()` method is meant to be used inside your `index()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -77,7 +77,7 @@ public function index()
 }
 ```
 
-As you can see, inside the `_index()` method we've instantiated four properties.   
+As you can see, inside the `_index()` method we've initialized four properties:   
 
 - **items** (mandatory)
     - should contain your model records. (paginated, filtered or sorted)
@@ -88,10 +88,10 @@ As you can see, inside the `_index()` method we've instantiated four properties.
 - **vars** (optional)
     - any additional view variables that you might want available in your blade view
 
-<a name="the-_create-method"></a>
-#### The `_create` Method
+<a name="the-create-method"></a>
+#### The Create Method
 
-This method is meant to be used inside your `create()` method on your controller.   
+The `_create()` method is meant to be used inside your `create()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -109,7 +109,7 @@ public function create()
 }
 ```
 
-As you can see, inside the `_create()` method we've instantiated three properties.   
+As you can see, inside the `_create()` method we've initialized three properties:   
 
 - **title** (mandatory)
     - string representing your page title and meta title
@@ -118,10 +118,10 @@ As you can see, inside the `_create()` method we've instantiated three propertie
 - **vars** (optional)
     - any additional view variables that you might want available in your blade view
     
-<a name="the-_store-method"></a>
-#### The `_store` Method
+<a name="the-store-method"></a>
+#### The Store Method
 
-This method is meant to be used inside your `store()` method on your controller.   
+The `_store` method is meant to be used inside your `store()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -143,17 +143,17 @@ public function store(YourRequest $request)
 }
 ```
 
-As you can see, inside the `_store()` method we've instantiated two properties.   
+As you can see, inside the `_store()` method we've initialized two properties:   
 
 - **item** (optional)
     - your loaded model instance
 - **redirect** (mandatory)
     - the redirect you want to use for your corresponding route
     
-<a name="the-_edit-method"></a>
-#### The `_edit` Method
+<a name="the-edit-method"></a>
+#### The Edit Method
 
-This method is meant to be used inside your `edit()` method on your controller.   
+The `_edit` method is meant to be used inside your `edit()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -173,7 +173,7 @@ public function edit(YourModel $model)
 }
 ```
 
-As you can see, inside the `_edit()` method we've instantiated four properties.     
+As you can see, inside the `_edit()` method we've initialized four properties:     
 
 - **item** (mandatory)
     - your loaded model instance also available in your view via the `$item` variable
@@ -184,10 +184,10 @@ As you can see, inside the `_edit()` method we've instantiated four properties.
 - **vars** (optional)
     - any additional view variables that you might want available in your blade view
     
-<a name="the-_update-method"></a>
-#### The `_update` Method
+<a name="the-update-method"></a>
+#### The Update Method
 
-This method is meant to be used inside your `update()` method on your controller.   
+The `_update` method is meant to be used inside your `update()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -212,17 +212,17 @@ public function update(YourRequest $request, YourModel $model)
 }
 ```
 
-As you can see, inside the `_update()` method we've instantiated two properties.   
+As you can see, inside the `_update()` method we've initialized two properties:   
 
 - **item** (optional)
     - your loaded model instance
 - **redirect** (mandatory)
     - the redirect you want to use for your corresponding route
     
-<a name="the-_destroy-method"></a>
-#### The `_destroy` Method
+<a name="the-destroy-method"></a>
+#### The Destroy Method
 
-This method is meant to be used inside your `destroy()` method on your controller.   
+The `_destroy` method is meant to be used inside your `destroy()` method on your controller.   
 Apart from what's displayed below, you can always add your own additional logic.
 
 ```php
@@ -242,7 +242,7 @@ public function destroy(YourModel $model)
 }
 ```
 
-As you can see, inside the `_destroy()` method we've instantiated two properties.   
+As you can see, inside the `_destroy()` method we've initialized two properties:   
 
 - **item** (optional)
     - your loaded model instance
@@ -325,7 +325,7 @@ protected function recordNotFoundMessage()
 <a name="use-database-transactions"></a>
 #### Use Database Transactions
 
-You can specify if you want to use database transactions by overriding the `shouldUseTransactions()` method in your controller.
+You can specify if you want to use database transactions by using the `shouldUseTransactions()` method in your controller.
 
 ```php
 /**
@@ -342,11 +342,11 @@ protected function shouldUseTransactions()
 <a name="configuration"></a>
 ## Configuration
 
-The crud configuration file is located at `config/varbox/crud.php`.
+The configuration file is located at `config/varbox/crud.php`.
 
-For more information on how you can customize the crud functionality, please read the comments from that file.
+> For more information on how you can customize the crud functionality, please read the comments from that file.
 
-<a name="full-example"></a>
-## Full Example
+<a name="implementation-example"></a>
+## Implementation Example
 
-For an example that combines every functionality into an admin crud, please follow this [Full Example](/docs/{{version}}/full-admin-crud-example)
+For an implementation example of this functionality please refer to the [Full Example](/docs/{{version}}/full-example#basic-crud) page.

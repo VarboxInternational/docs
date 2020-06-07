@@ -1,7 +1,6 @@
 # Installation
 
-- [Download Platform](#download-platform)
-- [Setup Composer](#setup-composer)
+- [Download & Setup](#download-and-setup)
 - [Automatic Installation](#automatic-installation)
 - [Manual Installation](#manual-installation)
     - [Publish Vendor Files](#publish-vendor-files)
@@ -19,21 +18,17 @@
     
 > In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> application and a database created and configured in your `.env` file.
 
-<a name="download-platform"></a>
-## Download Platform
+<a name="download-and-setup"></a>
+## Download & Setup
 
-Once you have purchased a Varbox license, you may download a Varbox release from the [downloads](/downloads) section of the Varbox website.
+Once you have purchased a Varbox license, you may download a Varbox release from the [Downloads](/downloads) section of the Varbox website.
 
-<a name="setup-composer"></a>
-## Setup Composer
- 
-After downloading a Zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file.
-
+After downloading a zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file. 
 Unzip the contents of the Varbox release into a `varbox` directory within your application's root directory. 
 
 > **Hidden Files**
 > 
-> When unzipping Varbox into your application's `varbox` directory, make sure all of Varbox's "hidden" files (such as `.gitignore`) are included.
+> When unzipping Varbox into your application's `varbox` directory, please make sure all of Varbox's "hidden" files (such as `.gitignore`) are included.
 
 Once you have unzipped and placed the Varbox source code within the appropriate directory, you are ready to update your `composer.json` file. 
 You should add the following configuration to the file:
@@ -57,7 +52,7 @@ Next, add `varbox/varbox` to the `require` section of your `composer.json` file:
 },
 ```
 
-After your `composer.json` file has been updated, run the following command in your console terminal:
+After you've updated your `composer.json` file, run the following command in your terminal:
 
 ```
 composer update
@@ -83,7 +78,8 @@ Migrate your database with the newly created Varbox migration file:
 php artisan migrate
 ```
 
-Seed your database with Varbox specific data. For an overview of what data is seeded, take a look inside your `database/seeds/VarboxSeeder.php` file.
+Seed your database with Varbox specific data.    
+For an overview of what data is seeded, take a look inside `database/seeds/VarboxSeeder.php`
 
 ```
 php artisan db:seed --class="VarboxSeeder"
@@ -97,9 +93,9 @@ Use `admin@mail.com / admin` to authenticate.
 <a name="manual-installation"></a>
 ## Manual Installation
 
-If for some reason you don't want to automatically install the [VarBox](/) platform, you can do so manually, by following the below steps.
+If for some reason you don't want to automatically install the Varbox platform, you can do so manually, by following the steps below.
 
-The following steps also provides useful insight on what the `varbox:install` artisan command actually does. 
+> The following steps also provide useful insight on what the `varbox:install` command does. 
 
 <a name="publish-vendor-files"></a>
 #### Publish Vendor Files
@@ -121,7 +117,6 @@ Append the following to your `.env` file:
 ```
 CACHE_ALL_QUERIES=false
 CACHE_DUPLICATE_QUERIES=false
-
 LOG_ACTIVITY=false
 OVERWRITE_CONFIGS=false
 SAVE_ERRORS=false
@@ -134,7 +129,7 @@ In your `routes/web.php` file, at the very bottom, add the following:
 
 ```
 // this should be the last line
-Route::url();
+Route::varbox();
 ```
 
 <a name="update-configurations"></a>
@@ -165,16 +160,19 @@ In your `config/filesystems.php` config file add the following to the `disks` se
         'url' => env('APP_URL').'/uploads',
         'visibility' => 'public',
     ],
-    'backups' => [
-        'driver' => 'local',
-        'root' => storage_path('backups'),
-    ],
+
     'wysiwyg' => [
         'driver' => 'local',
         'root' => storage_path('wysiwyg'),
         'url' => env('APP_URL').'/wysiwyg',
         'visibility' => 'public',
     ],
+
+    'backups' => [
+        'driver' => 'local',
+        'root' => storage_path('backups'),
+    ],
+    
 ],
 ```
 
@@ -222,7 +220,7 @@ class Handler extends VarboxExceptionHandler {
 <a name="copy-sql-files"></a>
 #### Copy SQL Files
 
-Copy all sql files from inside the `varbox/database/sql;` directory into your own `database/sql` directory.
+Copy all sql files from inside the `varbox/database/sql` directory into your `database/sql` directory.
 
 ```
 cp varbox/database/sql/countries.sql database/sql/countries.sql
@@ -234,7 +232,7 @@ cp varbox/database/sql/cities.sql database/sql/cities.sql
 #### Copy Seeder Classes
 
 Copy all seeder classes from inside the `varbox/database/seeds` directory into your own `database/seeds` directory.
-Also, don't forget to change the files' extension from `stub` to `php`.
+Also, don't forget to change the files' extensions from `stub` to `php`.
 
 ```
 cp varbox/database/seeds/PermissionsSeeder.stub database/seeds/PermissionsSeeder.php
@@ -249,7 +247,7 @@ cp varbox/database/seeds/CitiesSeeder.stub database/seeds/CitiesSeeder.php
 <a name="migrate-database"></a>
 #### Migrate Database
 
-Create the necessary database tables for the [VarBox](/) platform to work properly.
+Create the necessary database tables for the Varbox platform to work properly.
 
 ```
 php artisan migrate
@@ -258,7 +256,7 @@ php artisan migrate
 <a name="seed-database"></a>
 #### Seed Database
 
-Populate the database with necessary data for the [VarBox](/) platform to work properly.
+Populate the database with necessary data for the Varbox platform to work properly.
 
 ```
 composer dump-autoload
@@ -266,8 +264,10 @@ composer dump-autoload
 php artisan db:seed --class="PermissionsSeeder"
 php artisan db:seed --class="RolesSeeder"
 php artisan db:seed --class="UsersSeeder"
-php artisan db:seed --class="CountriesSeeder"
 php artisan db:seed --class="LanguagesSeeder"
+php artisan db:seed --class="CountriesSeeder"
+php artisan db:seed --class="StatesSeeder"
+php artisan db:seed --class="CitiesSeeder"
 ```
 
 <a name="symlink-directories"></a>
@@ -284,6 +284,11 @@ php artisan varbox:wysiwyg-link
 #### Create New Files
 
 In your `storage` directory create a new folder called `uploads`.   
+
+```
+mkdir storage/uploads
+```
+
 In your `storage/uploads` directory create a new file called `.gitignore` containing the following:
 
 ```
@@ -291,20 +296,30 @@ In your `storage/uploads` directory create a new file called `.gitignore` contai
 ```
 
 In your `storage` directory create a new folder called `backups`.   
+
+```
+mkdir storage/backups
+```
+
 In your `storage/backups` directory create a new file called `.gitignore` containing the following:
 
 ```
 !.gitignore
 ```
 
-In your `storage` directory create a new folder called `wysiwyg`.   
+In your `storage` directory create a new folder called `wysiwyg`. 
+
+```
+mkdir storage/wysiwyg
+```
+  
 In your `storage/wysiwyg` directory create a new file called `.gitignore` containing the following:
 
 ```
 !.gitignore
 ```
 
-In your `app/Http/Controllers` directory create a new file called `PagesController.php` containing the following:
+In your `app/Http/Controllers` directory create a new file called `PagesController.php` containing:
 
 ```php
 <?php
@@ -347,7 +362,7 @@ class PagesController extends Controller
 
 ```
 
-In your `app/Http/Composers` directory create a new file called `AdminMenuComposer.php` containing the following:
+In your `app/Http/Composers` directory create a new file called `AdminMenuComposer.php` containing:
 
 ```php
 <?php
@@ -544,7 +559,7 @@ class AdminMenuComposer
 <a name="overwrite-bindings"></a>
 #### Overwrite Bindings
 
-Inside your `config/varbox/bindings.php` config file, change the `user_model` value to the `\App\User::class`
+Inside your `config/varbox/bindings.php` file, change the `user_model` value to `\App\User::class`
 
 ```php
 /*
@@ -572,7 +587,7 @@ Inside your `config/varbox/bindings.php` config file, change the `user_model` va
     'user_model' => \App\User::class,
 ```
 
-Inside your `config/varbox/bindings.php` config file, change the `admin_menu_view_composer` value to the `\App\Http\Composers\AdminMenuComposer::class`
+Inside your `config/varbox/bindings.php` file, change the `admin_menu_view_composer` value to `\App\Http\Composers\AdminMenuComposer::class`
 
 ```php
 /*

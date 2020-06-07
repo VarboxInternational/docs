@@ -3,6 +3,7 @@
 - [Usage](#usage)
     - [Sort By Relation](#sort-by-relation)
     - [Change Sorting Parameters](#change-sorting-parameters)
+- [Implementation Example](#implementation-example)
 
 This functionality allows you to sort eloquent model records.      
 
@@ -111,3 +112,8 @@ For the example above, your URI should look like this:
 ```
 /some-list?field-to-sort-by=name&direction-to-sort-in=asc
 ```
+
+<a name="implementation-example"></a>
+## Implementation Example
+
+For an implementation example of this functionality please refer to the [Full Example](/docs/{{version}}/full-example#sort-records) page.

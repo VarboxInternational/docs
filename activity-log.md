@@ -18,9 +18,9 @@ Log activity and correlate it to users for any Eloquent model record.
 <a name="admin-interface"></a>
 ## Admin Interface
 
-Before you learn about logging activity inside a [VarBox](/) application, you should know that there's already a section in the admin from where you can manage all your activity logs.
+Before you learn about logging activity inside a Varbox application, you should know that there's already a section in the admin from where you can manage all your activity logs.
 
-You can find the activity log section inside [Admin -> Access Control -> Activity](/docs/{{version}}/activity-interface).   
+You can find the activity log section inside **Admin -> Access Control -> Activity**.   
 Feel free to explore all available options this section offers.
 
 ![Activity List](/docs/{{version}}/activity-list.png)
@@ -28,8 +28,7 @@ Feel free to explore all available options this section offers.
 <a name="usage"></a>
 ## Usage
 
-Your models should use the `Varbox\Traits\HasActivity` trait and the `Varbox\Options\ActivityOptions` class.   
-
+Your models should use the `Varbox\Traits\HasActivity` trait and the `Varbox\Options\ActivityOptions` class. 
 The trait contains an abstract method `getActivityOptions()` that you must implement yourself.   
 
 Here's an example of how to implement the trait:
@@ -234,27 +233,26 @@ For more information on how you can customize the activity log functionality, pl
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
-The `activity log` classes available for binding overwrites are:
-
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
-<span class="overwrite-class">Varbox\Models\Activity</span>
+<p class="overwrite-class">Varbox\Models\Activity</p>
 
 Found in `config/varbox/bindings.php` at `models.activity_model` key.   
 This class represents the activity log model.
 
-<span class="overwrite-class">Varbox\Controllers\ActivityController</span>
+<p class="overwrite-class">Varbox\Controllers\ActivityController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.activity_controller` key.   
-This class is used for interactions with the Admin -> Access Control -> Activity section.
+This class is used for interactions with the "Admin -> Access Control -> Activity" section.

@@ -6,7 +6,7 @@
     - [Make Model Translatable](#make-model-translatable)
     - [Save Translated Values](#save-translated-values)
     - [Display Translated Values](#display-translated-values)
-    - [Crud Implementation](#crud-implementation)
+    - [Admin Implementation](#admin-implementation)
     - [Useful Translation Methods](#useful-translation-methods)
 - [Static Translations](#static-translations)
     - [How Static Translations Work](#how-static-translations-work)
@@ -18,7 +18,6 @@
     - [The Language Model](#the-language-model)
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
-- [Full Example](#full-example)
 
 The multi language module is a powerful tool that offers you the following features out of the box:
 - manage your static translations by importing & exporting them
@@ -34,7 +33,7 @@ Before going deeper, you should know that there's already a section in the admin
 <a name="translations-interface"></a>
 #### Translations Interface
 
-You can find the translations section inside [Admin -> Manage Content -> Translations](/docs/{{version}}/translations-interface).   
+You can find the translations section inside **Admin -> Multi Language -> Translations**.   
 Feel free to explore all available options this section offers.
 
 ![Translations List](/docs/{{version}}/translations-list.png)
@@ -42,7 +41,7 @@ Feel free to explore all available options this section offers.
 <a name="languages-interface"></a>
 #### Languages Interface
 
-You can find the languages section inside [Admin -> Manage Content -> Languages](/docs/{{version}}/languages-interface).   
+You can find the languages section inside **Admin -> Multi Language -> Languages**.   
 Feel free to explore all available options this section offers.
 
 ![Languages List](/docs/{{version}}/languages-list.png)
@@ -81,8 +80,8 @@ You can also enable auto locale detection based on your browser's preferred lang
 You can make your eloquent models translatable.  
 Translations are stored in a json column, so there's no extra table needed.
 
-> No model that comes with the [Varbox](/) platform is translatable by default.    
-> If you want to make a [Varbox](/) model translatable, you should extend the original model and create a new migration in order to change you translatable columns type to json.
+> No model that comes with the Varbox platform is translatable by default.    
+> If you want to make a Varbox model translatable, you should extend the original model and create a new migration in order to change you translatable columns type to json.
 
 <a name="make-model-translatable"></a>
 ### Make Model Translatable
@@ -243,8 +242,8 @@ Just access the fields as you'd normally would and the `HasTranslations` trait w
 {!! $model->content['description'] !!}
 ```
 
-<a name="crud-implementation"></a>
-### Crud Implementation
+<a name="admin-implementation"></a>
+### Admin Implementation
 
 Now that you've enabled the translatable functionality on your models, it's time to learn how we can save your translatable fields in multiple languages.
 
@@ -296,8 +295,7 @@ To instruct your translatable form fields to support multi language format, use 
 {!! form_admin()->close() !!}
 ```
 
-That's it!   
-Now you can manage your dynamic translations for your model records directly from the admin.
+**That's it!** Now you can manage your dynamic translations for your records directly from the admin.
 
 <a name="useful-translation-methods"></a>
 ### Useful Translation Methods
@@ -397,16 +395,16 @@ First of all, let's understand the architecture behind static & dynamic translat
 #### The Workflow
 
 - Assuming you have static translations inside the `resources/lang` directory
-- Import all translations from `Admin -> Multi Language -> Translations`
+- Import all translations from "Admin -> Multi Language -> Translations"
 - Edit the translations for which wish to update their values and then save
-- Export the translations from `Admin -> Multi Language -> Translations` 
+- Export the translations from "Admin -> Multi Language -> Translations" 
 - Now your translations inside the `resources/lang` directory contain the updated values
 - Keep using your static translations as you'd normally would in a Laravel application
 
 <a name="modify-static-translations"></a>
 ### Modify Static Translations
 
-From inside the `Admin -> Multi Language -> Translations` you have the possibility to dynamically modify your static translations' values. 
+From inside the "Admin -> Multi Language -> Translations" you have the possibility to dynamically modify your static translations' values. 
 This is achievable, by first `importing` your static translations, modifying them from the admin and then `exporting` them. 
 
 At the end of this 3-step procedure, your static translations inside the `resources/lang` directory, will have the updated values, so you can use them as you'd normally would in a Laravel app.
@@ -455,7 +453,7 @@ $translations = Translation::withoutGroup()->get();
 <a name="languages"></a>
 ## Languages
 
-The [Varbox](/) platform also puts at your disposal the `Admin -> Multi Language -> Languages` section from where you can manage the languages for your application.
+The Varbox platform also puts at your disposal the "Admin -> Multi Language -> Languages" section from where you can manage the languages for your application.
 
 > As a bonus, 135 languages are already seeded for you when installing the platform.
 
@@ -534,40 +532,41 @@ The translations configuration file is located at `config/varbox/translation.php
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
 <a name="translation-bindings"></a>
 ### Translation Bindings
 
-The `translation` classes available for binding overwrites are:
+The translation classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Services\TranslationService</span>
+<p class="overwrite-class">Varbox\Services\TranslationService</p>
 
 Found in `config/varbox/bindings.php` at `services.translation_service` key.   
 This class is responsible for importing and exporting static translations.
 
-<span class="overwrite-class">Varbox\Models\Translation</span>
+<p class="overwrite-class">Varbox\Models\Translation</p>
 
 Found in `config/varbox/bindings.php` at `models.translation_model` key.   
 This class represents the translation model.
 
-<span class="overwrite-class">Varbox\Controllers\TranslationsController</span>
+<p class="overwrite-class">Varbox\Controllers\TranslationsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.translations_controller` key.   
-This class is used for interactions with the Admin -> Multi Language -> Translations.
+This class is used for interactions with the "Admin -> Multi Language -> Translations".
 
-<span class="overwrite-class">Varbox\Requests\TranslationRequest</span>
+<p class="overwrite-class">Varbox\Requests\TranslationRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.translation_form_request` key.   
 This class is used for validating any translation when updating.
@@ -575,29 +574,24 @@ This class is used for validating any translation when updating.
 <a name="language-bindings"></a>
 ### Language Bindings
 
-The `language` classes available for binding overwrites are:
+The language classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Language</span>
+<p class="overwrite-class">Varbox\Models\Language</p>
 
 Found in `config/varbox/bindings.php` at `models.language_model` key.   
 This class represents the language model.
 
-<span class="overwrite-class">Varbox\Controllers\LanguagesController</span>
+<p class="overwrite-class">Varbox\Controllers\LanguagesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.languages_controller` key.   
-This class is used for interactions with the Admin -> Multi Language -> Languages.
+This class is used for interactions with the "Admin -> Multi Language -> Languages".
 
-<span class="overwrite-class">Varbox\Requests\LanguageRequest</span>
+<p class="overwrite-class">Varbox\Requests\LanguageRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.language_form_request` key.   
 This class is used for validating any translation when creating or updating.
 
-<span class="overwrite-class">Varbox\Composers\LanguagesComposer</span>
+<p class="overwrite-class">Varbox\Composers\LanguagesComposer</p>
 
 Found in `config/varbox/bindings.php` at `view_composers.languages_view_composer` key.   
 The view composer for the language switcher in the header.
-
-<a name="full-example"></a>
-## Full Example
-
-For an example on how to add translatable fields to your entities, please follow this [Full Example](/docs/{{version}}/translatable-model-example).

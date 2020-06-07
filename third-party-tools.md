@@ -1,4 +1,6 @@
-# Third Party Tools
+# Third-Party Tools
+
+<br />
 
 The platform uses the following third-party composer packages:
 
@@ -8,5 +10,5 @@ The platform uses the following third-party composer packages:
 - [spatie/laravel-backup](https://packagist.org/packages/spatie/laravel-backup)
 
 The admin panel was designed using the [Tabler](https://tabler.io/) template with:
-- [bootstrap](https://getbootstrap.com/) 
-- [jquery](https://jquery.com/) 
+- [Bootstrap](https://getbootstrap.com/) 
+- [jQuery](https://jquery.com/) 

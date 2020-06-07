@@ -18,7 +18,7 @@
     - [Filter Addresses By City](#filter-addresses-by-city)
 - [Overwrite Bindings](#overwrite-bindings)
 
-Manage your users & admins directly from the [Varbox](/) admin panel, with no extra setup.
+Manage your users & admins directly from the Varbox admin panel, with no extra setup.
 
 <a name="admin-interface"></a>
 ## Admin Interface
@@ -28,7 +28,7 @@ Before going deeper, you should know that there's already a section in the admin
 <a name="users-interface"></a>
 #### Users Interface
 
-You can find the users section inside [Admin -> Access Control -> Users](/docs/{{version}}/users-interface).   
+You can find the users section inside **Admin -> Access Control -> Users**.   
 Feel free to explore all available options this section offers.
 
 ![Users List](/docs/{{version}}/users-list.png)
@@ -36,7 +36,7 @@ Feel free to explore all available options this section offers.
 <a name="admins-interface"></a>
 #### Admins Interface
 
-You can find the admins section inside [Admin -> Access Control -> Admins](/docs/{{version}}/admins-interface).   
+You can find the admins section inside **Admin -> Access Control -> Admins**.   
 Feel free to explore all available options this section offers.
 
 ![Admins List](/docs/{{version}}/admins-list.png)
@@ -44,7 +44,7 @@ Feel free to explore all available options this section offers.
 <a name="addresses-interface"></a>
 #### Addresses Interface
 
-You can find the addresses section inside [Admin -> Access Control -> Addresses](/docs/{{version}}/addresses-interface).   
+You can find the addresses section inside **Admin -> Access Control -> Users -> Addresses**.   
 Feel free to explore all available options this section offers.
 
 ![Addresses List](/docs/{{version}}/addresses-list.png)
@@ -52,9 +52,32 @@ Feel free to explore all available options this section offers.
 <a name="users-and-admins"></a>
 ## Users & Admins
 
-The `App\User` model now extends the `Varbox\Models\User` class, for extra functionalities.
+The users & admins component is a powerful access control functionality that allows you to quickly manage your users for your application.
 
-> The `App\User` model is also bound to the `user_model` key inside `config/varbox/bindings.php`
+In order to provide you with complex crud functionalities inside the admin, the users & admins cruds implement the following out of the box:
+
+<style>
+    #available-filter-operators-list > p {
+        column-count: 4; -moz-column-count: 4; -webkit-column-count: 4;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #available-filter-operators-list a {
+        display: block;
+        color: #4AAEE3;
+    }
+</style>
+<div id="available-filter-operators-list" markdown="1">
+
+[Filter Records](/docs/{{version}}/filter-records)
+[Sort Records](/docs/{{version}}/sort-records)
+[Query Cache](/docs/{{version}}/query-cache)
+[Activity Log](/docs/{{version}}/activity-log)
+
+</div>
+
+> The `App\User` model now extends the `Varbox\Models\User` class, for extra functionalities.   
+> The `App\User` model is bound to the `user_model` key inside `config/varbox/bindings.php`
 
 <a name="fetch-active-inactive-users"></a>
 #### Fetch Active / Inactive Users
@@ -228,16 +251,17 @@ $addresses = \Varbox\Models\Address::fromCity($cityId)->get();
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
@@ -246,19 +270,19 @@ The classes available for binding overwrites are:
 <a name="user-bindings"></a>
 ### User Bindings
 
-The `user` specific classes available for binding overwrites are:
+The user specific classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\User</span>
+<p class="overwrite-class">Varbox\Models\User</p>
 
 Found in `config/varbox/bindings.php` at `models.user_model` key.   
 This class represents the user model.
 
-<span class="overwrite-class">Varbox\Controllers\UsersController</span>
+<p class="overwrite-class">Varbox\Controllers\UsersController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.users_controller` key.   
-This class is used for interactions with the Admin -> Access Control -> Users section.
+This class is used for interactions with the "Admin -> Access Control -> Users" section.
 
-<span class="overwrite-class">Varbox\Requests\UserRequest</span>
+<p class="overwrite-class">Varbox\Requests\UserRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.user_form_request` key.   
 This class is used for validating any user when creating or updating.
@@ -266,14 +290,14 @@ This class is used for validating any user when creating or updating.
 <a name="admin-bindings"></a>
 ### Admin Bindings
 
-The `admin` specific classes available for binding overwrites are:
+The admin specific classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Controllers\AdminsController</span>
+<p class="overwrite-class">Varbox\Controllers\AdminsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.admins_controller` key.   
-This class is used for interactions with the Admin -> Access Control -> Admins section.
+This class is used for interactions with the "Admin -> Access Control -> Admins" section.
 
-<span class="overwrite-class">Varbox\Requests\AdminRequest</span>
+<p class="overwrite-class">Varbox\Requests\AdminRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.admin_form_request` key.   
 This class is used for validating any admin when creating or updating.
@@ -281,19 +305,19 @@ This class is used for validating any admin when creating or updating.
 <a name="address-bindings"></a>
 ### Address Bindings
 
-The `address` specific classes available for binding overwrites are:
+The address specific classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Address</span>
+<p class="overwrite-class">Varbox\Models\Address</p>
 
 Found in `config/varbox/bindings.php` at `models.address_model` key.   
 This class represents the address model.
 
-<span class="overwrite-class">Varbox\Controllers\AddressesController</span>
+<p class="overwrite-class">Varbox\Controllers\AddressesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.addresses_controller` key.   
-This class is used for interactions with the Admin -> Access Control -> Users -> Addresses section.
+This class is used for interactions with the "Admin -> Access Control -> Users -> Addresses" section.
 
-<span class="overwrite-class">Varbox\Requests\AddressRequest</span>
+<p class="overwrite-class">Varbox\Requests\AddressRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.address_form_request` key.   
 This class is used for validating any address when creating or updating.

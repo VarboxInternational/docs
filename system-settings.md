@@ -39,7 +39,7 @@ Before going deeper, you should know that there's already a section in the admin
 <a name="configs-interface"></a>
 #### Configs Interface
 
-You can find the configs section inside [Admin -> System Settings -> Configs](/docs/{{version}}/configs-interface).   
+You can find the configs section inside **Admin -> System Settings -> Configs**.   
 Feel free to explore all available options this section offers.
 
 ![Configs List](/docs/{{version}}/configs-list.png)
@@ -47,7 +47,7 @@ Feel free to explore all available options this section offers.
 <a name="redirects-interface"></a>
 #### Redirects Interface
 
-You can find the redirects section inside [Admin -> System Settings -> Redirects](/docs/{{version}}/redirects-interface).   
+You can find the redirects section inside **Admin -> System Settings -> Redirects**.   
 Feel free to explore all available options this section offers.
 
 ![Redirects List](/docs/{{version}}/redirects-list.png)
@@ -55,7 +55,7 @@ Feel free to explore all available options this section offers.
 <a name="errors-interface"></a>
 #### Errors Interface
 
-You can find the errors section inside [Admin -> System Settings -> Errors](/docs/{{version}}/errors-interface).   
+You can find the errors section inside **Admin -> System Settings -> Errors**.   
 Feel free to explore all available options this section offers.
 
 ![Errors List](/docs/{{version}}/errors-list.png)
@@ -63,7 +63,7 @@ Feel free to explore all available options this section offers.
 <a name="backups-interface"></a>
 #### Backups Interface
 
-You can find the backups section inside [Admin -> System Settings -> Backups](/docs/{{version}}/backups-interface).   
+You can find the backups section inside **Admin -> System Settings -> Backups**.   
 Feel free to explore all available options this section offers.
 
 ![Backups List](/docs/{{version}}/backups-list.png)
@@ -273,7 +273,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 
 <style>
     #available-filter-operators-list > p {
-        column-count: 4; -moz-column-count: 4; -webkit-column-count: 4;
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
         column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
     }
 
@@ -592,40 +592,41 @@ The backup configuration file is located at `config/varbox/backup.php`.
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
 <a name="config-bindings"></a>
 ### Config Bindings
 
-The `config` classes available for binding overwrites are:
+The config classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Config</span>
+<p class="overwrite-class">Varbox\Models\Config</p>
 
 Found in `config/varbox/bindings.php` at `models.config_model` key.   
 This class represents the config model.
 
-<span class="overwrite-class">Varbox\Controllers\ConfigsController</span>
+<p class="overwrite-class">Varbox\Controllers\ConfigsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.configs_controller` key.   
-This class is used for interactions with the Admin -> System Settings -> Configs section.
+This class is used for interactions with the "Admin -> System Settings -> Configs" section.
 
-<span class="overwrite-class">Varbox\Requests\ConfigRequest</span>
+<p class="overwrite-class">Varbox\Requests\ConfigRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.config_form_request` key.   
 This class is used for validating any config when creating or updating.
 
-<span class="overwrite-class">Varbox\Middleware\OverwriteConfigs</span>
+<p class="overwrite-class">Varbox\Middleware\OverwriteConfigs</p>
 
 Found in `config/varbox/bindings.php` at `middleware.overwrite_configs_middleware` key.   
 This is the middleware modifying your config keys with the values assigned from the admin.
@@ -633,24 +634,24 @@ This is the middleware modifying your config keys with the values assigned from 
 <a name="redirect-bindings"></a>
 ### Redirect Bindings
 
-The `redirect` classes available for binding overwrites are:
+The redirect classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Redirect</span>
+<p class="overwrite-class">Varbox\Models\Redirect</p>
 
 Found in `config/varbox/bindings.php` at `models.redirect_model` key.   
 This class represents the redirect model.
 
-<span class="overwrite-class">Varbox\Controllers\RedirectsController</span>
+<p class="overwrite-class">Varbox\Controllers\RedirectsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.redirects_controller` key.   
-This class is used for interactions with the Admin -> System Settings -> Redirects section.
+This class is used for interactions with the "Admin -> System Settings -> Redirects" section.
 
-<span class="overwrite-class">Varbox\Requests\RedirectRequest</span>
+<p class="overwrite-class">Varbox\Requests\RedirectRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.redirect_form_request` key.   
 This class is used for validating any redirect when creating or updating.
 
-<span class="overwrite-class">Varbox\Middleware\RedirectRequests</span>
+<p class="overwrite-class">Varbox\Middleware\RedirectRequests</p>
 
 Found in `config/varbox/bindings.php` at `middleware.redirect_requests_middleware` key.   
 This middleware can be used by you to manage your redirects at application level.
@@ -658,30 +659,30 @@ This middleware can be used by you to manage your redirects at application level
 <a name="block-bindings"></a>
 ### Error Bindings
 
-The `error` classes available for binding overwrites are:
+The error classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Error</span>
+<p class="overwrite-class">Varbox\Models\Error</p>
 
 Found in `config/varbox/bindings.php` at `models.error_model` key.   
 This class represents the error model.
 
-<span class="overwrite-class">Varbox\Controllers\ErrorsController</span>
+<p class="overwrite-class">Varbox\Controllers\ErrorsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.errors_controller` key.   
-This class is used for interactions with the Admin -> System Settings -> Errors section.
+This class is used for interactions with the "Admin -> System Settings -> Errors" section.
 
 
 <a name="backup-bindings"></a>
 ### Backup Bindings
 
-The `backup` classes available for binding overwrites are:
+The backup classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Error</span>
+<p class="overwrite-class">Varbox\Models\Error</p>
 
 Found in `config/varbox/bindings.php` at `models.backup_model` key.   
 This class represents the backup model.
 
-<span class="overwrite-class">Varbox\Controllers\BackupsController</span>
+<p class="overwrite-class">Varbox\Controllers\BackupsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.backups_controller` key.   
-This class is used for interactions with the Admin -> System Settings -> Backups section.
+This class is used for interactions with the "Admin -> System Settings -> Backups" section.

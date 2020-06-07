@@ -31,7 +31,7 @@ Before going deeper, you should know that there's already a section in the admin
 <a name="countries-interface"></a>
 #### Countries Interface
 
-You can find the countries section inside "Admin -> Geo Location -> Countries".   
+You can find the countries section inside **Admin -> Geo Location -> Countries**.   
 Feel free to explore all available options this section offers.
 
 ![Countries List](/docs/{{version}}/countries-list.png)
@@ -39,7 +39,7 @@ Feel free to explore all available options this section offers.
 <a name="states-interface"></a>
 #### States Interface
 
-You can find the states section inside "Admin -> Geo Location -> States".   
+You can find the states section inside "**Admin -> Geo Location -> States**.   
 Feel free to explore all available options this section offers.
 
 ![States List](/docs/{{version}}/states-list.png)
@@ -47,13 +47,15 @@ Feel free to explore all available options this section offers.
 <a name="cities-interface"></a>
 #### Cities Interface
 
-You can find the cities section inside "Admin -> Geo Location -> Cities".   
+You can find the cities section inside **Admin -> Geo Location -> Cities**.   
 Feel free to explore all available options this section offers.
 
 ![Cities List](/docs/{{version}}/cities-list.png)
 
 <a name="countries"></a>
 ## Countries
+
+The counties component provides you with an interface and some functionality to manage your countries.
 
 <a name="seeder-class"></a>
 #### Seeder Class
@@ -212,35 +214,36 @@ $cities = City::alphabetically()->get();
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
 <a name="country-bindings"></a>
 ### Country Bindings
 
-The `country` classes available for binding overwrites are:
+The country classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\Country</span>
+<p class="overwrite-class">Varbox\Models\Country</p>
 
 Found in `config/varbox/bindings.php` at `models.country_model` key.   
 This class represents the country model.
 
-<span class="overwrite-class">Varbox\Controllers\CountriesController</span>
+<p class="overwrite-class">Varbox\Controllers\CountriesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.countries_controller` key.   
-This class is used for interactions with the Admin -> Geo Location -> Countries.
+This class is used for interactions with the "Admin -> Geo Location -> Countries".
 
-<span class="overwrite-class">Varbox\Requests\CountryRequest</span>
+<p class="overwrite-class">Varbox\Requests\CountryRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.country_form_request` key.   
 This class is used for validating any country when updating.
@@ -248,19 +251,19 @@ This class is used for validating any country when updating.
 <a name="state-bindings"></a>
 ### State Bindings
 
-The `state` classes available for binding overwrites are:
+The state classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\State</span>
+<p class="overwrite-class">Varbox\Models\State</p>
 
 Found in `config/varbox/bindings.php` at `models.state_model` key.   
 This class represents the state model.
 
-<span class="overwrite-class">Varbox\Controllers\StatesController</span>
+<p class="overwrite-class">Varbox\Controllers\StatesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.states_controller` key.   
-This class is used for interactions with the Admin -> Geo Location -> States.
+This class is used for interactions with the "Admin -> Geo Location -> States".
 
-<span class="overwrite-class">Varbox\Requests\StateRequest</span>
+<p class="overwrite-class">Varbox\Requests\StateRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.state_form_request` key.   
 This class is used for validating any state when creating or updating.
@@ -268,19 +271,19 @@ This class is used for validating any state when creating or updating.
 <a name="city-bindings"></a>
 ### City Bindings
 
-The `city` classes available for binding overwrites are:
+The city classes available for binding overwrites are:
 
-<span class="overwrite-class">Varbox\Models\City</span>
+<p class="overwrite-class">Varbox\Models\City</p>
 
 Found in `config/varbox/bindings.php` at `models.city_model` key.   
 This class represents the city model.
 
-<span class="overwrite-class">Varbox\Controllers\CitiesController</span>
+<p class="overwrite-class">Varbox\Controllers\CitiesController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.cities_controller` key.   
-This class is used for interactions with the Admin -> Geo Location -> Cities.
+This class is used for interactions with the "Admin -> Geo Location -> Cities".
 
-<span class="overwrite-class">Varbox\Requests\CityRequest</span>
+<p class="overwrite-class">Varbox\Requests\CityRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.city_form_request` key.   
 This class is used for validating any city when creating or updating.

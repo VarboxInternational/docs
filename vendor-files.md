@@ -14,7 +14,7 @@ All platform specific routes are stored inside the `routes` directory of the `va
 > The routes are automatically registered at service provider level, so you don't have to do anything regarding this. 
 
 One important thing to note here is to have the following at the very end of your `routes/web.php` file.   
-This is a route macro that dispatches your custom urls to their appropriate controller & method.
+This is a route macro that dispatches your [custom urls](/docs/{{version}}/model-urls) to their appropriate controller & method.
 
 ```php
 Route::varbox();
@@ -36,7 +36,7 @@ All config files were automatically published when you ran:
 php artisan varbox:install
 ``` 
 
-If you didn't run the above command, you can publish your config files, by running:
+If you didn't run the above command, you can publish your config files by running:
 
 ```
 php artisan vendor:publish --tag=varbox-config
@@ -46,20 +46,17 @@ php artisan vendor:publish --tag=varbox-config
 #### Important Note
 
 <p style="color: #DD7467;">
-    Re-publishing the config files after you already modified them, won't overwrite your changes.
+    Re-publishing the config files after you've already modified them, won't overwrite your changes.
 </p>
 
 <a name="blade-views"></a>
 ## Blade Views
 
-All view files are stored in the `resources/views/vendor/varbox` directory.   
-This directory contains all blade views used in the `admin panel`.   
+All view files are stored in the `resources/views/vendor/varbox` directory. This directory contains all blade views used for the admin panel.   
 
 > You are free to modify any of these views to match your needs.
 
 The platform uses <a href="https://getbootstrap.com/docs/4.1" target="_blank">Bootstrap 4</a> so it should be fairly easy to modify the views.
-
-> If you won't ever need to modify the platform views, you can also remove that directory, in which case the views will be loaded from the package.
 
 <a name="publish-views"></a>
 #### Publish Views
@@ -80,7 +77,7 @@ php artisan vendor:publish --tag=varbox-views
 #### Important Note
 
 <p style="color: #DD7467;">
-    Re-publishing the view files after you already modified them, won't overwrite your changes.
+    Re-publishing the view files after you've already modified them, won't overwrite your changes.
 </p>
 
 <a name="public-assets"></a>
@@ -90,7 +87,7 @@ All of the asset files are stored in the `public/vendor/varbox` directory.
 
 > If you're using a vcs tool you should **NOT** ignore this directory.
 
-All assets published by the platform are only used for styling the `admin panel`. You're not required to include any css or js in your frontend.
+All assets published by the platform are only used for styling the admin panel. You're not required to include any platform related css or javascript in your frontend.
 
 > The asset files are already compiled using <a href="https://laravel.com/docs/7.x/mix" target="_blank">Laravel Mix</a>.   
 
@@ -149,7 +146,7 @@ In addition to the migration file, a few database seeders are are also published
 
 > No seeder will tamper with your already existing data, because a check is automatically performed to see if the record already exists before creating it.
 
-If you run the published seeders with one command:
+You can run all Varbox seeders with one command:
 
 ```
 php artisan db:seed --class="VarboxSeeder"

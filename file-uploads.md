@@ -1,4 +1,4 @@
-# File Uplaads
+# File Uploads
 
 - [Prerequisites](#prerequisites)
     - [Setup Storge Disk](#setup-storage-disk)
@@ -52,8 +52,8 @@
 - [Overwrite Bindings](#overwrite-bindings)
     
     
-This functionality allows you to save files on a disk.   
-It supports uploading `image`, `video`, `audio` and `normal` files.
+This functionality allows you to save files on a disk. 
+It supports uploading image, video, audio and normal files.
 
 <a name="prerequisites"></a>
 ## Prerequisites
@@ -97,9 +97,9 @@ php artisan varbox:uploads-link
 <a name="admin-interface"></a>
 ## Admin Interface
 
-Before you learn about managing your files inside a [VarBox](/) application, you should know that there's already a section in the admin from where you can manage all your files.
+Before you learn about managing your files inside a Varbox application, you should know that there's already a section in the admin from where you can manage all your files.
 
-You can find the uploads section inside [Admin -> Media Library -> Uploads](/docs/{{version}}/uploads-interface).   
+You can find the uploads section inside **Admin -> Media Library -> Uploads**.   
 Feel free to explore all available options this section offers.
 
 ![Uploads List](/docs/{{version}}/uploads-list.png)
@@ -227,9 +227,9 @@ You can do so by adding styles to the `images -> styles` value, inside the `conf
 
 > The styles specified in the config file will apply to all uploaded images. Most likely, you'll want to generate different styles for different eloquent models that support images.   
 > <br/>
-> To achieve that, please take a look at the [Eloquent Usage](#eloquent-usage) section.
+> To achieve that, please take a look at the [Model Usage](#model-usage) section.
 
-Let's say that besides the original and thumbnail, we also want to generate a `portrait` and a `landscape` version of the uploaded images.
+Let's say that besides the original and thumbnail, we also want to generate a "portrait" and a "landscape" version of the uploaded images.
 
 ```php
 'images' => [
@@ -1106,7 +1106,7 @@ public function getUploadConfig()
 
 Up until this point you've learned how you can leverage the power of the upload functionality.
    
-When it comes to `managing files` inside the `VarBox Admin` however, things are much more easier. 
+When it comes to managing files inside the Varbox Admin however, things are much more easier. 
 You just have to use the `uploader()` helper method that will generate the entire file manager. 
 
 > The `uploader()` helper function is a wrapper for the `Varbox\Helpers\UploaderHelper` class.
@@ -1121,7 +1121,7 @@ You also don't have to think about the uploading functionality itself, because t
 > - Viewing the uploaded file for the model record
 > - Cropping an uploaded image for the model record
 
-Let's say you have a `App\Post` model and you want to support uploading an `image` for each model record inside the `VarBox Admin`. 
+Let's say you have a `App\Post` model and you want to support uploading an `image` for each model record inside the Varbox Admin. 
 All you have to do is use the `uploader()` method inside your admin form:
 
 ```php
@@ -1209,57 +1209,56 @@ For more information on how you can customize the upload functionality, please r
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
-The `upload` classes available for binding overwrites are:
-
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
-<span class="overwrite-class">Varbox\Services\UploadService</span>
+<p class="overwrite-class">Varbox\Services\UploadService</p>
 
 Found in `config/varbox/bindings.php` at `services.upload_service` key.   
 This class is used for the entire file upload functionality.
 
-<span class="overwrite-class">Varbox\Models\Upload</span>
+<p class="overwrite-class">Varbox\Models\Upload</p>
 
 Found in `config/varbox/bindings.php` at `models.upload_model` key.   
 This class represents the upload model.
 
-<span class="overwrite-class">Varbox\Controllers\UploadController</span>
+<p class="overwrite-class">Varbox\Controllers\UploadController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.upload_controller` key.   
 This class is used for interactions with the uploading functionality.
 
-<span class="overwrite-class">Varbox\Controllers\UploadsController</span>
+<p class="overwrite-class">Varbox\Controllers\UploadsController</p>
 
 Found in `config/varbox/bindings.php` at `controllers.uploads_controller` key.   
-This class is used for interactions with the Admin -> Media Library -> Uploads section.
+This class is used for interactions with the "Admin -> Media Library -> Uploads" section.
 
-<span class="overwrite-class">Varbox\Requests\UploadRequest</span>
+<p class="overwrite-class">Varbox\Requests\UploadRequest</p>
 
 Found in `config/varbox/bindings.php` at `form_requests.upload_form_request` key.   
 This class is used for validating any upload when inserting into the database.
 
-<span class="overwrite-class">Varbox\Helpers\UploadedHelper</span>
+<p class="overwrite-class">Varbox\Helpers\UploadedHelper</p>
 
 Found in `config/varbox/bindings.php` at `helpers.uploaded_helper` key.   
 This class is used for displaying any uploaded file.
 
-<span class="overwrite-class">Varbox\Helpers\UploaderHelper</span>
+<p class="overwrite-class">Varbox\Helpers\UploaderHelper</p>
 
 Found in `config/varbox/bindings.php` at `helpers.uploader_helper` key.   
 This class is used for creating the entire upload manager for the admin.
 
-<span class="overwrite-class">Varbox\Helpers\Varbox\Helpers\UploaderLangHelper</span>
+<p class="overwrite-class">Varbox\Helpers\Varbox\Helpers\UploaderLangHelper</p>
 
 Found in `config/varbox/bindings.php` at `helpers.uploader_lang_helper` key.   
 This class is used for creating the entire multi-language upload manager for the admin.

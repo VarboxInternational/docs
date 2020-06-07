@@ -2,7 +2,7 @@
 
 <br />
 
-Now that you've successfully installed the platform and are able to sign into the admin panel, you might wonder what's next.
+Now that you've successfully installed the Varbox platform and are able to sign into the admin panel, you might wonder what's next.
 
 #### Learn The Architecture
 
@@ -13,10 +13,8 @@ We suggest reading the following documentation pages in order to have an idea of
 
 #### Follow The Tutorials
 
-We believe that's easier to learn by actually doing, instead of reading through endless documentation pages, so we offer you a few a-z tutorials to get you started using the platform.
-- [Full Admin Crud](/docs/{{version}}/full-admin-crud-example) - implement a custom admin crud containing most of the functionalities available
-- [Page With Blocks](/docs/{{version}}/page-with-blocks-example) - create a dynamic frontend page with assignable pieces of content
-- [Translatable Model](/docs/{{version}}/translatable-model-example) - create a model with fields supporting multiple languages
+We believe that's easier to learn by actually doing instead of reading through endless documentation pages, so we offer you a full example tutorial to get you started using the platform.
+- [Full Example](/docs/{{version}}/full-example) - implement a custom admin crud containing most of the functionalities available
 
 #### Read The Docs
 

@@ -6,7 +6,7 @@
     - [Disable Temporarily](#disable-temporarily)
 - [Configuration](#cofiguration)
 
-This functionality allows you to cache `all` queries of type `select`, or only just the `duplicated` ones for an eloquent model.    
+This functionality allows you to cache all read queries or only just the duplicated ones for a model.    
    
 <a name="usage"></a>
 ## Usage
@@ -27,7 +27,7 @@ class YourModel extends Model
 }
 ```
 
-Next, if you've installed the [VarBox](/) correctly, you should already see the following in your `.env` file.   
+Next, if you've installed Varbox correctly, you should already see the following in your `.env` file. 
 If not, please add them.
 
 ```
@@ -38,12 +38,11 @@ CACHE_DUPLICATE_QUERIES=false
 <a name="cache-all-queries"></a>
 #### Cache All Queries
 
-It's possible to cache `all` queries of type select for a model. The queries will be cached forever using <a href="https://laravel.com/docs/7.x/cache#cache-tags" target="_blank">cache tagging</a>.
+It's possible to cache all read queries for a model. The queries will be cached using <a href="https://laravel.com/docs/7.x/cache#cache-tags" target="_blank">cache tagging</a>.
 
 > When creating, updating or deleting a record for a model, all queries for that entire model will be flushed from cache.
 
 In your `.env` file change `CACHE_DRIVER` to a value that's persistent and also supports tagging.   
-`redis` / `memcached`
 
 ```
 CACHE_DRIVER=redis
@@ -58,12 +57,11 @@ CACHE_ALL_QUERIES=true
 <a name="cache-duplicate-queries"></a>
 #### Cache Duplicate Queries
 
-If you don't want to cache all queries for your models forever, you can opt in for caching only `duplicate` queries. The queries will be cached only for the current request using <a href="https://laravel.com/docs/7.x/cache#cache-tags" target="_blank">cache tagging</a> .
+If you don't want to cache all queries for your models forever, you can opt in for caching only duplicate queries. The queries will be cached only for the current request using <a href="https://laravel.com/docs/7.x/cache#cache-tags" target="_blank">cache tagging</a>.
 
 > If you already cache all your queries, it's redundant to enable the duplicate query cache.
 
 In your `.env` file change `CACHE_DRIVER` to a value that supports tagging.   
-`apc` / `array` / `redis` / `memcached`
 
 ```
 CACHE_DRIVER=array

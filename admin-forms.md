@@ -1,8 +1,10 @@
 # Admin Forms
 
-The [Varbox](/) platform offers an easy solution for building form elements inside the admin panel.
+<br />
 
-> For building admin form elements, the form builder from [laravelcollective/html](https://packagist.org/packages/laravelcollective/html) is used as the foundation, so make sure you read their documentation first.
+The Varbox platform offers an easy solution for building form elements inside the admin panel.
+
+> For building admin form elements, the form builder from <a href="https://packagist.org/packages/laravelcollective/html" target="_blank">laravelcollective/html</a> is used as the foundation, so make sure you read their documentation first.
 
 <a name="build-admin-forms"></a>
 #### Build Admin Forms

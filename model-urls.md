@@ -14,6 +14,7 @@
     - [Get Original Model](#get-original-model)
     - [Get Accessed Url Model](#get-accessed-url-model)
 - [Overwrite Bindings](#overwrite-bindings)
+- [Implementation Example](#implementation-example)
 
 This functionality allows you to generate custom urls for your model records.   
 The generated url will be stored inside the `urls` database table.   
@@ -66,11 +67,9 @@ class YourModel extends Model
 
 The `routeUrlTo()` method is mandatory and it's used to specify to what controller and method to dispatch the request, when accessing the generated url in your browser.
 
-The `generateUrlSlugFrom()` and `saveUrlSlugTo()` are mandatory and they're used by the underlying `HasSlug` trait which is used by the `HasUrl` trait. 
-For more information on how slugs work please see [Model Slugs](/docs/{{version}}/model-slugs).
+The `generateUrlSlugFrom()` and `saveUrlSlugTo()` are mandatory and they're used by the underlying `Varbox\Traits\HasSlug` trait which is used by the `Varbox\Traits\HasUrl` trait.   
 
-> When using the `HasUrl` trait on your models you're not required to also use the `HasSlug` trait.
-> The `HasUrl` trait directly uses the `HasSlug` trait.
+> For more information on how slugs work refer to the [Model Slugs](/docs/{{version}}/model-slugs) documentation section.
 
 <hr>
 
@@ -86,8 +85,7 @@ Schema::table('your_table', function (Blueprint $table) {
 #### Generate Url
 
 After you've done the above steps, generating a url for a model record will be done automatically when you'll be saving that model record.
-
-A new entry for the url will be stored inside the `urls` database table.
+A new entry for the url will be stored inside the `urls` table.
 
 ```php
 $model = YourModel::create([
@@ -102,9 +100,7 @@ $model->update([
 <a name="fetch-the-url"></a>
 #### Fetch The Url
 
-By using the `Varbox\Traits\HasUrl` trait on your models, you automatically relate that model to the `Varbox\Models\Url` model via a `morphOne` relationship.
-
-To get the full url of a model use the `getUrl()` method.
+To get the full url of a model use the `getUrl()` method present on the trait.
 
 ```php
 $model = YourModel::find($id);
@@ -112,7 +108,7 @@ $model = YourModel::find($id);
 $model->getUrl();
 ``` 
 
-To get only the relative url of a model use the `getUri()` method.
+To get only the relative url of a model use the `getUri()` method present on the trait.
 
 ```php
 $model = YourModel::find($id);
@@ -124,9 +120,7 @@ $model->getUri();
 #### Disable Url Generation
 
 By default, a url will be generated for your model record each time you create or update one.   
-You may have the need to just save the model without generating a url.
-
-You can do that by using the `doGenerateUrl()` method. 
+To save the model without generating a url use the `doGenerateUrl()` method. 
 
 ```php
 // url will not be generated
@@ -174,8 +168,6 @@ public function getUrlOptions(): UrlOptions
 {
     return UrlOptions::instance()
         ->routeUrlTo(YourController::class, 'yourShowMethod')
-        ->generateUrlSlugFrom('name')
-        ->saveUrlSlugTo('slug');
 }
 ```
 
@@ -195,9 +187,6 @@ You can change the url separator by using the `glueUrlWith()` method in your def
 public function getUrlOptions(): UrlOptions
 {
     return UrlOptions::instance()
-        ->routeUrlTo(YourController::class, 'yourShowMethod')
-        ->generateUrlSlugFrom('name')
-        ->saveUrlSlugTo('slug')
         ->glueUrlWith('-');
 }
 ```
@@ -216,9 +205,6 @@ You can prefix the generated url with a value by using the `prefixUrlWith()` met
 public function getUrlOptions(): UrlOptions
 {
     return UrlOptions::instance()
-        ->routeUrlTo(YourController::class, 'yourShowMethod')
-        ->generateUrlSlugFrom('name')
-        ->saveUrlSlugTo('slug')
         ->prefixUrlWith(function ($prefix, $model) {
             foreach ($model->ancestors()->get() as $ancestor) {
                 $prefix[] = $ancestor->slug;
@@ -243,9 +229,6 @@ You can suffix the generated url with a value by using the `suffixUrlWith()` met
 public function getUrlOptions(): UrlOptions
 {
     return UrlOptions::instance()
-        ->routeUrlTo(YourController::class, 'yourShowMethod')
-        ->generateUrlSlugFrom('name')
-        ->saveUrlSlugTo('slug')
         ->suffixUrlWith(function ($suffix, $model) {
             foreach ($model->descendants()->get() as $ancestor) {
                 $suffix[] = $ancestor->slug;
@@ -272,9 +255,6 @@ You can disable this using the `doNotUpdateCascading()` method in your definitio
 public function getUrlOptions(): UrlOptions
 {
     return UrlOptions::instance()
-        ->routeUrlTo(YourController::class, 'yourShowMethod')
-        ->generateUrlSlugFrom('name')
-        ->saveUrlSlugTo('slug')
         ->doNotUpdateCascading();
 }
 ```
@@ -282,8 +262,7 @@ public function getUrlOptions(): UrlOptions
 <a name="the-model"></a>
 ## The Model
 
-Up until this point you've learned how to use the functionality exposed by the `HasUrl` trait.
-
+Up until this point you've learned how to use the functionality exposed by the `HasUrl` trait.   
 However, there's also a `Varbox\Models\Url` model that manages the urls.
 
 Below you'll find some basic functionalities of the `Varbox\Models\Url` model, but you can always inspect the model yourself, or even [extend](#overwrite-bindings) it.
@@ -291,7 +270,7 @@ Below you'll find some basic functionalities of the `Varbox\Models\Url` model, b
 <a name="get-original-model"></a>
 #### Get Original Model
 
-The `Url` model is related to the models, using a `morphTo` relation called `urlable`.
+You can get the original model using the `urlable` relation method.
 
 ```php
 use Varbox\Models\Url;
@@ -303,11 +282,10 @@ $model = $url->urlable;
 <a name="get-accessed-url-model"></a>
 #### Get Accessed Url Model
 
-To get your actual model instance when accessing its url in the browser, you might be tempted to use the `urbale()` method from the `Varbox\Models\Url` model.
-
+To get your actual model instance when accessing its url in the browser, you might be tempted to use the `urbale()` method from the `Varbox\Models\Url` model. 
 However, that won't be necessary because the route dispatcher already takes care of attaching the model instance. 
 
-To fetch your model instance when accessing its url use `$request->route()->action['model']`
+To fetch your model instance when accessing its url use `$request->route()->action['model']` directly from your controller method.
 
 ```php
 <?php
@@ -337,22 +315,26 @@ class YourController extends Controller
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
-The `url` classes available for binding overwrites are:
-
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
-<span class="overwrite-class">Varbox\Models\Url</span>
+<p class="overwrite-class">Varbox\Models\Url</p>
 
 Found in `config/varbox/bindings.php` at `models.url_model` key.   
 This class represents the url model.
+
+<a name="implementation-example"></a>
+## Implementation Example
+
+For an implementation example of this functionality please refer to the [Full Example](/docs/{{version}}/full-example#model-url) page.

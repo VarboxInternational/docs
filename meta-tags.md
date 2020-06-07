@@ -11,6 +11,7 @@
     - [Display Model Meta Tags](#display-model-meta-tags)
 - [Configuration](#configuration)
 - [Overwrite Bindngs](#overwrite-bindings)
+- [Implementation Example](#implementation-example)
 
 This functionality allows you to quickly set values for any meta tags you might have and properly display them in the `<head>` section of your pages.
 
@@ -60,7 +61,7 @@ You can customize the available tags from inside the `varbox/config/meta.php`, s
 <a name="model-usage"></a>
 ## Model Usage
 
-You can also assign meta tags to your model records. [Varbox](/) provides you with an easy way of saving any number of meta tags directly on your model records, store those values in the database and display their proper html in your blade views.
+You can also assign meta tags to your model records. Varbox provides you with an easy way of saving any number of meta tags directly on your model records, store those values in the database and display their proper html in your blade views.
 
 <a name="apply-the-trait"></a>
 #### Apply The Trait
@@ -131,7 +132,7 @@ After you've setup your migration, run the `php artisan migrate` command.
 #### Add Admin Form
 
 Next you should add the fields for saving any meta tags that you might want. 
-Fortunately, the [Varbox](/) platform offers a nice partial to help you with that.
+Fortunately, the Varbox platform offers a nice partial to help you with that.
 
 > You you're not happy with the default meta tags, you can customize those fields by modifying the `resources/views/vendor/varbox/helpers/meta/container.blade.php` file.
 
@@ -167,22 +168,26 @@ For more information on how you can customize the meta tags functionality, pleas
 ## Overwrite Bindings
 
 In your projects, you may stumble upon the need to modify the behavior of these classes, in order to fit your needs.
-[VarBox](/) makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
+Varbox makes this possible via the `config/varbox/bindings.php` configuration file. In that file, you'll find every customizable class the platform uses.
 
 > For more information on how the class binding works, please refer to the [Custom Bindings](/docs/{{version}}/custom-bindings) documentation section.
 
-The `meta tag` classes available for binding overwrites are:
-
 <style>
-    span.overwrite-class {
+    p.overwrite-class {
         display: block;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
+        margin: 0;
     }
 </style>
 
-<span class="overwrite-class">Varbox\Helpers\MetaHelper</span>
+<p class="overwrite-class">Varbox\Helpers\MetaHelper</p>
 
 Found in `config/varbox/bindings.php` at `helpers.meta_helper` key.   
 This class is used for setting, getting and displaying meta tags.
+
+<a name="implementation-example"></a>
+## Implementation Example
+
+For an implementation example of this functionality please refer to the [Full Example](/docs/{{version}}/full-example#meta-tags) page.

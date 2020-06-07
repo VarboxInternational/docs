@@ -86,9 +86,9 @@ The slug functionality offers a variety of customizations to fit your needs.
 <a name="allow-duplicate-slugs"></a>
 #### Allow Duplicate Slugs
 
-By default the generated slugs for a model are unique by appending `{slug-separator}{increment}` to the end of the already existing value.
+By default the generated slugs for a model are unique by appending `{slug-separator}{increment}` at the end of the already existing value.
 
-You can allow duplicate slugs for your model records by using the `allowDuplicateSlugs()` method in your definition of the `getSlugOptions()` method.
+You can allow duplicate slug values for your model records by using the `allowDuplicateSlugs()` method in your definition of the `getSlugOptions()` method.
 
 ```php
 /**
@@ -99,8 +99,6 @@ You can allow duplicate slugs for your model records by using the `allowDuplicat
 public function getSlugOptions(): SlugOptions
 {
     return SlugOptions::instance()
-        ->generateSlugFrom('name')
-        ->saveSlugTo('slug')
         ->allowDuplicateSlugs();
 }
 ```
@@ -121,8 +119,6 @@ You can change the slug separator by using the `usingSeparator()` method in your
 public function getSlugOptions(): SlugOptions
 {
     return SlugOptions::instance()
-        ->generateSlugFrom('name')
-        ->saveSlugTo('slug')
         ->usingSeparator('_');
 }
 ```
@@ -130,9 +126,9 @@ public function getSlugOptions(): SlugOptions
 <a name="disable-slugs-on-create"></a>
 #### Disable Slugs On Create
 
-By default when creating a model record, a slug will be automatically generated for it based on the attribute value from your `generateSlugFrom()` method.
+By default, when creating a model record, a slug will be automatically generated for it based on the attribute value from your `generateSlugFrom()` method.
 
-You can disable this by using the `doNotGenerateSlugOnCreate()` method in your definition of the `getSlugOptions()` method.
+You can disable this using the `doNotGenerateSlugOnCreate()` method in your definition of the `getSlugOptions()` method.
 
 ```php
 /**
@@ -143,8 +139,6 @@ You can disable this by using the `doNotGenerateSlugOnCreate()` method in your d
 public function getSlugOptions(): SlugOptions
 {
     return SlugOptions::instance()
-        ->generateSlugFrom('name')
-        ->saveSlugTo('slug')
         ->doNotGenerateSlugOnCreate();
 }
 ```
@@ -152,9 +146,9 @@ public function getSlugOptions(): SlugOptions
 <a name="disable-slugs-on-update"></a>
 #### Disable Slugs On Update
 
-By default when updating a model record, the slug will be automatically updated based on the attribute value from your `generateSlugFrom` method.
+By default, when updating a model record, the slug will be automatically updated based on the attribute value from your `generateSlugFrom()` method.
 
-You can disable this by using the `doNotGenerateSlugOnUpdate()` method in your definition of the `getSlugOptions()` method.
+You can disable this using the `doNotGenerateSlugOnUpdate()` method in your definition of the `getSlugOptions()` method.
 
 ```php
 /**
@@ -165,8 +159,6 @@ You can disable this by using the `doNotGenerateSlugOnUpdate()` method in your d
 public function getSlugOptions(): SlugOptions
 {
     return SlugOptions::instance()
-        ->generateSlugFrom('name')
-        ->saveSlugTo('slug')
         ->doNotGenerateSlugOnUpdate();
 }
 ```
