@@ -256,3 +256,13 @@ This class represents the activity log model.
 
 Found in `config/varbox/bindings.php` at `controllers.activity_controller` key.   
 This class is used for interactions with the "Admin -> Access Control -> Activity" section.
+
+<p class="overwrite-class">Varbox\Filters\ActivityFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.activity_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\ActivitySort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.activity_sort` key.   
+This class is used for applying the sorting logic.

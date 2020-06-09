@@ -457,6 +457,29 @@ The Varbox platform also puts at your disposal the "Admin -> Multi Language -> L
 
 > As a bonus, 135 languages are already seeded for you when installing the platform.
 
+In order to provide you with a complex crud functionality inside the admin, the languages crud implements the following out of the box:
+
+<style>
+    #available-filter-operators-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #available-filter-operators-list a {
+        display: block;
+        color: #4AAEE3;
+    }
+</style>
+<div id="available-filter-operators-list" markdown="1">
+
+[Filter Records](/docs/{{version}}/filter-records)
+[Sort Records](/docs/{{version}}/sort-records)
+[Query Cache](/docs/{{version}}/query-cache)
+[Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
+
+</div>
+
 <a name="the-active-languages"></a>
 ### The Active Languages
 
@@ -571,6 +594,16 @@ This class is used for interactions with the "Admin -> Multi Language -> Transla
 Found in `config/varbox/bindings.php` at `form_requests.translation_form_request` key.   
 This class is used for validating any translation when updating.
 
+<p class="overwrite-class">Varbox\Filters\TranslationFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.translation_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\TranslationSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.translation_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="language-bindings"></a>
 ### Language Bindings
 
@@ -595,3 +628,13 @@ This class is used for validating any translation when creating or updating.
 
 Found in `config/varbox/bindings.php` at `view_composers.languages_view_composer` key.   
 The view composer for the language switcher in the header.
+
+<p class="overwrite-class">Varbox\Filters\LanguageFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.language_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\LanguageSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.language_sort` key.   
+This class is used for applying the sorting logic.

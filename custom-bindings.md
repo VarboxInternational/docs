@@ -27,9 +27,9 @@ Throughout these classes, the following support being overwritten by you:
 <span>models</span>
 <span>controllers</span>
 <span>form requests</span>
+<span>view composers</span>
 <span>middleware</span>
 <span>helpers</span>
-<span>view composers</span>
 <span>filters</span>
 <span>sorts</span>
 </div>

@@ -1263,4 +1263,13 @@ This class is used for creating the entire upload manager for the admin.
 Found in `config/varbox/bindings.php` at `helpers.uploader_lang_helper` key.   
 This class is used for creating the entire multi-language upload manager for the admin.
 
+<p class="overwrite-class">Varbox\Filters\UploadFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.upload_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\UploadSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.upload_sort` key.   
+This class is used for applying the sorting logic.
 

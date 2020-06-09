@@ -58,7 +58,7 @@ In order to provide you with complex crud functionalities inside the admin, the 
 
 <style>
     #available-filter-operators-list > p {
-        column-count: 4; -moz-column-count: 4; -webkit-column-count: 4;
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
         column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
     }
 
@@ -73,6 +73,7 @@ In order to provide you with complex crud functionalities inside the admin, the 
 [Sort Records](/docs/{{version}}/sort-records)
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
 
 </div>
 
@@ -287,6 +288,16 @@ This class is used for interactions with the "Admin -> Access Control -> Users" 
 Found in `config/varbox/bindings.php` at `form_requests.user_form_request` key.   
 This class is used for validating any user when creating or updating.
 
+<p class="overwrite-class">Varbox\Filters\UserFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.user_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\UserSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.user_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="admin-bindings"></a>
 ### Admin Bindings
 
@@ -301,6 +312,16 @@ This class is used for interactions with the "Admin -> Access Control -> Admins"
 
 Found in `config/varbox/bindings.php` at `form_requests.admin_form_request` key.   
 This class is used for validating any admin when creating or updating.
+
+<p class="overwrite-class">Varbox\Filters\AdminFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.admin_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\AdminSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.admin_sort` key.   
+This class is used for applying the sorting logic.
 
 <a name="address-bindings"></a>
 ### Address Bindings
@@ -321,3 +342,13 @@ This class is used for interactions with the "Admin -> Access Control -> Users -
 
 Found in `config/varbox/bindings.php` at `form_requests.address_form_request` key.   
 This class is used for validating any address when creating or updating.
+
+<p class="overwrite-class">Varbox\Filters\AddressFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.address_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\AddressSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.address_sort` key.   
+This class is used for applying the sorting logic.

@@ -631,6 +631,16 @@ This class is used for validating any config when creating or updating.
 Found in `config/varbox/bindings.php` at `middleware.overwrite_configs_middleware` key.   
 This is the middleware modifying your config keys with the values assigned from the admin.
 
+<p class="overwrite-class">Varbox\Filters\ConfigFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.config_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\ConfigSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.config_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="redirect-bindings"></a>
 ### Redirect Bindings
 
@@ -656,6 +666,16 @@ This class is used for validating any redirect when creating or updating.
 Found in `config/varbox/bindings.php` at `middleware.redirect_requests_middleware` key.   
 This middleware can be used by you to manage your redirects at application level.
 
+<p class="overwrite-class">Varbox\Filters\RedirectFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.redirect_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\RedirectSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.redirect_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="block-bindings"></a>
 ### Error Bindings
 
@@ -671,6 +691,15 @@ This class represents the error model.
 Found in `config/varbox/bindings.php` at `controllers.errors_controller` key.   
 This class is used for interactions with the "Admin -> System Settings -> Errors" section.
 
+<p class="overwrite-class">Varbox\Filters\ErrorFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.error_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\ErrorSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.error_sort` key.   
+This class is used for applying the sorting logic.
 
 <a name="backup-bindings"></a>
 ### Backup Bindings
@@ -686,3 +715,13 @@ This class represents the backup model.
 
 Found in `config/varbox/bindings.php` at `controllers.backups_controller` key.   
 This class is used for interactions with the "Admin -> System Settings -> Backups" section.
+
+<p class="overwrite-class">Varbox\Filters\BackupFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.backup_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\BackupSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.backup_sort` key.   
+This class is used for applying the sorting logic.

@@ -99,6 +99,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 [Sort Records](/docs/{{version}}/sort-records)
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
 [Content Blocks](/docs/{{version}}/content-blocks)
 [Meta Tags](/docs/{{version}}/meta-tags)
 
@@ -277,7 +278,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 
 <style>
     #available-filter-operators-list > p {
-        column-count: 4; -moz-column-count: 4; -webkit-column-count: 4;
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
         column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
     }
 
@@ -292,6 +293,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 [Sort Records](/docs/{{version}}/sort-records)
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
 
 </div>
 
@@ -435,7 +437,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 
 <style>
     #available-filter-operators-list > p {
-        column-count: 4; -moz-column-count: 4; -webkit-column-count: 4;
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
         column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
     }
 
@@ -454,6 +456,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 [Sort Records](/docs/{{version}}/sort-records)
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
 
 </div>
 
@@ -774,6 +777,7 @@ In order to provide you with a complex crud functionality inside the admin, the 
 [Sort Records](/docs/{{version}}/sort-records)
 [Query Cache](/docs/{{version}}/query-cache)
 [Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
 
 </div>
 
@@ -995,6 +999,16 @@ Used for interactions with the pages tree from the "Admin -> Manage Content -> P
 Found in `config/varbox/bindings.php` at `form_requests.page_form_request` key.   
 This class is used for validating any page when creating or updating.
 
+<p class="overwrite-class">Varbox\Filters\PageFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.page_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\PageSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.page_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="menu-bindings"></a>
 ### Menu Bindings
 
@@ -1020,6 +1034,15 @@ Used for interactions with the menus tree from the "Admin -> Manage Content -> M
 Found in `config/varbox/bindings.php` at `form_requests.menu_form_request` key.   
 This class is used for validating any menu when creating or updating.
 
+<p class="overwrite-class">Varbox\Filters\MenuFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.menu_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\MenuSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.menu_sort` key.   
+This class is used for applying the sorting logic.
 
 <a name="block-bindings"></a>
 ### Block Bindings
@@ -1041,6 +1064,15 @@ This class is used for interactions with the "Admin -> Manage Content -> Pages" 
 Found in `config/varbox/bindings.php` at `form_requests.block_form_request` key.   
 This class is used for validating any block when creating or updating.
 
+<p class="overwrite-class">Varbox\Filters\BlockFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.block_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\BlockSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.block_sort` key.   
+This class is used for applying the sorting logic.
 
 <a name="email-bindings"></a>
 ### Email Bindings
@@ -1061,3 +1093,13 @@ This class is used for interactions with the "Admin -> Manage Content -> Emails"
 
 Found in `config/varbox/bindings.php` at `form_requests.email_form_request` key.   
 This class is used for validating any email when creating or updating.
+
+<p class="overwrite-class">Varbox\Filters\EmailFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.email_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\EmailSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.email_sort` key.   
+This class is used for applying the sorting logic.

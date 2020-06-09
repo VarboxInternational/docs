@@ -477,3 +477,23 @@ This class is used for restricting access to users based on the given roles.
 
 Found in `config/varbox/bindings.php` at `middleware.check_permissions_middleware` key.   
 This class is used for restricting access to users based on the given permissions.
+
+<p class="overwrite-class">Varbox\Filters\PermissionFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.permission_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Filters\RoleFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.role_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\PermissionSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.permission_sort` key.   
+This class is used for applying the sorting logic.
+
+<p class="overwrite-class">Varbox\Sorts\RoleSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.role_sort` key.   
+This class is used for applying the sorting logic.

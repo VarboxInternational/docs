@@ -57,6 +57,29 @@ Feel free to explore all available options this section offers.
 
 The counties component provides you with an interface and some functionality to manage your countries.
 
+In order to provide you with a complex crud functionality inside the admin, the countries crud implements the following out of the box:
+
+<style>
+    #available-filter-operators-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #available-filter-operators-list a {
+        display: block;
+        color: #4AAEE3;
+    }
+</style>
+<div id="available-filter-operators-list" markdown="1">
+
+[Filter Records](/docs/{{version}}/filter-records)
+[Sort Records](/docs/{{version}}/sort-records)
+[Query Cache](/docs/{{version}}/query-cache)
+[Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
+
+</div>
+
 <a name="seeder-class"></a>
 #### Seeder Class
 
@@ -109,6 +132,29 @@ $countries = Country::alphabetically()->get();
 <a name="states"></a>
 ## States
 
+In order to provide you with a complex crud functionality inside the admin, the states crud implements the following out of the box:
+
+<style>
+    #available-filter-operators-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #available-filter-operators-list a {
+        display: block;
+        color: #4AAEE3;
+    }
+</style>
+<div id="available-filter-operators-list" markdown="1">
+
+[Filter Records](/docs/{{version}}/filter-records)
+[Sort Records](/docs/{{version}}/sort-records)
+[Query Cache](/docs/{{version}}/query-cache)
+[Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
+
+</div>
+
 <a name="seeder-class"></a>
 #### Seeder Class
 
@@ -160,6 +206,29 @@ $states = State::alphabetically()->get();
 
 <a name="cities"></a>
 ## Cities
+
+In order to provide you with a complex crud functionality inside the admin, the cities crud implements the following out of the box:
+
+<style>
+    #available-filter-operators-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #available-filter-operators-list a {
+        display: block;
+        color: #4AAEE3;
+    }
+</style>
+<div id="available-filter-operators-list" markdown="1">
+
+[Filter Records](/docs/{{version}}/filter-records)
+[Sort Records](/docs/{{version}}/sort-records)
+[Query Cache](/docs/{{version}}/query-cache)
+[Activity Log](/docs/{{version}}/activity-log)
+[Csv Exports](/docs/{{version}}/csv-exports)
+
+</div>
 
 <a name="seeder-class"></a>
 #### Seeder Class
@@ -248,6 +317,16 @@ This class is used for interactions with the "Admin -> Geo Location -> Countries
 Found in `config/varbox/bindings.php` at `form_requests.country_form_request` key.   
 This class is used for validating any country when updating.
 
+<p class="overwrite-class">Varbox\Filters\CountryFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.country_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\CountrySort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.country_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="state-bindings"></a>
 ### State Bindings
 
@@ -268,6 +347,16 @@ This class is used for interactions with the "Admin -> Geo Location -> States".
 Found in `config/varbox/bindings.php` at `form_requests.state_form_request` key.   
 This class is used for validating any state when creating or updating.
 
+<p class="overwrite-class">Varbox\Filters\StateFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.state_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\StateSort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.state_sort` key.   
+This class is used for applying the sorting logic.
+
 <a name="city-bindings"></a>
 ### City Bindings
 
@@ -287,3 +376,13 @@ This class is used for interactions with the "Admin -> Geo Location -> Cities".
 
 Found in `config/varbox/bindings.php` at `form_requests.city_form_request` key.   
 This class is used for validating any city when creating or updating.
+
+<p class="overwrite-class">Varbox\Filters\CityFilter</p>
+
+Found in `config/varbox/bindings.php` at `filters.city_filter` key.   
+This class is used for applying the filtering logic.
+
+<p class="overwrite-class">Varbox\Sorts\CitySort</p>
+
+Found in `config/varbox/bindings.php` at `sorts.city_sort` key.   
+This class is used for applying the sorting logic.
