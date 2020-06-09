@@ -30,6 +30,12 @@
     - [Apply Controller Trait](#apply-order-controller-trait)
     - [Add Controller Code](#add-order-controller-code)
     - [Add Blade Code](#add-order-blade-code)
+- [Csv Exports](#csv-exports)
+    - [Add Route](#add-export-route)
+    - [Add Permission](#add-export-permission)
+    - [Apply Model Trait](#apply-export-model-trait)
+    - [Add Controller Code](#add-export-controller-code)
+    - [Add Blade Code](#add-export-blade-code)
 - [Upload Files](#upload-files)
     - [Add Table Columns](#add-upload-table-columns)
     - [Add Fillable Fields](#add-upload-fillable-fields)
@@ -92,6 +98,7 @@
 - apply filtering for your records *(see [Filter Records](/docs/{{version}}/filter-records))*
 - apply sorting for your records *(see [Sort Records](/docs/{{version}}/sort-records))*
 - apply ordering for your records *(see [Order Records](/docs/{{version}}/order-records))*
+- support downloading csv exports *(see [Csv Exports](/docs/{{version}}/csv-exports))*
 - enable file uploads for your records *(see [Upload Files](/docs/{{version}}/file-uploads))*
 - support drafting your records *(see [Draft Records](/docs/{{version}}/draft-records))*
 - support revisioning your records *(see [Model Revisions](/docs/{{version}}/model-revisions))*
@@ -566,9 +573,13 @@ Create the `resources/views/admin/posts/index.blade.php` file containing the fol
 @section('content')
     <div class="row row-cards">
         <div class="col-lg-3">
-            @permission('posts-add')
-                @include('varbox::buttons.add', ['url' => route('admin.posts.create')])
-            @endpermission
+            <div class="card">
+                <div class="card-body">
+                    @permission('posts-add')
+                        @include('varbox::buttons.add', ['url' => route('admin.posts.create')])
+                    @endpermission
+                </div>
+            </div>
         </div>
         <div class="col-lg-9">
             @include('admin.posts._table')
@@ -1277,6 +1288,182 @@ Modify the `resources/views/admin/posts/_table.blade.php` with the following:
 ```
 
 **That's it!** Now you can order your records by dragging & dropping the table rows.
+
+<a name="csv-exports"></a>
+## Csv Exports
+
+Let's add the possibility to download a csv file for your records. Estimated time: **5 minutes**   
+At the end of this example section you'll be able download a csv export for your records. It will also take into consideration your filtering and sorting parameters.
+
+> For questions you might have following this section, please refer to the [Csv Exports](/docs/{{version}}/csv-exports) documentation page.
+
+<a name="add-export-route"></a>
+#### Add Route
+
+Inside your `routes/web.php` file, add the following for your posts route group:
+
+```php
+// the posts route group
+Route::group([
+    'prefix' => 'posts',
+], function () {
+    // the crud routes
+    ...
+
+    // the export route
+    Route::post('csv', [
+        'as' => 'admin.posts.csv', 
+        'uses' => 'PostsController@csv', 
+        'permissions' => 'posts-export'
+    ]);
+});
+```
+
+<a name="add-export-permission"></a>
+#### Add Permission
+
+Inside your `database/seeds/PermissionsSeeder.php` file add this to the `$permissions` property.
+
+```php
+/**
+ * Mapping structure of admin permissions.
+ *
+ * @var array
+ */
+protected $permissions = [
+    ...
+
+    'Posts' => [
+        ...
+
+        'Export' => [
+            'group' => 'Posts',
+            'label' => 'Export',
+            'guard' => 'admin',
+            'name' => 'posts-export',
+        ],
+    ],
+];
+```
+
+Seed the permission by running the following artisan command:
+
+```
+php artisan db:seed --class="PermissionsSeeder"
+```
+
+<a name="apply-export-model-trait"></a>
+#### Apply Model Trait
+
+Use the `Varbox\Traits\IsCsvExportable` trait inside your `App\Post` model. 
+The trait contains two abstract methods that you must implement yourself.
+
+```php
+<?php
+
+namespace App;
+
+use Varbox\Traits\IsCsvExportable;
+
+class Post extends Model
+{
+    use IsCsvExportable;
+
+    /**
+     * Get the heading columns for the csv.
+     *
+     * @return array
+     */
+    public function getCsvColumns()
+    {
+        return [
+            'Title', 'User', 'Created At', 'Last Modified At'
+        ];
+    }
+
+    /**
+     * Get the values for a row in the csv.
+     *
+     * @return array
+     */
+    public function toCsvArray()
+    {
+        return [
+            $this->title,
+            $this->user && $this->user->exists ? $this->user->email : 'None',
+            $this->created_at->format('Y-m-d H:i:s'),
+            $this->updated_at->format('Y-m-d H:i:s'),
+        ];
+    }
+
+    ...
+}
+```
+
+<a name="add-export-controller-code"></a>
+#### Add Controller Code
+
+Inside your `app/Http/Controllers/Admin/PostsController.php` file, create a new method called `csv()`: 
+
+```php
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Filters\Admin\PostFilter;
+use App\Sorts\Admin\PostSort;
+use Illuminate\Http\Request;
+...
+
+class PostsController extends Controller
+{
+    /**
+     * @param Request $request
+     * @param PostFilter $filter
+     * @param PostSort $sort
+     * @return mixed
+     */
+    public function csv(Request $request, PostFilter $filter, PostSort $sort)
+    {
+        $items = $this->model/*->withDrafts()*/
+            ->filtered($request->all(), $filter)
+            ->sorted($request->all(), $sort)
+            ->get();
+
+        return $this->model->exportToCsv($items);
+    }
+
+    ...
+}
+```
+
+<a name="add-export-blade-code"></a>
+#### Add Blade Code
+
+Inside your `resources/views/admin/posts/index.blade.php` blade file, add the code for displaying the export button.
+
+```php
+<div class="col-lg-3">
+    <div class="card">
+        <div class="card-body">
+            ... 
+
+            @permission('posts-export')
+                @include('varbox::buttons.csv', [
+                    'url' => route('admin.posts.csv', request()->query())
+                ])
+            @endpermission
+        </div>
+    </div>
+
+    ...
+</div>
+<div class="col-lg-9">
+    ...
+</div>
+```
+
+**That's it!** Now you download a csv file for your model records.
 
 <a name="upload-files"></a>
 ## Upload Files
