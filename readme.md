@@ -1,1 +1,0 @@
-Documentation files for **VarBox 1.x**
