@@ -1,10 +1,11 @@
 # Database Notifications
 
 - [Admin Interface](#admin-interface)
-- [Database Notifications](#database-notifications)
+- [Concepts](#concepts)
     - [How Notifications Work](#how-notifications-work)
     - [Admin Operations](#admin-operations)
     - [Actionable Notifications](#actionable-notifications)
+- [Usage](#usage)
     - [Delete Old Notifications](#delete-old-notifications)
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
@@ -21,8 +22,8 @@ Feel free to explore all available options this section offers.
 
 ![Notifications List](/docs/{{version}}/notifications-list.png)
 
-<a name="database-notifications"></a>
-## Database Notifications
+<a name="concepts"></a>
+## Concepts
 
 <a name="how-notifications-work"></a>
 #### How Notifications Work
@@ -43,11 +44,14 @@ As you've probably noticed, inside the admin section for managing notifications,
 <a name="actionable-notifications"></a>
 #### Actionable Notifications
 
-Through the admin operations available for notifications, you might've noticed there's also an individual button for each notification called "Action". 
+Through the admin operations available for notifications, you might've noticed there's also an individual button for each notification called "Action".
+ 
 When clicking this button, the following will happen:
 - your notification will be marked as read
-- if your notification contains an `url` key in its json representation, you'll be redirected to that url
+- if your notification contains a `url` key in its json representation, you'll be redirected to that url
 
+<a name="usage"></a>
+## Usage
 
 <a name="delete-old-notifications"></a>
 #### Delete Old Notifications
