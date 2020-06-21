@@ -1,4 +1,4 @@
-# Translatable Models
+<h1>Translatable Models <small class="paid">PAID</small></h1>
 
 - [Setup](#setup)
 - [Usage](#translatable-models)

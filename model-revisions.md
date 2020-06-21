@@ -1,4 +1,4 @@
-# Model Revisions
+<h1>Model Revisions <small class="paid">PAID</small></h1>
 
 - [Usage](#usage)
     - [Create Revisions Automatically](#create-revisions-automatically)

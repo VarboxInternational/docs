@@ -1,4 +1,4 @@
-# Content Pages
+<h1>Content Pages <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)
@@ -13,8 +13,6 @@
     - [Render Location Blocks](#render-page-location-blocks)
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
-
-> {red} This functionality is available only for the <span style="color: #DD7467; font-weight: 700;">paid</span> version.
 
 The pages component is a very powerful content management functionality that allows you to quickly convert a static Laravel page into a dynamic page that can be modified from the admin panel.
 

@@ -1,4 +1,4 @@
-# Sort Records
+<h1>Sort Records <small class="free">FREE</small></h1>
 
 - [Usage](#usage)
     - [Sort By Relation](#sort-by-relation)

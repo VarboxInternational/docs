@@ -1,4 +1,4 @@
-# Meta Tags
+<h1>Meta Tags <small class="free">FREE</small></h1>
 
 - [General Usage](#general-usage)
     - [Set Meta Tag Value](#set-meta-tag-value)

@@ -1,4 +1,4 @@
-# Activity Log
+<h1>Activity Log <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [Usage](#usage)

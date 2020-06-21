@@ -1,4 +1,4 @@
-# Global Languages
+<h1>Global Languages <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)

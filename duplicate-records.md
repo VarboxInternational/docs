@@ -1,4 +1,4 @@
-# Duplicate Records
+<h1>Duplicate Records <small class="free">FREE</small></h1>
 
 - [Usage](#usage)
 - [Customizations](#customizations)

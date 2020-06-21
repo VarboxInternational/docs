@@ -1,4 +1,4 @@
-# Filter Records
+<h1>Filter Records <small class="free">FREE</small></h1>
 
 - [Usage](#usage)
     - [Filter By Relation](#filter-by-relation)

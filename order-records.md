@@ -1,4 +1,4 @@
-# Order Records
+<h1>Order Records <small class="free">FREE</small></h1>
 
 - [Usage](#usage)
     - [Order Records](#order-records)

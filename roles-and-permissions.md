@@ -1,4 +1,4 @@
-# Roles & Permissions
+<h1>Roles & Permissions <small class="free">FREE</small></h1>
 
 - [Admin Interface](#admin-interface)
     - [Roles Interface](#roles-interface)

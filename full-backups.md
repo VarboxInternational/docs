@@ -1,4 +1,4 @@
-# Full Backups
+<h1>Full Backups <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)

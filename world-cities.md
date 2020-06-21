@@ -1,4 +1,4 @@
-# World Cities
+<h1>World Cities <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [Seeder Class](#seeder-class)

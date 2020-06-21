@@ -1,4 +1,4 @@
-# Static Translations
+<h1>Static Translations <small class="paid">PAID</small></h1>
 
 - [Admin Interface](#admin-interface)
 - [Initial Setup](#initial-setup)

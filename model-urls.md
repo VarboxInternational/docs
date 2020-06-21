@@ -1,4 +1,4 @@
-# Model Urls
+<h1>Model Urls <small class="paid">PAID</small></h1>
 
 - [Usage](#usage)
     - [Generate Url](#generate-url)
