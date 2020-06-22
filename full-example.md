@@ -1,94 +1,159 @@
 # Full Example
 
-- [Initial Setup](#initial-setup)
-    - [Create Migration](#create-migration)
-    - [Create Model](#create-model)
-- [Basic Crud](#basic-crud)
-    - [Add Routes](#add-crud-routes)
-    - [Add Permissions](#add-crud-permissions)
-    - [Create Form Request](#create-crud-form-request)
-    - [Create Controller](#create-crud-controller)
-    - [Create Views](#create-crud-views)
-    - [Add Menu Button](#add-menu-button)
-- [Activity Log](#activity-log)
-    - [Modify Env Variable](#modify-activity-env-variable)
-    - [Apply Model Trait](#apply-activity-model-trait)
-- [Filter Records](#filter-records)
-    - [Create Filter Class](#create-filter-class)
-    - [Apply Model Trait](#apply-filter-model-trait)
-    - [Add Controller Code](#add-filter-controller-code)
-    - [Add Blade Code](#add-filter-blade-code)
-- [Sort Records](#sort-records)
-    - [Create Sort Class](#create-sort-class)
-    - [Apply Model Trait](#apply-sort-model-trait)
-    - [Add Controller Code](#add-sort-controller-code)
-    - [Add Blade Code](#add-sort-blade-code)
-- [Order Records](#order-records)
-    - [Add Table Column](#add-order-table-column)
-    - [Add Route](#add-order-route)
-    - [Apply Model Trait](#apply-order-model-trait)
-    - [Apply Controller Trait](#apply-order-controller-trait)
-    - [Add Controller Code](#add-order-controller-code)
-    - [Add Blade Code](#add-order-blade-code)
-- [Csv Exports](#csv-exports)
-    - [Add Route](#add-export-route)
-    - [Add Permission](#add-export-permission)
-    - [Apply Model Trait](#apply-export-model-trait)
-    - [Add Controller Code](#add-export-controller-code)
-    - [Add Blade Code](#add-export-blade-code)
-- [Upload Files](#upload-files)
-    - [Add Table Columns](#add-upload-table-columns)
-    - [Add Fillable Fields](#add-upload-fillable-fields)
-    - [Apply Model Trait](#apply-upload-model-trait)
-    - [Add Blade Code](#add-upload-blade-code)
-- [Draft Records](#draft-records)
-    - [Add Table Column](#add-draft-table-column)
-    - [Add Routes](#add-draft-routes)
-    - [Add Permissions](#add-draft-permissions)
-    - [Add Cast Field](#add-draft-cast-field)
-    - [Define Explicit Rotue Binding](#define-draft-explicit-route-binding)
-    - [Apply Model Trait](#apply-draft-model-trait)
-    - [Apply Controller Trait](#apply-draft-controller-trait)
-    - [Add Controller Code](#add-draft-controller-code)
-    - [Add Blade Code](#add-draft-blade-code)
-- [Model Revisions](#model-revisions)
-    - [Add Route](#add-revision-route)
-    - [Apply Model Trait](#apply-revision-model-trait)
-    - [Apply Controller Trait](#apply-revision-controller-trait)
-    - [Add Blade Code](#add-revision-blade-code)
-- [Duplicate Records](#duplicate-records)
-    - [Add Route](#add-duplicate-route)
-    - [Add Permission](#add-duplicate-permission)
-    - [Apply Model Trait](#apply-duplicate-model-trait)
-    - [Apply Controller Trait](#apply-duplicate-controller-trait)
-    - [Add Blade Code](#add-duplicate-blade-code)
-- [Model Url](#model-url)
-    - [Add Table Column](#add-url-table-column)
-    - [Add Fillable Field](#add-url-fillable-field)
-    - [Apply Model Trait](#apply-url-model-trait)
-    - [Add Blade Code](#add-url-blade-code)
-    - [Create Controller Class](#create-url-controller-class)
-    - [Create Blade File](#create-url-blade-file)
-- [Preview Records](#preview-records)
-    - [Add Route](#add-preview-route)
-    - [Add Permission](#add-preview-permission)
-    - [Apply Controller Trait](#apply-preview-controller-trait)
-    - [Add Blade Code](#add-preview-blade-code)
-- [Translatable Models](#translatable-models)
-    - [Modify Table Columns](#modify-translate-table-columns)
-    - [Apply Model Trait](#apply-translate-model-trait)
-    - [Attach Middleware](#attach-translate-middleware)
-    - [Modify Blade Code](#modify-translate-blade-code)
-- [Meta Tags](#meta-tags)
-    - [Add Table Column](#add-meta-table-column)
-    - [Add Fillable Field](#add-meta-fillable-field)
-    - [Add Cast Field](#add-meta-cast-field)
-    - [Apply Model Trait](#apply-meta-model-trait)
-    - [Add Blade Code](#add-meta-blade-code)
-- [Content Blocks](#content-blocks)
-    - [Apply Model Trait](#apply-block-model-trait)
-    - [Apply Controller Code](#add-block-controller-code)
-    - [Add Blade Code](#add-block-blade-code)
+<ul>
+    <li>
+        <a href="#initial-setup">Initial Setup</a>
+        <ul>
+            <li><a href="#create-migration">Create Migration</a></li>
+            <li><a href="#create-model">Create Model</a></li>
+        </ul>
+    </li>
+    <li><a href="#basic-crud">Basic Crud <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-crud-routes">Add Routes</a></li>
+            <li><a href="#add-crud-permissions">Add Permissions</a></li>
+            <li><a href="#create-crud-form-request">Create Form Request</a></li>
+            <li><a href="#create-crud-controller">Create Controller</a></li>
+            <li><a href="#create-crud-views">Create Views</a></li>
+            <li><a href="#add-menu-button">Add Menu Button</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#filter-records">Filter Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#create-filter-class">Create Filter Class</a></li>
+            <li><a href="#apply-filter-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-filter-controller-code">Add Controller Code</a></li>
+            <li><a href="#add-filter-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#sort-records">Sort Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#create-sort-class">Create Sort Class</a></li>
+            <li><a href="#apply-sort-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-sort-controller-code">Add Controller Code</a></li>
+            <li><a href="#add-sort-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#order-records">Order Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-order-table-column">Add Table Column</a></li>
+            <li><a href="#add-order-route">Add Route</a></li>
+            <li><a href="#apply-order-model-trait">Apply Model Trait</a></li>
+            <li><a href="#apply-order-controller-trait">Apply Controller Trait</a></li>
+            <li><a href="#add-order-controller-code">Add Controller Code</a></li>
+            <li><a href="#add-order-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#csv-exports">Csv Exports <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-export-route">Add Route</a></li>
+            <li><a href="#add-export-permission">Add Permission</a></li>
+            <li><a href="#apply-export-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-export-controller-code">Add Controller Code</a></li>
+            <li><a href="#add-export-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#upload-files">Upload Files <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-upload-table-columns">Add Table Columns</a></li>
+            <li><a href="#add-upload-fillable-fields">Add Fillable Fields</a></li>
+            <li><a href="#apply-upload-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-upload-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#draft-records">Draft Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-draft-table-column">Add Table Column</a></li>
+            <li><a href="#add-draft-routes">Add Routes</a></li>
+            <li><a href="#add-draft-permissions">Add Permissions</a></li>
+            <li><a href="#add-draft-cast-field">Add Cast Field</a></li>
+            <li><a href="#define-draft-explicit-route-binding">Define Explicit Rotue Binding</a></li>
+            <li><a href="#apply-draft-model-trait">Apply Model Trait</a></li>
+            <li><a href="#apply-draft-controller-trait">Apply Controller Trait</a></li>
+            <li><a href="#add-draft-controller-code">Add Controller Code</a></li>
+            <li><a href="#add-draft-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#duplicate-records">Duplicate Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-duplicate-route">Add Route</a></li>
+            <li><a href="#add-duplicate-permission">Add Permission</a></li>
+            <li><a href="#apply-duplicate-model-trait">Apply Model Trait</a></li>
+            <li><a href="#apply-duplicate-controller-trait">Apply Controller Trait</a></li>
+            <li><a href="#add-duplicate-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#preview-records">Preview Records <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-preview-route">Add Route</a></li>
+            <li><a href="#add-preview-permission">Add Permission</a></li>
+            <li><a href="#apply-preview-controller-trait">Apply Controller Trait</a></li>
+            <li><a href="#add-preview-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#meta-tags">Meta Tags <small class="free">FREE</small></a>
+        <ul>
+            <li><a href="#add-meta-table-column">Add Table Column</a></li>
+            <li><a href="#add-meta-fillable-field">Add Fillable Field</a></li>
+            <li><a href="#add-meta-cast-field">Add Cast Field</a></li>
+            <li><a href="#apply-meta-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-meta-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#activity-log">Activity Log <small class="paid">PAID</small></a>
+        <ul>
+            <li><a href="#modify-activity-env-variable">Modify Env Variable</a></li>
+            <li><a href="#apply-activity-model-trait">Apply Model Trait</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#model-revisions">Model Revisions <small class="paid">PAID</small></a>
+        <ul>
+            <li><a href="#add-revision-route">Add Route</a></li>
+            <li><a href="#apply-revision-model-trait">Apply Model Trait</a></li>
+            <li><a href="#apply-revision-controller-trait">Apply Controller Trait</a></li>
+            <li><a href="#add-revision-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#model-url">Model Url <small class="paid">PAID</small></a>
+        <ul>
+            <li><a href="#add-url-table-column">Add Table Column</a></li>
+            <li><a href="#add-url-fillable-field">Add Fillable Field</a></li>
+            <li><a href="#apply-url-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-url-blade-code">Add Blade Code</a></li>
+            <li><a href="#create-url-controller-class">Create Controller Class</a></li>
+            <li><a href="#create-url-blade-file">Create Blade File</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#translatable-models">Translatable Models <small class="paid">PAID</small></a>
+        <ul>
+            <li><a href="#modify-translate-table-columns">Modify Table Columns</a></li>
+            <li><a href="#apply-translate-model-trait">Apply Model Trait</a></li>
+            <li><a href="#attach-translate-middleware">Attach Middleware</a></li>
+            <li><a href="#modify-translate-blade-code">Modify Blade Code</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#content-blocks">Content Blocks <small class="paid">PAID</small></a>
+        <ul>
+            <li><a href="#apply-block-model-trait">Apply Model Trait</a></li>
+            <li><a href="#add-block-controller-code">Apply Controller Code</a></li>
+            <li><a href="#add-block-blade-code">Add Blade Code</a></li>
+        </ul>
+    </li>
+</ul>
 
 > This example will take you though the journey of building an admin crud for your posts that will contain most of the functionalities.
 
