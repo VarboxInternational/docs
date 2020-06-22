@@ -21,7 +21,7 @@
 <a name="download-and-setup"></a>
 ## Download & Setup
 
-Once you have purchased a Varbox license, you may download a Varbox release from the [Downloads](/downloads) section of the Varbox website.
+After you've signed into your account, go to the [Downloads](/releases) section of the Varbox website and download a **FREE** or **PAID** version of the software.
 
 After downloading a zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file. 
 Unzip the contents of the Varbox release into a `varbox` directory within your application's root directory. 
@@ -93,6 +93,9 @@ Use `admin@mail.com / admin` to authenticate.
 <a name="manual-installation"></a>
 ## Manual Installation
 
+> The following guide only works for the `paid` version of the software.   
+> You can also follow along using the free version, but you'll have to exclude some steps.
+
 If for some reason you don't want to automatically install the Varbox platform, you can do so manually, by following the steps below.
 
 > The following steps also provide useful insight on what the `varbox:install` command does. 
@@ -118,7 +121,6 @@ Append the following to your `.env` file:
 CACHE_ALL_QUERIES=false
 CACHE_DUPLICATE_QUERIES=false
 LOG_ACTIVITY=false
-OVERWRITE_CONFIGS=false
 SAVE_ERRORS=false
 ```
 
@@ -235,6 +237,7 @@ Copy all seeder classes from inside the `varbox/database/seeds` directory into y
 Also, don't forget to change the files' extensions from `stub` to `php`.
 
 ```
+cp varbox/database/seeds/VarboxSeeder.stub database/seeds/VarboxSeeder.php
 cp varbox/database/seeds/PermissionsSeeder.stub database/seeds/PermissionsSeeder.php
 cp varbox/database/seeds/RolesSeeder.stub database/seeds/RolesSeeder.php
 cp varbox/database/seeds/UsersSeeder.stub database/seeds/UsersSeeder.php
@@ -261,13 +264,7 @@ Populate the database with necessary data for the Varbox platform to work proper
 ```
 composer dump-autoload
 
-php artisan db:seed --class="PermissionsSeeder"
-php artisan db:seed --class="RolesSeeder"
-php artisan db:seed --class="UsersSeeder"
-php artisan db:seed --class="LanguagesSeeder"
-php artisan db:seed --class="CountriesSeeder"
-php artisan db:seed --class="StatesSeeder"
-php artisan db:seed --class="CitiesSeeder"
+php artisan db:seed --class="VarboxSeeder"
 ```
 
 <a name="symlink-directories"></a>

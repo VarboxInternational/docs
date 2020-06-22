@@ -11,7 +11,7 @@ We suggest reading the following documentation pages in order to have an idea of
 - [Vendor Files](/docs/{{version}}/vendor-files) - be aware of what files are published inside your application
 - [Custom Bindings](/docs/{{version}}/custom-bindings) - learn how to extend or replace platform specific classes
 
-#### Follow The Tutorials
+#### Follow The Tutorial
 
 We believe that's easier to learn by actually doing instead of reading through endless documentation pages, so we offer you a full example tutorial to get you started using the platform.
 - [Full Example](/docs/{{version}}/full-example) - implement a custom admin crud containing most of the functionalities available
