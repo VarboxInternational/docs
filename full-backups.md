@@ -14,7 +14,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The backups component is a very powerful and customizable functionality that allows you to quickly create backups of your application files and database.
+</p>
 
 > The backups component uses the [spatie/laravel-backup](https://packagist.org/packages/spatie/laravel-backup) behind the scenes, so make sure you read their documentation first, in order to fully understand our wrapper around it.
 

@@ -8,7 +8,9 @@
     - [Sort States Alphabetically](#sort-states-alphabetically)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The states component provides you with an interface to manage your states.
+</p>
 
 > As a bonus, 4.854 states are already seeded for you when installing the platform.
 

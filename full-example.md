@@ -155,7 +155,11 @@
     </li>
 </ul>
 
-> This example will take you though the journey of building an admin crud for your posts that will contain most of the functionalities.
+<blockquote>
+    <p id="first-p">
+        This example will take you though the journey of building an admin crud for your posts that will contain most of the functionalities.
+    </p>
+</blockquote>
 
 #### In this example you'll learn how to   
 - develop a basic crud system *(see [Admin Crud](/docs/{{version}}/admin-crud))*

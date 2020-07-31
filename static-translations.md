@@ -9,7 +9,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The translations component is a very powerful multi language functionality that allows you to quickly make your models translatable, but also manipulate your static translations.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the translations crud implements the following out of the box:
 

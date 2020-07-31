@@ -13,7 +13,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
-Log activity and correlate it to users for any Eloquent model record.    
+<p id="first-p">
+Log activity and correlate it to users for any Eloquent model record.
+</p>    
    
 <a name="admin-interface"></a>
 ## Admin Interface

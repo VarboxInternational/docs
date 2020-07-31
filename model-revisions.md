@@ -21,7 +21,9 @@
 - [Overwrite Bindings](#overwrite-bindings)
 - [Implementation Example](#implementation-example)
 
-Create revisions for any Eloquent model record along with its underlying relationships.    
+<p id="first-p">
+Create revisions for any Eloquent model record along with its underlying relationships.
+</p>    
    
 * when a revision is created, it gets stored inside the `revisions` database table.    
 * revisions are created automatically on model update, using the `updated` eloquent event

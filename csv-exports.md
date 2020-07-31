@@ -6,7 +6,9 @@
     - [Export Csv File](#export-csv-file)
 - [Implementation Example](#implementation-example)
 
+<p id="first-p">
 This functionality allows you to download csv files for a given collection of model records.
+</p>
 
 <a name="usage"></a>
 ## Usage

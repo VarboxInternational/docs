@@ -16,7 +16,9 @@
     - [Remove All Translations](#remove-all-translations)
 - [Implementation Example](#implementation-example)
 
+<p id="first-p">
 You can make your eloquent models translatable. Translations are stored in a json column, so there's no extra table needed.
+</p>
 
 <a name="setup"></a>
 ## Setup

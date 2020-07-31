@@ -9,7 +9,9 @@
 - [Available Filter Operators](#available-filter-operators)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to filter eloquent model records by defining filter rules, similar to how Laravel's form request rules work.   
+<p id="first-p">
+This functionality allows you to filter eloquent model records by defining filter rules, similar to how Laravel's form request rules work.
+</p>   
 
 <a name="usage"></a>
 ## Usage

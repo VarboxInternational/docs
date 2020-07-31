@@ -10,7 +10,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
-Easily manage [Laravel Database Notifications](https://laravel.com/docs/7.x/notifications#database-notifications) for every user in your application.
+<p id="first-p">
+Easily manage <a href="https://laravel.com/docs/7.x/notifications#database-notifications" target="_blank" rel="noreferrer">Laravel Database Notifications</a> for every user in your application.
+</p>
 
 <a name="admin-interface"></a>
 ## Admin Interface

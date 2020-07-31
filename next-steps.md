@@ -2,7 +2,9 @@
 
 <br />
 
+<p id="first-p">
 Now that you've successfully installed the Varbox platform and are able to sign into the admin panel, you might wonder what's next.
+</p>
 
 #### Learn The Architecture
 

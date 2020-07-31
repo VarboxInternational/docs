@@ -8,7 +8,9 @@
     - [Sort Cities Alphabetically](#sort-cities-alphabetically)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The cities component provides you with an interface to manage your cities.
+</p>
 
 > As a bonus, 141.488 cities are already seeded for you when installing the platform.
 

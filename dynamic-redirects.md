@@ -12,7 +12,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The redirects component is a very powerful functionality that allows you to visually manage your request redirects.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the redirects crud implements the following out of the box:
 

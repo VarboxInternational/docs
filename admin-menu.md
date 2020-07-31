@@ -2,7 +2,9 @@
 
 <br />
 
-If you've successfully followed the [installation guide](/docs/{{version}}/installation), you should already have this setup.
+<p id="first-p">
+If you've successfully followed the installation guide, you should already have this setup.
+</p>
 
 > If not, please make sure you've followed the installation guide properly.
 

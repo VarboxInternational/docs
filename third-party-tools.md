@@ -2,7 +2,9 @@
 
 <br />
 
+<p id="first-p">
 The platform uses the following third-party composer packages:
+</p>
 
 - [intervention/image](https://packagist.org/packages/intervention/image) *(free & paid versions)*
 - [laravelcollective/html](https://packagist.org/packages/laravelcollective/html) *(free & paid versions)*

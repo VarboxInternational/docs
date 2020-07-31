@@ -5,8 +5,10 @@
     - [Check If Preview](#check-if-preview)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to preview a model record before saving any changes to it.   
-Preview can be available on both `add` and `edit`.  
+<p id="first-p">
+This functionality allows you to preview a model record before saving any changes to it.<br />
+Preview can be available on both <code class="class="language-php">add</code> and <code class="class="language-php">edit</code>.
+</p>  
 
 > It only makes sense to implement the preview functionality for model records that have a visual representation in the frontend (eg. a details page).
 

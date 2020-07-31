@@ -25,7 +25,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The blocks component is a very powerful content management functionality that allows you to quickly assign pieces of dynamic content to your content pages or other custom entities of yours that support block assignment.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the blocks crud implements the following out of the box:
 

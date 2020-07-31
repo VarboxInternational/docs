@@ -13,7 +13,9 @@
 - [Overwrite Bindngs](#overwrite-bindings)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to quickly set values for any meta tags you might have and properly display them in the `<head>` section of your pages.
+<p id="first-p">
+This functionality allows you to quickly set values for any meta tags you might have and properly display them in the <code class="class="language-php">head</code> section of your pages.
+</p>
 
 <a name="general-usage"></a>
 ## General Usage

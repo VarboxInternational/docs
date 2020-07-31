@@ -13,7 +13,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The menus component is a very powerful content management functionality that allows you to quickly create menu items for different page locations and assign them dynamically .
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the menus crud implements the following out of the box:
 

@@ -12,8 +12,10 @@
 - [Eloquent Events](#eloquent-events)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to save eloquent model records in a drafted state.   
-A record in a drafted state is much like an inactive or a soft deleted record.   
+<p id="first-p">
+This functionality allows you to save eloquent model records in a drafted state.<br />
+A record in a drafted state is much like an inactive or a soft deleted record.
+</p>   
 
 <a name="usage"></a>
 ## Usage

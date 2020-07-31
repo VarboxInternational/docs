@@ -21,7 +21,9 @@
     - [Permissions Seeder](#permissions-seeder)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 This functionality allows you to manage roles & permissions for your users.
+</p>
 
 The Varbox platform comes out of the box with a solution for role based permissions already integrated on your `App\User` model.
 

@@ -6,7 +6,9 @@
     - [Disable Temporarily](#disable-temporarily)
 - [Configuration](#cofiguration)
 
-This functionality allows you to cache all read queries or only just the duplicated ones for a model.    
+<p id="first-p">
+This functionality allows you to cache all read queries or only just the duplicated ones for a model.
+</p>    
    
 <a name="usage"></a>
 ## Usage

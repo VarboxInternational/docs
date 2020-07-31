@@ -16,8 +16,10 @@
 - [Overwrite Bindings](#overwrite-bindings)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to generate custom urls for your model records.   
-The generated url will be stored inside the `urls` database table.   
+<p id="first-p">
+This functionality allows you to generate custom urls for your model records.<br /> 
+The generated url will be stored inside the <code class="class="language-php">urls</code> database table.
+</p>   
 
 <a name="usage"></a>
 ## Usage

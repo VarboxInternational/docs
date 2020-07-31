@@ -16,12 +16,14 @@
     - [Create New Files](#create-new-files)
     - [Overwrite Bindings](#overwrite-bindings)
     
-> In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank">Laravel 7</a> application and a database created and configured in your `.env` file.
+> In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank" rel="noreferrer">Laravel 7</a> application and a database created and configured in your `.env` file.
 
 <a name="download-and-setup"></a>
 ## Download & Setup
 
-After you've signed into your account, go to the [Downloads](/releases) section of the Varbox website and download a **FREE** or **PAID** version of the software.
+<p id="first-p">
+After you've signed into your account, go to the <a href="/releases">Downloads</a> section of the Varbox website and download a <strong>FREE</strong> or <strong>PAID</strong> version of the software.
+</p>
 
 After downloading a zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file. 
 Unzip the contents of the Varbox release into a `varbox` directory within your application's root directory. 

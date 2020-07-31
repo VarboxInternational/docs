@@ -16,7 +16,9 @@
 - [Configuration](#configuration)
 - [Implementation Example](#implementation-example)
 
+<p id="first-p">
 This functionality allows you to easily setup a system for creating / reading / updating / deleting for your entities.   
+</p>
 
 <a name="usage"></a>
 ## Usage

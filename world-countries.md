@@ -8,7 +8,9 @@
     - [Sort Countries Alphabetically](#sort-countries-alphabetically)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The countries component provides you with an interface to manage your countries.
+</p>
 
 > As a bonus, 257 countries are already seeded for you when installing the platform.
 

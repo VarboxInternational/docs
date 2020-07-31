@@ -11,7 +11,9 @@
 - [Eloquent Events](#eloquent-events)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to duplicate any model record along with its underlying relationships. 
+<p id="first-p">
+This functionality allows you to duplicate any model record along with its underlying relationships.
+</p> 
 
 <a name="usage"></a>
 ## Usage

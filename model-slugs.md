@@ -8,7 +8,9 @@
     - [Disable Slugs On Create](#disable-slugs-on-create)
     - [Disable Slugs On Update](#disable-slugs-on-update)
 
-This functionality allows you to generate slugs for your model records based on other fields.   
+<p id="first-p">
+This functionality allows you to generate slugs for your model records based on other fields.
+</p>   
 
 <a name="usage"></a>
 ## Usage

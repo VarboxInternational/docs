@@ -2,7 +2,9 @@
 
 <br />
 
+<p id="first-p">
 In some of your applications that use the Varbox platform, you might find the need to overwrite, customize or extend functionalities that come with the platform, in order to match your needs.
+</p>
 
 In its underlying implementation, the Varbox platform uses a lot of classes, each serving its own purpose in different parts of the system. 
 

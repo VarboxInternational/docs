@@ -9,7 +9,9 @@
 <a name="platform-routes"></a>
 ## Platform Routes
 
-All platform specific routes are stored inside the `routes` directory of the `varbox` package, so if you want to have a clear overview on what we expose, take a look in that directory.
+<p id="first-p">
+All platform specific routes are stored inside the <code class="class="language-php">routes</code> directory of the <code class="class="language-php">varbox</code> package, so if you want to have a clear overview on what we expose, take a look in that directory.
+</p>
 
 > The routes are automatically registered at service provider level, so you don't have to do anything regarding this. 
 

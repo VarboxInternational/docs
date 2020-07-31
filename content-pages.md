@@ -14,7 +14,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The pages component is a very powerful content management functionality that allows you to quickly convert a static Laravel page into a dynamic page that can be modified from the admin panel.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the pages crud implements the following out of the box:
 

@@ -9,7 +9,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The configs component is a very powerful functionality that allows you to quickly overwrite static config values in your application.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the configs crud implements the following out of the box:
 

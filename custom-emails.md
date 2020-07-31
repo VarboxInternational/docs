@@ -14,7 +14,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The emails component is a very powerful content management functionality that allows you to quickly customize a mailable with custom details and variable oriented values.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the emails crud implements the following out of the box:
 

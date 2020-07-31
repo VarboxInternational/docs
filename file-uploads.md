@@ -51,9 +51,10 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
     
-    
-This functionality allows you to save files on a disk. 
+<p id="first-p">
+This functionality allows you to save files on a disk.
 It supports uploading image, video, audio and normal files.
+</p>
 
 <a name="prerequisites"></a>
 ## Prerequisites

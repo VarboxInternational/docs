@@ -13,7 +13,9 @@
     - [Disable Order When Creating](#disable-order-when-creating)
 - [Implementation Example](#implementation-example)
 
+<p id="first-p">
 This functionality allows you to order model records between them.
+</p>
 
 <a name="usage"></a>
 ## Usage

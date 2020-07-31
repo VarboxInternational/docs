@@ -18,7 +18,9 @@
     - [Filter Addresses By City](#filter-addresses-by-city)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 Manage your users & admins directly from the Varbox admin panel, with no extra setup.
+</p>
 
 <a name="admin-interface"></a>
 ## Admin Interface

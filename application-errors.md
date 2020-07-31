@@ -11,7 +11,9 @@
 - [Configuration](#configuration)
 - [Overwrite Bindings](#overwrite-bindings)
 
+<p id="first-p">
 The errors component is a very powerful functionality that allows you to have an overview of the errors occurred inside your application, with the possibility of being notified via email.
+</p>
 
 In order to provide you with a complex crud functionality inside the admin, the errors crud implements the following out of the box:
 

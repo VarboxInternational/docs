@@ -5,7 +5,9 @@
     - [Change Sorting Parameters](#change-sorting-parameters)
 - [Implementation Example](#implementation-example)
 
-This functionality allows you to sort eloquent model records.      
+<p id="first-p">
+This functionality allows you to sort eloquent model records.
+</p>      
 
 <a name="usage"></a>
 ## Usage
