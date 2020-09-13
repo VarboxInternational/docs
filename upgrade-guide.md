@@ -11,8 +11,8 @@ Estimated time: **15 minutes**
 #### Download Paid Version
 
 <p id="first-p">
-Go to the site, <a href="/login">sign in</a> to your account and buy a Varbox license.<br />
-Go to the <a href="/releases">downloads</a> section and download the <code class="class="language-php">paid 1.x</p> version of the platform.   
+Go to the site and <a href="/buy">buy</a> a Varbox license.<br />
+Go to the <a href="/releases">downloads</a> section and download the paid 1.x version of the platform.   
 </p>    
 
 <a name="replace-source-code"></a>
