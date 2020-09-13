@@ -176,5 +176,5 @@ php artisan db:seed --class="CountriesSeeder"
 php artisan db:seed --class="StatesSeeder"
 
 // create most known cities
-php artisan db:seed --class="CitieesSeeder"
+php artisan db:seed --class="CitiesSeeder"
 ```
