@@ -26,7 +26,7 @@ Here's an example of how to implement the trait:
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Options\DuplicateOptions;
@@ -197,7 +197,7 @@ You can implement these events in your own models as you would implement any oth
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Neurony\Duplicate\Options\DuplicateOptions;

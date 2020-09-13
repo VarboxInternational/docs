@@ -25,7 +25,7 @@ Your models should use the `Varbox\Traits\IsOrderable` trait and the `Varbox\Opt
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Options\OrderOptions;

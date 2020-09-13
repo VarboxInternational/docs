@@ -32,7 +32,7 @@ If you want to attach the role based permission functionality on other models, a
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Traits\HasRolesAndPermissions;

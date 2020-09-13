@@ -1014,7 +1014,7 @@ Here's an example of how to implement the trait:
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Traits\HasUploads;

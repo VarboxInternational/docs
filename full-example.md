@@ -255,7 +255,7 @@ Create the `app/Post.php` file containing the following:
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -830,7 +830,7 @@ Use the `Varbox\Traits\HasActivity` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\ActivityOptions;
 use Varbox\Traits\HasActivity;
@@ -942,7 +942,7 @@ Use the `Varbox\Traits\IsFilterable` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Traits\IsFilterable;
 
@@ -1083,7 +1083,7 @@ Use the `Varbox\Traits\IsSortable` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Traits\IsSortable;
 
@@ -1233,7 +1233,7 @@ Use the `Varbox\Traits\IsOrderable` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\OrderOptions;
 use Varbox\Traits\IsOrderable;
@@ -1430,7 +1430,7 @@ The trait contains two abstract methods that you must implement yourself.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Traits\IsCsvExportable;
 
@@ -1624,7 +1624,7 @@ Use the `Varbox\Traits\HasUploads` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Traits\HasUploads;
 ...
@@ -1901,7 +1901,7 @@ Use the `Varbox\Traits\IsDraftable` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Traits\IsDraftable;
 
@@ -2098,7 +2098,7 @@ The trait contains an abstract method `getRevisionOptions()` that you must imple
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\RevisionOptions;
 use Varbox\Traits\HasRevisions;
@@ -2290,7 +2290,7 @@ The trait contains an abstract method `getDuplicateOptions()` that you must impl
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\DuplicateOptions;
 use Varbox\Traits\HasDuplicates;
@@ -2462,7 +2462,7 @@ Use the `Varbox\Traits\HasUrl` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\UrlOptions;
 use Varbox\Traits\HasUrl;
@@ -2798,7 +2798,7 @@ Use the `Varbox\Traits\HasTranslations` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\TranslationsOptions;
 use Varbox\Traits\HasTranslations;
@@ -2998,7 +2998,7 @@ Use the `Varbox\Traits\HasMetaTags` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\MetaTagOptions;
 use Varbox\Traits\HasMetaTags;
@@ -3067,7 +3067,7 @@ Use the `Varbox\Traits\HasBlocks` trait inside your `App\Post` model.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Varbox\Options\BlockOptions;
 use Varbox\Traits\HasBlocks;

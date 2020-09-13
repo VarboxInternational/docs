@@ -25,7 +25,7 @@ Your models should use the `Varbox\Traits\IsDraftable` trait.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Traits\IsDraftable;
@@ -167,7 +167,7 @@ You can implement these events in your eloquent models as you would implement an
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Traits\IsDraftable;

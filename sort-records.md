@@ -17,7 +17,7 @@ Your models should use the `Varbox\Traits\IsSortable` trait.
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Traits\IsSortable;

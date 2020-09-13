@@ -41,7 +41,7 @@ Here's an example of how to implement the trait:
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Options\RevisionOptions;
@@ -322,7 +322,7 @@ You can implement these events in your eloquent models as you would implement an
 ```php
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Varbox\Options\RevisionOptions;
