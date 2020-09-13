@@ -1,9 +1,41 @@
 # Upgrade Guide
 
-- [Upgrade From Free To Paid](#upgrade-from-free-to-paid)
+- [Upgrade From 1.x To 2.x](#upgrade-from-1x-to-2x)
+- [Upgrade From 2.x Free To 2.x Paid](#upgrade-from-2x-free-to-2x-paid)
 
-<a name="upgrade-from-free-to-paid"></a>
-## Upgrade From Free To Paid
+<a name="upgrade-from-1x-to-2x"></a>
+## Upgrade From 1x To 2x
+
+Estimated time: **5 minutes**
+
+> **Important!**   
+> First, apply the [Laravel upgrades from 7.x to 8.x](https://laravel.com/docs/8.x/upgrade)
+
+<a name="download-2x-version"></a>
+#### Download 2.x Version
+
+<p id="first-p">
+Go to the <a href="/releases">downloads</a> section and download the 2.x version of the platform (free or paid).   
+</p>   
+
+<a name="replace-2x-source-code"></a>
+#### Replace Source Code
+
+Inside your project, delete everything you have inside the `varbox` directory. After that, unzip the downloaded archive for the `2x` version and place its contents inside your empty `varbox` directory within your application's root directory.
+
+> When deleting or unzipping Varbox into your application's `varbox` directory, please make sure all of Varbox's "hidden" files (such as `.gitignore`) are included.
+
+<a name="install-varbox-2x"></a>
+#### Install Varbox 2.x
+
+Install the Varbox platform by running one simple command:
+
+```
+php artisan varbox:install
+```
+
+<a name="upgrade-from-2x-free-to-2x-paid"></a>
+## Upgrade From 2.x Free To 2.x Paid
 
 Estimated time: **15 minutes**
 
@@ -11,8 +43,8 @@ Estimated time: **15 minutes**
 #### Download Paid Version
 
 <p id="first-p">
-Go to the site, <a href="/login">sign in</a> to your account and buy a Varbox license.<br />
-Go to the <a href="/releases">downloads</a> section and download the <code class="class="language-php">paid 1.x</p> version of the platform.   
+Go to the site and <a href="/buy">buy</a> a Varbox license.<br />
+Go to the <a href="/releases">downloads</a> section and download the paid 1.x version of the platform.   
 </p>    
 
 <a name="replace-source-code"></a>
@@ -25,7 +57,7 @@ Inside your project, delete everything you have inside the `varbox` directory. A
 <a name="replace-seeder-classes"></a>
 #### Replace Seeder Classes
 
-Delete your already existing `UsersSeeder.php`, `PermissionsSeeder.php`, `RolesSeeder.php` and `VarboxSeeder.php` files from inside your `database/seeds` directory. 
+Delete your already existing `UsersSeeder.php`, `PermissionsSeeder.php`, `RolesSeeder.php` and `VarboxSeeder.php` files from inside your `database/seeders` directory. 
 The reason for this is that new seeder classes will be generated for the `paid` version.
 
 > If you've already modified these seeder classes while using the `free` version, then you should make a backup of the files and paste your code inside the newly generated seeder classes for the `paid` version.
