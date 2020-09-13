@@ -8,10 +8,10 @@
 - [Overwrite Bindings](#overwrite-bindings)
 
 <p id="first-p">
-The Varbox platform also puts at your disposal the "Admin -> Multi Language -> Languages" section from where you can manage the languages for your application.
+The Varbox platform also puts at your disposal the Admin -> Multi Language -> Languages section from where you can manage the languages for your application.
 </p>
 
-> As a bonus, 135 languages are already seeded for you when installing the platform.
+As a bonus, 135 languages are already seeded for you when installing the platform.
 
 In order to provide you with a complex crud functionality inside the admin, the languages crud implements the following out of the box:
 
