@@ -1,9 +1,6 @@
 # Upgrade Guide
 
-- [Upgrade From 1.x To 2.x](#upgrade-from-1x-to-2x)
-
-<a name="upgrade-from-1x-to-2x"></a>
-## Upgrade From 1.x To 2x.
+<br>
 
 Estimated time: **10 minutes**
 
