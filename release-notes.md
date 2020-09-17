@@ -16,3 +16,5 @@ Minor and patch releases may be released as often as every week. Minor and patch
 ## Varbox 1.0
 
 This is the first version of the Varbox platform!
+
+Please see the [CHANGELOG](https://github.com/VarboxInternational/varbox/blob/1.x/CHANGELOG.md)
