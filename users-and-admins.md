@@ -79,8 +79,8 @@ In order to provide you with complex crud functionalities inside the admin, the 
 
 </div>
 
-> The `App\User` model now extends the `Varbox\Models\User` class, for extra functionalities.   
-> The `App\User` model is bound to the `user_model` key inside `config/varbox/bindings.php`
+> The `App\Models\User` model now extends the `Varbox\Models\User` class, for extra functionalities.   
+> The `App\Models\User` model is bound to the `user_model` key inside `config/varbox/bindings.php`
 
 <a name="fetch-active-inactive-users"></a>
 #### Fetch Active / Inactive Users
@@ -88,13 +88,13 @@ In order to provide you with complex crud functionalities inside the admin, the 
 You can get only active users by applying the `onlyActive` query scope.
 
 ```php
-$users = \App\User::onlyActive()->get();
+$users = \App\Models\User::onlyActive()->get();
 ```
 
 Alternatively, you can get only inactive users by applying the `onlyInactive` query scope.
 
 ```php
-$users = \App\User::onlyInactive()->get();
+$users = \App\Models\User::onlyInactive()->get();
 ```
 
 <a name="verify-active-inactive-user"></a>
@@ -103,7 +103,7 @@ $users = \App\User::onlyInactive()->get();
 You can verify if a user is active by applying the `isActive` method.
 
 ```php
-$user = \App\User::find($id);
+$user = \App\Models\User::find($id);
 
 if ($user->isActive()) ...
 ```
@@ -111,7 +111,7 @@ if ($user->isActive()) ...
 Alternatively, you can verify if a user is inactive by applying the `isInactive` method.
 
 ```php
-$user = \App\User::find($id);
+$user = \App\Models\User::find($id);
 
 if ($user->isInactive()) ...
 ```
@@ -122,13 +122,13 @@ if ($user->isInactive()) ...
 You can get only admin users by applying the `onlyAdmins` query scope.
 
 ```php
-$admins = \App\User::onlyAdmins()->get();
+$admins = \App\Models\User::onlyAdmins()->get();
 ```
 
 Alternatively, you can get exclude admin users by applying the `excludingAdmins` query scope.
 
 ```php
-$users = \App\User::excludingAdmins()->get();
+$users = \App\Models\User::excludingAdmins()->get();
 ````
 
 <a name="check-admin-user"></a>
@@ -137,7 +137,7 @@ $users = \App\User::excludingAdmins()->get();
 You can check if a user is an admin by applying the `isAdmin` method.
 
 ```php
-$user = \App\User::find($id);
+$user = \App\Models\User::find($id);
 
 if ($user->isAdmin()) ...
 ```
@@ -145,7 +145,7 @@ if ($user->isAdmin()) ...
 <a name="user-addresses"></a>
 ## User Addresses
 
-Now that your `App\User` model extends the `Varbox\Models\User` model, it's also possible to assign addresses to your users. 
+Now that your `App\Models\User` model extends the `Varbox\Models\User` model, it's also possible to assign addresses to your users. 
 You can also do this from inside the admin panel, when editing a user.
 
 <a name="fetch-user-addresses"></a>
@@ -154,7 +154,7 @@ You can also do this from inside the admin panel, when editing a user.
 You can get a user's addresses by using the `addresses` has many relation present on the `Varbox\Traits\HasAddresses` trait.
 
 ```php
-$user = \App\User::find($id);
+$user = \App\Models\User::find($id);
 $addresses = $user->addresses;
 ```
 

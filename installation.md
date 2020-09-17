@@ -523,7 +523,7 @@ class AdminMenuComposer
 <a name="overwrite-bindings"></a>
 #### Overwrite Bindings
 
-Inside your `config/varbox/bindings.php` file, change the `user_model` value to `\App\User::class`
+Inside your `config/varbox/bindings.php` file, change the `user_model` value to `\App\Models\User::class`
 
 ```php
 /*
@@ -548,7 +548,7 @@ Inside your `config/varbox/bindings.php` file, change the `user_model` value to 
     | - or you could even use your own class as a direct implementation
     |
     */
-    'user_model' => \App\User::class,
+    'user_model' => \App\Models\User::class,
 ```
 
 Inside your `config/varbox/bindings.php` file, change the `admin_menu_view_composer` value to `\App\Http\Composers\AdminMenuComposer::class`

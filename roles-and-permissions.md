@@ -25,7 +25,7 @@
 This functionality allows you to manage roles & permissions for your users.
 </p>
 
-The Varbox platform comes out of the box with a solution for role based permissions already integrated on your `App\User` model.
+The Varbox platform comes out of the box with a solution for role based permissions already integrated on your `App\Models\User` model.
 
 If you want to attach the role based permission functionality on other models, all you have to do is use the `Varbox\Traits\HasRolesAndPermissions` trait on your models.
 
@@ -114,7 +114,7 @@ Route::group([
 <a name="roles-usage"></a>
 ## Roles Usage
 
-When working with your `App\User` model you have a few options when it comes to managing your roles.
+When working with your `App\Models\User` model you have a few options when it comes to managing your roles.
 
 <a name="fetch-roles"></a>
 #### Fetch Roles
@@ -221,7 +221,7 @@ $user->hasAllRoles(['owner', 'editor']);
 <a name="permissions-usage"></a>
 ## Permissions Usage
 
-When working with your `App\User` model you have a few options when it comes to managing your permissions.
+When working with your `App\Models\User` model you have a few options when it comes to managing your permissions.
 
 <a name="fetch-permissions"></a>
 #### Fetch Permissions
