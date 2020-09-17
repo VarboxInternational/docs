@@ -24,7 +24,7 @@
 Require the package inside your Laravel project
 
 ```
-composer require varbox/varbox
+composer require varbox/varbox "^1.0"
 ```
 
 Install the Varbox platform by running  one simple command:
@@ -64,7 +64,7 @@ If for some reason you don't want to automatically install the Varbox platform, 
 Require the package inside your Laravel project
 
 ```
-composer require varbox/varbox
+composer require varbox/varbox "^1.0"
 ```
 
 <a name="publish-vendor-files"></a>
