@@ -1,4 +1,4 @@
-<h1>Database Notifications <small class="paid">PAID</small></h1>
+<h1>Database Notifications</h1>
 
 - [Admin Interface](#admin-interface)
 - [Concepts](#concepts)

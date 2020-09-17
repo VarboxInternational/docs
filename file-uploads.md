@@ -1,4 +1,4 @@
-<h1>File Uploads <small class="free">FREE</small></h1>
+<h1>File Uploads</h1>
 
 - [Prerequisites](#prerequisites)
     - [Setup Storge Disk](#setup-storage-disk)

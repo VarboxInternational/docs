@@ -1,4 +1,4 @@
-<h1>Model Slugs <small class="free">FREE</small></h1>
+<h1>Model Slugs</h1>
 
 - [Usage](#usage)
     - [Generate Slug](#generate-slug)

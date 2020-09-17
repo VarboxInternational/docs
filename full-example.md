@@ -8,7 +8,7 @@
             <li><a href="#create-model">Create Model</a></li>
         </ul>
     </li>
-    <li><a href="#basic-crud">Basic Crud <small class="free">FREE</small></a>
+    <li><a href="#basic-crud">Basic Crud</a>
         <ul>
             <li><a href="#add-crud-routes">Add Routes</a></li>
             <li><a href="#add-crud-permissions">Add Permissions</a></li>
@@ -19,7 +19,7 @@
         </ul>
     </li>
     <li>
-        <a href="#filter-records">Filter Records <small class="free">FREE</small></a>
+        <a href="#filter-records">Filter Records</a>
         <ul>
             <li><a href="#create-filter-class">Create Filter Class</a></li>
             <li><a href="#apply-filter-model-trait">Apply Model Trait</a></li>
@@ -28,7 +28,7 @@
         </ul>
     </li>
     <li>
-        <a href="#sort-records">Sort Records <small class="free">FREE</small></a>
+        <a href="#sort-records">Sort Records</a>
         <ul>
             <li><a href="#create-sort-class">Create Sort Class</a></li>
             <li><a href="#apply-sort-model-trait">Apply Model Trait</a></li>
@@ -37,7 +37,7 @@
         </ul>
     </li>
     <li>
-        <a href="#order-records">Order Records <small class="free">FREE</small></a>
+        <a href="#order-records">Order Records</a>
         <ul>
             <li><a href="#add-order-table-column">Add Table Column</a></li>
             <li><a href="#add-order-route">Add Route</a></li>
@@ -48,7 +48,7 @@
         </ul>
     </li>
     <li>
-        <a href="#csv-exports">Csv Exports <small class="free">FREE</small></a>
+        <a href="#csv-exports">Csv Exports</a>
         <ul>
             <li><a href="#add-export-route">Add Route</a></li>
             <li><a href="#add-export-permission">Add Permission</a></li>
@@ -58,7 +58,7 @@
         </ul>
     </li>
     <li>
-        <a href="#upload-files">Upload Files <small class="free">FREE</small></a>
+        <a href="#upload-files">Upload Files</a>
         <ul>
             <li><a href="#add-upload-table-columns">Add Table Columns</a></li>
             <li><a href="#add-upload-fillable-fields">Add Fillable Fields</a></li>
@@ -67,7 +67,7 @@
         </ul>
     </li>
     <li>
-        <a href="#draft-records">Draft Records <small class="free">FREE</small></a>
+        <a href="#draft-records">Draft Records</a>
         <ul>
             <li><a href="#add-draft-table-column">Add Table Column</a></li>
             <li><a href="#add-draft-routes">Add Routes</a></li>
@@ -81,7 +81,7 @@
         </ul>
     </li>
     <li>
-        <a href="#duplicate-records">Duplicate Records <small class="free">FREE</small></a>
+        <a href="#duplicate-records">Duplicate Records</a>
         <ul>
             <li><a href="#add-duplicate-route">Add Route</a></li>
             <li><a href="#add-duplicate-permission">Add Permission</a></li>
@@ -91,7 +91,7 @@
         </ul>
     </li>
     <li>
-        <a href="#preview-records">Preview Records <small class="free">FREE</small></a>
+        <a href="#preview-records">Preview Records</a>
         <ul>
             <li><a href="#add-preview-route">Add Route</a></li>
             <li><a href="#add-preview-permission">Add Permission</a></li>
@@ -100,7 +100,7 @@
         </ul>
     </li>
     <li>
-        <a href="#meta-tags">Meta Tags <small class="free">FREE</small></a>
+        <a href="#meta-tags">Meta Tags</a>
         <ul>
             <li><a href="#add-meta-table-column">Add Table Column</a></li>
             <li><a href="#add-meta-fillable-field">Add Fillable Field</a></li>
@@ -110,14 +110,14 @@
         </ul>
     </li>
     <li>
-        <a href="#activity-log">Activity Log <small class="paid">PAID</small></a>
+        <a href="#activity-log">Activity Log</a>
         <ul>
             <li><a href="#modify-activity-env-variable">Modify Env Variable</a></li>
             <li><a href="#apply-activity-model-trait">Apply Model Trait</a></li>
         </ul>
     </li>
     <li>
-        <a href="#model-revisions">Model Revisions <small class="paid">PAID</small></a>
+        <a href="#model-revisions">Model Revisions</a>
         <ul>
             <li><a href="#add-revision-route">Add Route</a></li>
             <li><a href="#apply-revision-model-trait">Apply Model Trait</a></li>
@@ -126,7 +126,7 @@
         </ul>
     </li>
     <li>
-        <a href="#model-url">Model Url <small class="paid">PAID</small></a>
+        <a href="#model-url">Model Url</a>
         <ul>
             <li><a href="#add-url-table-column">Add Table Column</a></li>
             <li><a href="#add-url-fillable-field">Add Fillable Field</a></li>
@@ -137,7 +137,7 @@
         </ul>
     </li>
     <li>
-        <a href="#translatable-models">Translatable Models <small class="paid">PAID</small></a>
+        <a href="#translatable-models">Translatable Models</a>
         <ul>
             <li><a href="#modify-translate-table-columns">Modify Table Columns</a></li>
             <li><a href="#apply-translate-model-trait">Apply Model Trait</a></li>
@@ -146,7 +146,7 @@
         </ul>
     </li>
     <li>
-        <a href="#content-blocks">Content Blocks <small class="paid">PAID</small></a>
+        <a href="#content-blocks">Content Blocks</a>
         <ul>
             <li><a href="#apply-block-model-trait">Apply Model Trait</a></li>
             <li><a href="#add-block-controller-code">Apply Controller Code</a></li>
