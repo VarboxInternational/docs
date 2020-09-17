@@ -1,8 +1,8 @@
 # Installation
 
-- [Download & Setup](#download-and-setup)
 - [Automatic Installation](#automatic-installation)
 - [Manual Installation](#manual-installation)
+    - [Composer Package](#composer-package)
     - [Publish Vendor Files](#publish-vendor-files)
     - [Write Env Variables](#write-env-variables)
     - [Register Routes](#register-routes)
@@ -18,55 +18,14 @@
     
 > In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank" rel="noreferrer">Laravel 7</a> application and a database created and configured in your `.env` file.
 
-<a name="download-and-setup"></a>
-## Download & Setup
-
-<p id="first-p">
-After you've signed into your account, go to the <a href="/releases">Downloads</a> section of the Varbox website and download a <strong>FREE</strong> or <strong>PAID</strong> version of the software.
-</p>
-
-After downloading a zip file containing the Varbox source code, you will need to install it as a Composer "path" repository within your Laravel application's `composer.json` file. 
-Unzip the contents of the Varbox release into a `varbox` directory within your application's root directory. 
-
-> **Hidden Files**
-> 
-> When unzipping Varbox into your application's `varbox` directory, please make sure all of Varbox's "hidden" files (such as `.gitignore`) are included.
-
-Once you have unzipped and placed the Varbox source code within the appropriate directory, you are ready to update your `composer.json` file. 
-You should add the following configuration to the file:
-
-```
-"repositories": [
-    {
-        "type": "path",
-        "url": "./varbox"
-    }
-],
-```
-
-Next, add `varbox/varbox` to the `require` section of your `composer.json` file:
-
-```
-"require": {
-    "php": "^7.2.5",
-    "laravel/framework": "^7.0",
-    "varbox/varbox": "*"
-},
-```
-
-After you've updated your `composer.json` file, run the following command in your terminal:
-
-```
-composer update
-```
-
-> **Package Stability**
-> 
-> If you are not able to install Varbox into your application because of your `minimum-stability` setting, consider setting your `minimum-stability` option to `dev` and your `prefer-stable` option to `true`. 
-> This will allow you to install Varbox while still preferring stable package releases for your application.
-
 <a name="automatic-installation"></a>
 ## Automatic Installation 
+
+Require the package inside your Laravel project
+
+```
+composer require varbox/varbox
+```
 
 Install the Varbox platform by running  one simple command:
 
@@ -95,12 +54,18 @@ Use `admin@mail.com / admin` to authenticate.
 <a name="manual-installation"></a>
 ## Manual Installation
 
-> The following guide only works for the `paid` version of the software.   
-> You can also follow along using the free version, but you'll have to exclude some steps.
-
 If for some reason you don't want to automatically install the Varbox platform, you can do so manually, by following the steps below.
 
 > The following steps also provide useful insight on what the `varbox:install` command does. 
+
+<a name="comopser-package"></a>
+#### Composer Package
+
+Require the package inside your Laravel project
+
+```
+composer require varbox/varbox
+```
 
 <a name="publish-vendor-files"></a>
 #### Publish Vendor Files
