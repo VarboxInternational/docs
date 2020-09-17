@@ -1,4 +1,4 @@
-<h1>Admin Crud <small class="free">FREE</small></h1>
+<h1>Admin Crud</h1>
 
 - [Usage](#usage)
     - [The Index Method](#the-index-method)

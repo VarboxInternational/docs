@@ -1,4 +1,4 @@
-<h1>Custom Emails <small class="paid">PAID</small></h1>
+<h1>Custom Emails</h1>
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)

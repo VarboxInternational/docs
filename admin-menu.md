@@ -1,4 +1,4 @@
-<h1>Admin Menu <small class="free">FREE</small></h1>
+<h1>Admin Menu</h1>
 
 <br />
 

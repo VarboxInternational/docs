@@ -1,4 +1,4 @@
-<h1>Preview Records <small class="free">FREE</small></h1>
+<h1>Preview Records</h1>
 
 - [Usage](#usage)
     - [Preview Record](#preview-record)

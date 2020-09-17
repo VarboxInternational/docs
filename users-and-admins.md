@@ -1,4 +1,4 @@
-<h1>Users & Admins <small class="free">FREE</small></h1>
+<h1>Users & Admins</h1>
 
 - [Admin Interface](#admin-interface)
 - [Users & Admins](#users-and-admins)

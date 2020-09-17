@@ -1,4 +1,4 @@
-<h1>Query Cache <small class="free">FREE</small></h1>
+<h1>Query Cache</h1>
 
 - [Usage](#usage)
     - [Cache All Queries](#cache-all-queries)

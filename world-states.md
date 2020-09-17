@@ -1,4 +1,4 @@
-<h1>World States <small class="paid">PAID</small></h1>
+<h1>World States</h1>
 
 - [Admin Interface](#admin-interface)
 - [Seeder Class](#seeder-class)

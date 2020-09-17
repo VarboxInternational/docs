@@ -1,4 +1,4 @@
-<h1>Application Errors <small class="paid">PAID</small></h1>
+<h1>Application Errors</h1>
 
 - [Admin Interface](#admin-interface)
 - [How It Works](#how-it-works)
