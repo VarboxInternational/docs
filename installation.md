@@ -148,7 +148,7 @@ In your `config/filesystems.php` config file add the following to the `disks` se
 <a name="update-existing-files"></a>
 #### Update Existing Files
 
-In your `app/User.php` file change the extended class to reference:
+In your `app/Models/User.php` file change the extended class to reference:
 
 ```
 use Varbox\Models\User as VarboxUser;
@@ -158,7 +158,7 @@ class User extends VarboxUser {
 }
 ```
 
-In your `app/User.php` file append the following to the `$fillable` property:
+In your `app/Models/User.php` file append the following to the `$fillable` property:
 
 ```
 protected $fillable = [
@@ -167,7 +167,7 @@ protected $fillable = [
 ];
 ```
 
-In your `app/User.php` file append the following to the `$casts` property:
+In your `app/Models/User.php` file append the following to the `$casts` property:
 
 ```
 protected $casts = [
