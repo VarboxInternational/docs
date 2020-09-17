@@ -16,7 +16,7 @@
     - [Create New Files](#create-new-files)
     - [Overwrite Bindings](#overwrite-bindings)
     
-> In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/7.x/installation" target="_blank" rel="noreferrer">Laravel 7</a> application and a database created and configured in your `.env` file.
+> In order for the following installation guide to work, you'll need to have a working <a href="https://laravel.com/docs/8.x/installation" target="_blank" rel="noreferrer">Laravel 8</a> application and a database created and configured in your `.env` file.
 
 <a name="automatic-installation"></a>
 ## Automatic Installation 
@@ -58,7 +58,7 @@ If for some reason you don't want to automatically install the Varbox platform, 
 
 > The following steps also provide useful insight on what the `varbox:install` command does. 
 
-<a name="comopser-package"></a>
+<a name="composer-package"></a>
 #### Composer Package
 
 Require the package inside your Laravel project
