@@ -15,18 +15,4 @@ Minor and patch releases may be released as often as every week. Minor and patch
 <a name="varbox-2.x"></a>
 ## Varbox 2.x
 
-Varbox 2.x continues the improvements made in Varbox 1.x by supporting Laravel 8.x.
-
-#### Models Directory
-
-Varbox 2.x complies with the changes in Laravel 8.x regarding [the new Models directory](https://laravel.com/docs/8.x/releases).
-
-Now the `varbox:install` artisan command will look for your `User` model inside the `app/Models` directory.
-
-#### Database Seeds
-
-Varbox 2.x complies with the changes in Laravel 8.x regarding [seeder namespaces and directory renaming](https://laravel.com/docs/8.x/upgrade#seeder-factory-namespaces)
-
-#### PHPUnit Deprecated Methods
-
-Varbox 2.x now uses `assertFileDoesNotExist` instead of `assertFileNotExists` in its internal tests.
+Please see the [CHANGELOG](https://github.com/VarboxInternational/varbox/blob/2.x/CHANGELOG.md) file for details.
