@@ -13,7 +13,7 @@
 
 ## Varbox Documentation
 
-You can find the full documentation for the Varbox platform at [https://varbox.io/docs](https://varbox.io/docs/2.x)
+You can find the full documentation for the Varbox platform at [https://varbox.io/docs/2.x](https://varbox.io/docs/2.x)
 
 ## Getting Started
 
