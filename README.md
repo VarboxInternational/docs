@@ -7,7 +7,7 @@
 
 ---
 
-[Website](https://varbox.io) | [Documentation](https://varbox.io/docs/1.x) | [Buy License](https://varbox.io/buy)
+[Our Website](https://varbox.io) | [Browse Documentation](https://varbox.io/docs/2.x) | [Live Demo](https://demo.varbox.io/admin) | [Buy License](https://varbox.io/buy)
 
 <br>
 
