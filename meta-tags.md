@@ -153,7 +153,7 @@ To actually display the html of the meta tags saved for a model record, use the 
 
 ```php
 <head>
-    {!! $model->displayMetaTags() !}}
+    {!! $model->displayMetaTags() !!}
 </head>
 ```
 
